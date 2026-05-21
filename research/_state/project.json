@@ -1,8 +1,9 @@
 {
-  "studentName": null,
-  "currentModule": "m0_setup",
+  "studentName": "Aiden Maila",
+  "currentModule": "m1_discovery",
   "candidateNiches": [],
   "finalistNiches": [],
   "chosenNiche": null,
-  "lastUpdated": null
+  "lastUpdated": "2026-05-21T00:00:00.000Z",
+  "interviewNotes": {}
 }
