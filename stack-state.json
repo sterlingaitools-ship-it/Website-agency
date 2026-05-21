@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "module": "m2b_complete",
-  "niche": null,
+  "module": "m2c_complete",
+  "niche": "trades-roofing-plumbing-electrical",
   "studentName": "Aiden Maila",
   "gates": {
     "setup.complete": true,
@@ -9,7 +9,7 @@
     "m1.profileLocked": true,
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
-    "m2c.nicheDecided": false,
+    "m2c.nicheDecided": true,
     "m2d.templateBuilt": false,
     "m3.offerLocked": false,
     "m4.factoryStructureLoaded": false,
@@ -55,6 +55,11 @@
       "timestamp": "2026-05-21T00:00:00.000Z",
       "command": "/research",
       "outcome": "complete - web research used (Apify blocked by remote environment network policy)"
+    },
+    {
+      "timestamp": "2026-05-21T00:00:00.000Z",
+      "command": "/pick-niche",
+      "outcome": "trades-roofing-plumbing-electrical selected"
     }
   ]
 }
