@@ -1,0 +1,31 @@
+{
+  "niche": "trades-roofing-plumbing-electrical",
+  "pickedAt": "2026-05-21T00:00:00.000Z",
+  "pickedBy": "Aiden Maila",
+  "decision": "hybrid",
+  "base": "direction-a-proof-first-authority",
+  "baseScore": 93,
+  "additions": [
+    {
+      "from": "direction-b-emergency-led-action",
+      "element": "mobilePattern",
+      "spec": "Fixed bottom bar on mobile with tap-to-call button. Visible at all times, overrides default mobile scroll behavior."
+    },
+    {
+      "from": "direction-c-story-driven-community",
+      "element": "testimonialsFormat",
+      "spec": "Named photo testimonials with full name, city/state, and a specific outcome sentence. Replaces generic star-rating widget."
+    }
+  ],
+  "heroFrom": "direction-a-proof-first-authority",
+  "sectionOrderFrom": "direction-a-proof-first-authority",
+  "typographyFrom": "direction-a-proof-first-authority",
+  "colorSystemFrom": "direction-a-proof-first-authority",
+  "trustStackFrom": "direction-a-proof-first-authority",
+  "ctaFrom": "direction-a-proof-first-authority",
+  "navigationFrom": "direction-a-proof-first-authority",
+  "formPatternFrom": "direction-a-proof-first-authority",
+  "mobilePatternFrom": "direction-b-emergency-led-action",
+  "testimonialsFrom": "direction-c-story-driven-community",
+  "rationale": "Direction A scores highest on the homeowner trust rubric. The fear-of-scam purchase driver means proof above the fold wins. Direction B's mobile fixed CTA bar is additive with no structural conflict. Direction C's named photo testimonials replace generic review widgets and raise conversion confidence in the reviews section."
+}
