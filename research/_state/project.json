@@ -1,14 +1,17 @@
 {
   "studentName": "Aiden Maila",
-  "currentModule": "m2a_scoring",
+  "currentModule": "m2b_research",
   "candidateNiches": [
     "salon-hair-beauty",
     "personal-coaches",
     "trades-roofing-plumbing-electrical",
-    "sales-trainers-event-hosts",
-    "education-training-providers"
+    "sales-trainers-event-hosts"
   ],
-  "finalistNiches": [],
+  "finalistNiches": [
+    "trades-roofing-plumbing-electrical",
+    "sales-trainers-event-hosts",
+    "personal-coaches"
+  ],
   "chosenNiche": null,
   "lastUpdated": "2026-05-21T00:00:00.000Z",
   "interviewNotes": {
