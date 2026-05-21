@@ -1,0 +1,80 @@
+{
+  "niche": "trades-roofing-plumbing-electrical",
+  "phase": "Phase 1 — source candidates",
+  "captureMethod": "WebFetch (Apify blocked by remote network policy)",
+  "candidates": [
+    {
+      "slug": "cloud-roofing",
+      "company": "Cloud Roofing",
+      "url": "https://www.cloudroofing.com/",
+      "market": "US",
+      "city": "San Antonio, TX",
+      "notes": "Frequently cited in roofing website roundups; 45+ year brand"
+    },
+    {
+      "slug": "bumble-roofing",
+      "company": "Bumble Roofing",
+      "url": "https://bumbleroofing.com/",
+      "market": "US",
+      "city": "Multi-city (Dallas, LA, Atlanta, Colorado Springs, Richmond)",
+      "notes": "BBB A+ rated; high-volume multi-market brand; frequently cited as high-converting"
+    },
+    {
+      "slug": "edge2edge-roofing",
+      "company": "Edge 2 Edge Roofing",
+      "url": "https://www.edge2edgeroofing.com/",
+      "market": "US",
+      "city": "Longwood / Sunrise, FL",
+      "notes": "Cited for hero video of crew on job; strong visual-first layout"
+    },
+    {
+      "slug": "weathertight-corp",
+      "company": "Weather Tight Corp",
+      "url": "https://www.weathertightcorp.com/",
+      "market": "US",
+      "city": "Milwaukee, WI",
+      "notes": "Owens Corning Platinum Preferred Contractor; Wisconsin largest exterior remodeler"
+    },
+    {
+      "slug": "centennial-roofing",
+      "company": "Centennial Roofing",
+      "url": "https://www.centennialroofing.com/",
+      "market": "US",
+      "city": "Midlothian / DFW, TX",
+      "notes": "Family-owned since 1983; 600+ Google reviews cited; strong social proof"
+    },
+    {
+      "slug": "hometown-roofing",
+      "company": "Hometown Roofing",
+      "url": "https://www.hometownroofing.com/",
+      "market": "US",
+      "city": "Omaha, NE",
+      "notes": "50+ years in business; frequently cited for trust-stack architecture"
+    },
+    {
+      "slug": "champion-roofing",
+      "company": "Champion Roofing",
+      "url": "https://championroofing.com/",
+      "market": "US",
+      "city": "Chicago, IL",
+      "notes": "30+ years; licensed/bonded/insured leader in commercial + residential"
+    },
+    {
+      "slug": "bone-dry-roofing",
+      "company": "Bone Dry Roofing",
+      "url": "https://www.bonedryroofing.com/",
+      "market": "US",
+      "city": "Midwest (Indianapolis, IN hub)",
+      "notes": "Family-owned since 1989; Midwest leader; high review volume"
+    },
+    {
+      "slug": "premier-roofing",
+      "company": "Premier Roofing",
+      "url": "https://premieroofing.com/",
+      "market": "US",
+      "city": "US (national)",
+      "notes": "Frequently cited in contractor website examples"
+    }
+  ],
+  "capturedAt": "2026-05-21T00:00:00.000Z"
+}
