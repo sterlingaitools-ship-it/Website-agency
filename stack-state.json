@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "module": "setup_complete",
+  "module": "m1_complete",
   "niche": null,
-  "studentName": null,
+  "studentName": "Aiden Maila",
   "gates": {
     "setup.complete": true,
     "agency.brandLocked": false,
-    "m1.profileLocked": false,
+    "m1.profileLocked": true,
     "m2a.scoresLocked": false,
     "m2b.researchComplete": false,
     "m2c.nicheDecided": false,
@@ -39,6 +39,11 @@
     {
       "timestamp": "2026-05-21T00:00:00.000Z",
       "command": "/setup",
+      "outcome": "complete"
+    },
+    {
+      "timestamp": "2026-05-21T00:00:00.000Z",
+      "command": "/discovery",
       "outcome": "complete"
     }
   ]

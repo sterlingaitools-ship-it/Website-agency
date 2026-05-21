@@ -1,9 +1,23 @@
 {
   "studentName": "Aiden Maila",
-  "currentModule": "m1_discovery",
-  "candidateNiches": [],
+  "currentModule": "m2a_scoring",
+  "candidateNiches": [
+    "salon-hair-beauty",
+    "personal-coaches",
+    "trades-roofing-plumbing-electrical",
+    "sales-trainers-event-hosts",
+    "education-training-providers"
+  ],
   "finalistNiches": [],
   "chosenNiche": null,
   "lastUpdated": "2026-05-21T00:00:00.000Z",
-  "interviewNotes": {}
+  "interviewNotes": {
+    "section1": "Sports coordinator, student development adviser (80% retention), BNI intake, salon manager via seller financing, electrician, broad tech stack builder, LinkedIn newsletter on funnels/lead gen",
+    "section2": "Salons freshest and most concrete; education and sports also lived in; sees all service businesses through the lens of retention and systems",
+    "section3": "CRM segmentation and tagging; automation design; knows what broken automations look like from both builder and prospect side",
+    "section4": "Cold start - no active warm network, all past relationships dormant",
+    "section5": "Coaches and sales professionals with broken follow-up; aviation institution; pattern is businesses that want automation but set it up wrong",
+    "section6": "Hair & beauty, trades, personal coaches; US/UK only; no cannabis, OnlyFans, scams",
+    "section7": "50 hrs/week, $0 cash, GHL + Claude in hand; design 3.5/5, sales 2.5/5, SEO 1.5/5, content 3/5; target $10k USD/month"
+  }
 }
