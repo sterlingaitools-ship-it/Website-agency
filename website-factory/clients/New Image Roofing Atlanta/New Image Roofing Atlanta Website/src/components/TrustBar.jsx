@@ -1,4 +1,5 @@
 import brandDNA from '../config/brand-dna';
+import { useCountUp } from '../hooks/useCountUp';
 
 function StarIcon() {
   return (
@@ -57,6 +58,8 @@ function CalendarIcon() {
 }
 
 export default function TrustBar() {
+  const googleCount = brandDNA.reviews.googleCount || 0;
+  const { ref: countRef, count: animatedCount } = useCountUp(googleCount);
   const trustBadges = brandDNA.trust_badges;
   const gafBadge = trustBadges.find((b) => b.alt && b.alt.toLowerCase().includes('gaf'));
   const bbbBadge = trustBadges.find((b) => b.alt && b.alt.toLowerCase().includes('bbb'));
@@ -67,6 +70,7 @@ export default function TrustBar() {
 
   return (
     <section
+      ref={countRef}
       className="bg-silver py-5"
       aria-label="Trust indicators"
     >
@@ -80,7 +84,7 @@ export default function TrustBar() {
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
             <span className="font-heading font-bold text-xl text-ink tabular-nums">
-              {brandDNA.reviews.googleCount || brandDNA.reviews.googleStat}
+              {animatedCount || brandDNA.reviews.googleStat}
             </span>
             <span className="font-body text-xs text-neutral-dim">Google Reviews</span>
           </div>
@@ -169,7 +173,7 @@ export default function TrustBar() {
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
             <span className="font-heading font-bold text-lg text-ink tabular-nums">
-              {brandDNA.reviews.googleCount || brandDNA.reviews.googleStat}
+              {animatedCount || brandDNA.reviews.googleStat}
             </span>
             <span className="font-body text-xs text-neutral-dim">Google Reviews</span>
           </div>

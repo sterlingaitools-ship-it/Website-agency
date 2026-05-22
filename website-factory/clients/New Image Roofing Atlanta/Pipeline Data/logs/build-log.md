@@ -51,3 +51,14 @@ Output: /home/user/Website-agency/website-factory/clients/New Image Roofing Atla
 ## Stage 10.1, build-from-template (2026-05-22T21:09:55.698345+00:00)
 Status: complete
 Output: /home/user/Website-agency/website-factory/clients/New Image Roofing Atlanta/New Image Roofing Atlanta Website
+
+## Stage 10.1, build-from-template (2026-05-22T21:40:38.327785+00:00)
+Status: complete
+Output: /home/user/Website-agency/website-factory/clients/New Image Roofing Atlanta/New Image Roofing Atlanta Website
+
+## Stage 10.3, Uplift
+Status: complete
+Optional extras applied: animated stats counters (trigger: reviews.totalReviewCount = 114, >= 25 threshold)
+- Created src/hooks/useCountUp.js (IntersectionObserver + RAF, 800ms ease-out cubic, prefers-reduced-motion respected)
+- Wired to TrustBar.jsx googleCount stat (desktop + mobile renders share single animation instance)
+- No other triggers fired: business open 24/7 so time-of-day swap has no effect; no brand-dna.icon_set defined; no greeting copy keys present
