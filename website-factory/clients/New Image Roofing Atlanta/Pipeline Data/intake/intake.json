@@ -1,0 +1,21 @@
+{
+  "businessName": "New Image Roofing Atlanta",
+  "websiteUrl": "https://www.newimageroofingatlanta.com",
+  "phone": "404-680-0041",
+  "phoneNormalised": "4046800041",
+  "email": "bugzbunny.maila@gmail.com",
+  "ownerName": "Montana Mace",
+  "ownerTitle": "Chief Executive Officer",
+  "address": {
+    "street": "2020 Howell Mill Road, Suite 232",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip": "30318",
+    "full": "2020 Howell Mill Road, Suite 232, Atlanta, GA 30318"
+  },
+  "niche": "trades-roofing-plumbing-electrical",
+  "specialOffers": null,
+  "financing": null,
+  "notes": null,
+  "submittedAt": "2026-05-22T00:00:00.000Z"
+}

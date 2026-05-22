@@ -1,0 +1,154 @@
+{
+  "businessName": "New Image Roofing Atlanta",
+  "websiteUrl": "https://www.newimageroofingatlanta.com",
+  "phone": "404-680-0041",
+  "email": "bugzbunny.maila@gmail.com",
+  "address": {
+    "street": "2020 Howell Mill Road, Suite 232",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip": "30318"
+  },
+  "ownerName": "Montana Mace",
+  "ownerTitle": "CEO",
+  "foundingYear": 2010,
+  "yearsInBusiness": 16,
+  "tagline": "Reliable Roofing Services",
+  "description": "New Image Roofing Atlanta is one of the largest residential and commercial roofing companies in Atlanta, GA. Founded in 2010, the company specializes in residential and commercial roof replacement, repair, restoration, and insurance claim assistance. They are an Owens Corning Platinum Preferred Contractor, a certified Duro-Last contractor (one of fewer than a dozen in Georgia), and BBB Accredited since April 2015 with an A+ rating. They handle everything from residential roof leak repairs to full-scale commercial roof replacement projects, and are specialists in storm damage insurance claims.",
+  "services": [
+    "Residential Roof Replacement",
+    "Residential Roof Repair",
+    "Commercial Roof Replacement",
+    "Commercial Roof Repair",
+    "Commercial Roof Restoration",
+    "Roof Spray Coatings",
+    "Storm Damage Repair",
+    "Insurance Claims Assistance",
+    "Roof Inspections",
+    "Preventive Maintenance",
+    "Gutter Installation",
+    "Gutter Cleaning",
+    "New Construction Roofing (Commercial)",
+    "TPO Roofing",
+    "Metal Roofing",
+    "Owens Corning Shingle Installation",
+    "Duro-Last Commercial Roofing",
+    "Solar Systems"
+  ],
+  "serviceAreas": [
+    "Atlanta, GA",
+    "Alpharetta, GA",
+    "Brookhaven, GA",
+    "Buckhead, GA",
+    "Buford, GA",
+    "Chamblee, GA",
+    "Clarkston, GA",
+    "Cumming, GA",
+    "Decatur, GA",
+    "Doraville, GA",
+    "Druid Hills, GA",
+    "Dunwoody, GA",
+    "East Point, GA",
+    "Johns Creek, GA",
+    "Kennesaw, GA",
+    "Lawrenceville, GA",
+    "Mableton, GA",
+    "Marietta, GA",
+    "Norcross, GA",
+    "Powder Springs, GA",
+    "Roswell, GA",
+    "Sandy Springs, GA",
+    "Smyrna, GA",
+    "Stone Mountain, GA",
+    "Suwanee, GA",
+    "Tucker, GA",
+    "Vinings, GA",
+    "Woodstock, GA"
+  ],
+  "manufacturerCerts": {
+    "gaf_master_elite": false,
+    "gaf_certified": true,
+    "owens_corning_platinum": true,
+    "certainteed_select": false,
+    "duro_last_certified": true
+  },
+  "certifications": {
+    "bbb": true,
+    "bbb_rating": "A+",
+    "bbb_accredited_since": "2015-04-10",
+    "nrca": false,
+    "license_number": null
+  },
+  "reviews": {
+    "google_count": 114,
+    "google_rating": 4.7,
+    "birdeye_count": 148,
+    "birdeye_rating": 4.8,
+    "facebook_count": null,
+    "yelp_count": null,
+    "yelp_rating": null
+  },
+  "awards": [
+    "Best of Buckhead 2026 Top Roofing Company"
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/NewImageRoofAtlanta/",
+    "instagram": null,
+    "youtube": null,
+    "linkedin": "https://www.linkedin.com/in/montana-mace-89295562/"
+  },
+  "hasMascot": false,
+  "brandVoice": [
+    "professional",
+    "reliable",
+    "certifications-focused",
+    "insurance-claim-specialist",
+    "residential-and-commercial"
+  ],
+  "competitors": [
+    "Dr. Roof Atlanta",
+    "Atlanta Premier Roofing",
+    "Roof Solutions and Construction",
+    "Hercules Roofing",
+    "Atlanta Roofing"
+  ],
+  "businessModel": {
+    "primaryFocus": "residential-and-commercial",
+    "residentialPct": 60,
+    "commercialPct": 40
+  },
+  "marketSegment": {
+    "primaryFocus": "residential-and-commercial",
+    "geographicFocus": "metro-atlanta",
+    "specialization": "storm-damage-and-insurance-claims"
+  },
+  "specialOffers": {
+    "financing": true,
+    "senior_discount": false,
+    "military_discount": false,
+    "free_inspection": true,
+    "no_money_down_insurance_claims": true
+  },
+  "financing": {
+    "offered": true,
+    "details": "Wide range of financing options available for residential and commercial roofing projects"
+  },
+  "brandGuidelines": {
+    "hasFormalGuide": false
+  },
+  "business_hours": "Not found",
+  "owner_cutout_url": null,
+  "logoUrl": "https://www.newimageroofingatlanta.com/wp-content/uploads/2019/12/NIR_Website_Logo_New.png",
+  "logoLocalPath": "MANUAL-DROP-NEEDED - logo-primary.png not downloadable from public URL",
+  "data_confidence": "medium-high",
+  "data_sources": [
+    "Web search: Google Business Profile data",
+    "BBB profile: bbb.org/us/ga/atlanta/profile/commercial-roofing/new-image-roofing-atlanta-inc-0443-27436004",
+    "GAF profile: gaf.com/en-us/roofing-contractors/commercial/new-image-roofing-atlanta-llc-cumming-ga-1118912",
+    "Birdeye: reviews.birdeye.com/new-image-roofing-atlanta-148959722091930",
+    "LinkedIn: linkedin.com/in/montana-mace-89295562/",
+    "Facebook: facebook.com/NewImageRoofAtlanta/",
+    "Website sitemap references: newimageroofingatlanta.com (403 on direct pages)"
+  ],
+  "notes": "Website returns 403 on direct page fetches. Data compiled from third-party review platforms, search engine snippets, and structured web search. GAF listing appears under LLC entity in Cumming GA. BBB accreditation is for Inc entity in Atlanta. Both appear to be the same operating company. Review count from Google (114 at 4.7) is likely undercount as of research date; Birdeye aggregates 148 reviews at 4.8. Best of Buckhead 2026 award confirms local market recognition."
+}
