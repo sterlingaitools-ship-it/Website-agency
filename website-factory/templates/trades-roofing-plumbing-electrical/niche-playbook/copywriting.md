@@ -8,7 +8,7 @@ Voice principles:
 
 **1. Every sentence earns trust before it asks for anything.**
 
-Avoid: "We are the premier roofing solution provider in the region."
+Avoid vague superlatives: "We are the top roofing solution provider in the region."
 Use: "We have replaced 400+ roofs in this area since 2008. Our license number is on every page."
 
 **2. Short sentences. One idea per sentence. No compound claims.**
@@ -33,7 +33,7 @@ Use: "Your roof has three layers. Here is what each one does, and which one we f
 
 **6. No fluff between the claim and the proof.**
 
-Avoid: "We are passionate about delivering outstanding results for every homeowner we work with."
+Avoid emotion-first language: "We care deeply about every homeowner we work with."
 Use: "We show up on the day we say we will. That is the number one complaint about contractors in this area. We take it seriously."
 
 ---
@@ -63,7 +63,7 @@ Phrases that pattern-match contractor scam language or signal AI copy to homeown
 These phrases appear in top-performing roofing sites written by real practitioners. Use them.
 
 - "free inspection, no obligation" (not "free estimate" alone - inspection is the entry point)
-- "we handle the insurance claim from start to finish"
+- "we handle the insurance claim — inspection, paperwork, and adjuster meeting"
 - "GAF Master Elite - top 3% of US roofers"
 - "licensed, insured, and on the books" (UK variant: "fully insured, VAT registered")
 - "we do not start until you sign off on the quote"

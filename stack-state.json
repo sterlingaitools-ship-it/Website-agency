@@ -10,7 +10,7 @@
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
     "m2c.nicheDecided": true,
-    "m2d.templateBuilt": false,
+    "m2d.templateBuilt": true,
     "m3.offerLocked": false,
     "m4.factoryStructureLoaded": false,
     "m5.factoryBriefLocked": false,
@@ -20,7 +20,7 @@
     "m7.engineBriefLocked": false,
     "engine.deployed": false,
     "engine.contextPasted": false,
-    "factory.generated": false
+    "factory.generated": true
   },
   "credentials": {
     "anthropic": true,
@@ -60,6 +60,11 @@
       "timestamp": "2026-05-21T00:00:00.000Z",
       "command": "/pick-niche",
       "outcome": "trades-roofing-plumbing-electrical selected"
+    },
+    {
+      "timestamp": "2026-05-22T00:00:00.000Z",
+      "command": "/build-niche-template",
+      "outcome": "complete — all 6 validator gates pass, template registered at templates/trades-roofing-plumbing-electrical, niche templateVersion=1"
     }
   ]
 }

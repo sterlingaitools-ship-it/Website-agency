@@ -67,9 +67,10 @@ const DEFAULT_DIFFERENTIATORS = [
 ];
 
 export default function WhyUs() {
+  const whyChooseUs = brandDNA.why_choose_us;
   const items =
-    brandDNA.why_choose_us && brandDNA.why_choose_us.length > 0
-      ? brandDNA.why_choose_us.slice(0, 4).map((title, i) => ({
+    whyChooseUs && whyChooseUs.length > 0
+      ? whyChooseUs.slice(0, 4).map((title, i) => ({
           title,
           body: DEFAULT_DIFFERENTIATORS[i]?.body ?? '',
           icon: DEFAULT_DIFFERENTIATORS[i]?.icon ?? Icon247,

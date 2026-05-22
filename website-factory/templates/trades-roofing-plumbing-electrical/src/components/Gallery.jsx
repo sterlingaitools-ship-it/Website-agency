@@ -113,7 +113,8 @@ function Lightbox({ project, onClose }) {
 export default function Gallery({ limit = 6, showSeeAll = true }) {
   const [lightboxProject, setLightboxProject] = useState(null);
 
-  const projects = brandDNA.previous_projects.slice(0, limit);
+  const allProjects = brandDNA.previous_projects;
+  const projects = allProjects.slice(0, limit);
 
   const openLightbox = (project) => setLightboxProject(project);
   const closeLightbox = () => setLightboxProject(null);

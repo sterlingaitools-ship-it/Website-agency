@@ -145,19 +145,22 @@ export default function ServicePage() {
   const { service: serviceSlug } = useParams();
 
   // Find matching service from brandDNA or fall back to a default shape
+  const services = brandDNA.services;
   const service =
-    brandDNA.services.find((s) => s.slug === serviceSlug) ||
+    services.find((s) => s.slug === serviceSlug) ||
     (serviceSlug ? { slug: serviceSlug, name: serviceSlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()), body: null } : null);
 
   // FAQ items filtered by service slug (uses brandDNA.faq[])
-  const faqItems = brandDNA.faq.filter(
+  const faqSource = brandDNA.faq;
+  const faqItems = faqSource.filter(
     (item) => !serviceSlug || !item.category || item.category === serviceSlug
   );
 
   // Reviews filtered by service tag
+  const reviewItems = brandDNA.reviews.items;
   const filteredReviews = {
     ...brandDNA.reviews,
-    items: brandDNA.reviews.items.filter(
+    items: reviewItems.filter(
       (r) => !r.category || !serviceSlug || r.category === serviceSlug
     ),
   };

@@ -215,18 +215,18 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                {brandDNA.hours.display.length > 0 && (
+                {(() => { const hoursDisplay = brandDNA.hours.display; return hoursDisplay.length > 0 ? (
                   <div>
                     <h3 className="font-heading font-semibold text-base text-ink mb-1">
                       Hours
                     </h3>
-                    {brandDNA.hours.display.map((row, i) => (
+                    {hoursDisplay.map((row, i) => (
                       <p key={i} className="font-body text-sm text-neutral-dim">
                         {row.label}: {row.value}
                       </p>
                     ))}
                   </div>
-                )}
+                ) : null; })()}
 
                 {/* Map embed */}
                 {brandDNA.contact.mapsEmbedUrl && (

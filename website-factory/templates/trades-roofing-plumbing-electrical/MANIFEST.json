@@ -1,0 +1,90 @@
+{
+  "niche": "trades-roofing-plumbing-electrical",
+  "templateVersion": 1,
+  "generatedAt": "2026-05-22",
+  "phases": {
+    "5a": "template-spec + wireframe + sitemap",
+    "5b": "niche-design-tokens.json extraction",
+    "5c": "build skeleton (generate-factory.py)",
+    "6": "per-section React components (12 components)",
+    "7": "per-route pages (9 pages)",
+    "8": "niche playbook (10 JSON + 7 markdown + trust-badges manifest)",
+    "9": "per-niche SOPs + agents",
+    "10": "per-niche QA checklists",
+    "12": "register + lock"
+  },
+  "components": [
+    "src/components/NavBar.jsx",
+    "src/components/MobileCTABar.jsx",
+    "src/components/Hero.jsx",
+    "src/components/TrustBar.jsx",
+    "src/components/Services.jsx",
+    "src/components/WhyUs.jsx",
+    "src/components/Process.jsx",
+    "src/components/Reviews.jsx",
+    "src/components/Gallery.jsx",
+    "src/components/ServiceAreas.jsx",
+    "src/components/FinalCTA.jsx",
+    "src/components/Footer.jsx"
+  ],
+  "pages": [
+    "src/pages/HomePage.jsx",
+    "src/pages/ServicePage.jsx",
+    "src/pages/CityPage.jsx",
+    "src/pages/AboutPage.jsx",
+    "src/pages/ContactPage.jsx",
+    "src/pages/ReviewsPage.jsx",
+    "src/pages/GalleryPage.jsx",
+    "src/pages/FaqPage.jsx",
+    "src/pages/NotFoundPage.jsx"
+  ],
+  "nichePlaybook": {
+    "json": [
+      "niche-playbook/brand-voice.json",
+      "niche-playbook/copy-locks.json",
+      "niche-playbook/photo-manifest.json",
+      "niche-playbook/segment-vocabulary.json",
+      "niche-playbook/seo-keywords.json",
+      "niche-playbook/services.json",
+      "niche-playbook/trust-signals.json",
+      "niche-playbook/hero-composition.json",
+      "niche-playbook/motion-preset.json",
+      "niche-playbook/section-order.json"
+    ],
+    "markdown": [
+      "niche-playbook/copywriting.md",
+      "niche-playbook/copy-blocklist-additions.md",
+      "niche-playbook/photo-manifest.md",
+      "niche-playbook/sop-overrides/README.md",
+      "niche-playbook/trust-badges/MANUAL-DROP-NEEDED.md"
+    ]
+  },
+  "designTokens": {
+    "primary": "#1a2e4a",
+    "accent": "#f5a623",
+    "headingFont": "Montserrat",
+    "bodyFont": "Inter",
+    "shapeMode": "sharp",
+    "motionPreset": "energetic"
+  },
+  "sectionOrder": [
+    "NavBar",
+    "MobileCTABar",
+    "Hero",
+    "TrustBar",
+    "Services",
+    "WhyUs",
+    "Process",
+    "Reviews",
+    "Gallery",
+    "ServiceAreas",
+    "FinalCTA",
+    "Footer"
+  ],
+  "haltGates": {
+    "heroSSIM": 0.85,
+    "trustBarSSIM": 0.83,
+    "trustBarPosition": "must be immediately after Hero"
+  },
+  "factoryRegistered": true
+}

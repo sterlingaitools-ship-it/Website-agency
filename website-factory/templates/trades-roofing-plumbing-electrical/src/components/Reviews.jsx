@@ -87,7 +87,8 @@ function ReviewCard({ review, index }) {
 }
 
 export default function Reviews({ limit = 6, showSeeAll = true }) {
-  const items = brandDNA.reviews.items.slice(0, limit);
+  const reviewItems = brandDNA.reviews.items;
+  const items = reviewItems.slice(0, limit);
 
   return (
     <section

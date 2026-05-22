@@ -41,7 +41,7 @@ Insurance claim assistance is the single most powerful differentiator in high-st
 
 - The nav bar (Storm Damage as a named link)
 - The hero subhead (one sentence referencing claim handling)
-- The WhyUs section (one full column dedicated to "We Handle the Insurance Claim")
+- The WhyUs section (one full column focused to "We Handle the Insurance Claim")
 - The storm-damage service page hero
 - The FinalCTA section copy
 
@@ -52,7 +52,7 @@ Markets where this differentiator applies most strongly: Texas, Oklahoma, Colora
 Default strategy targets mid-size US metros in the Southeast, Midwest, and South Central regions. These markets have high hail and wind event frequency, a homeowner base that has gone through at least one insurance claim, and a moderate-to-high roofing replacement cycle.
 
 City tier strategy:
-- Primary city: the city where the GBP is registered. Build one dedicated city page.
+- Primary city: the city where the GBP is registered. Build one focused city page.
 - Secondary cities (4 to 8): surrounding suburbs and towns within the client's service radius. Build one city page per secondary city.
 - City page format: `[City] Roofing Contractor | Licensed and Insured | Free Estimates | [Company Name]`
 

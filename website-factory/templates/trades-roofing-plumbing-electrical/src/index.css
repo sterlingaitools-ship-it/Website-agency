@@ -1,36 +1,21 @@
-/*
- * index.css template — Module 2D substitutes the {{...}} slots with
- * per-niche values from niche-design-tokens.json before writing this
- * file to templates/{niche-slug}/src/index.css.
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Niche design tokens — substituted by Module 2D from niche-design-tokens.json */
 
 :root {
-  /* Per-niche palette tokens (RGB triplets for tailwind's rgb() alpha) */
-  --primary: 26 46 74;
-  --primary-dark: 19 34 58;
-  --primary-slate: 31 55 87;
-  --accent: 245 166 35;
-  --accent-light: 249 196 103;
-  --accent-dark: 196 133 28;
-  --neutral: 148 163 184;
-  --neutral-dim: 71 85 105;
-  --silver: 226 232 240;
-  --ink: 22 40 68;
-
-  /* Foundation tokens (universal) */
-  --glass-opacity: 0.80;
-  --motion-duration: 400ms;
-  --motion-stagger: 50ms;
-  --motion-easing-premium-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --motion-easing-premium-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --primary: 0 102 204;
+  --primary-dark: 0 51 102;
+  --primary-slate: 85 119 170;
+  --accent: 255 170 0;
+  --accent-light: 255 204 85;
+  --accent-dark: 204 136 0;
+  --neutral: 170 170 170;
+  --neutral-dim: 136 136 136;
+  --silver: 204 204 204;
+  --ink: 34 34 34;
 }
-
 /* Universal foundation rules (apply to every niche) */
 
 html {

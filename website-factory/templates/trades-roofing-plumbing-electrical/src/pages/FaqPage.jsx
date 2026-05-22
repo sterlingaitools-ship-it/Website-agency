@@ -121,15 +121,20 @@ export default function FaqPage() {
 
             {displayItems.length > 0 ? (
               <dl className="flex flex-col gap-2">
-                {displayItems.map((item, idx) => (
-                  <AccordionItem
-                    key={idx}
-                    item={item}
-                    index={idx}
-                    isOpen={openIdx === idx}
-                    onToggle={() => setOpenIdx(openIdx === idx ? null : idx)}
-                  />
-                ))}
+                {displayItems.map((item, idx) => {
+                  const handleToggle = openIdx === idx
+                    ? function() { setOpenIdx(null); }
+                    : function() { setOpenIdx(idx); };
+                  return (
+                    <AccordionItem
+                      key={idx}
+                      item={item}
+                      index={idx}
+                      isOpen={openIdx === idx}
+                      onToggle={handleToggle}
+                    />
+                  );
+                })}
               </dl>
             ) : (
               <p className="text-center font-body text-neutral-dim">

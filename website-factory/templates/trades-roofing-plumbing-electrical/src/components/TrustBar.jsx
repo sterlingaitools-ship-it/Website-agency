@@ -57,8 +57,9 @@ function CalendarIcon() {
 }
 
 export default function TrustBar() {
-  const gafBadge = brandDNA.trust_badges.find((b) => b.alt && b.alt.toLowerCase().includes('gaf'));
-  const bbbBadge = brandDNA.trust_badges.find((b) => b.alt && b.alt.toLowerCase().includes('bbb'));
+  const trustBadges = brandDNA.trust_badges;
+  const gafBadge = trustBadges.find((b) => b.alt && b.alt.toLowerCase().includes('gaf'));
+  const bbbBadge = trustBadges.find((b) => b.alt && b.alt.toLowerCase().includes('bbb'));
 
   const divider = (
     <div className="hidden sm:block w-px self-stretch bg-neutral/30 mx-2" aria-hidden="true" />

@@ -1,9 +1,4 @@
-/**
- * Tailwind config template. Module 2D substitutes the {{...}} slots
- * with per-niche values from niche-design-tokens.json + the niche
- * playbook's motion-preset.json before writing this to
- * templates/{niche-slug}/tailwind.config.js.
- */
+/* Niche Tailwind config — design tokens from niche-design-tokens.json + motion-preset.json */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],

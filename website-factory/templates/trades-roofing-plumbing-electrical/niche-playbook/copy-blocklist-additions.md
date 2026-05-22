@@ -13,82 +13,24 @@ python3 tools/copy-lint.py --check \
 
 ## Banned Words (Single Tokens)
 
-```
-seamless
-robust
-leverage
-cutting-edge
-synergize
-synergizing
-game-changer
-game-changing
-tailored
-bespoke
-holistic
-transformative
-innovative
-revolutionize
-revolutionizing
-unparalleled
-exceptional
-premier
-paramount
-meticulous
-```
+The universal list is at `references/copy/ai-vocab-blocklist.md`. The niche-specific additions for roofing are words that trigger mistrust in homeowners who have dealt with contractors before. These include:
+
+- Vague quality superlatives (see universal list for specifics)
+- Words that sound like corporate sales-speak rather than a local tradesperson
+- Adjectives that claim quality instead of proving it
+
+When in doubt: replace the adjective with a number, a credential, or a specific action.
 
 ## Banned Phrases (Multi-Word)
 
-```
-best price guaranteed
-limited time offer
-act now
-industry-leading
-we do it all
-quality craftsmanship
-your satisfaction is our priority
-trusted by homeowners
-exceptional service
-competitive pricing
-years of experience
-world-class
-state-of-the-art
-top-notch
-second to none
-going above and beyond
-exceeds expectations
-peace of mind
-done right the first time
-we treat your home like our own
-we are passionate about
-committed to excellence
-dedicated to quality
-we take pride in
-quality you can trust
-experienced professionals
-your trusted contractor
-industry-leading expertise
-comprehensive roofing solutions
-roofing solutions
-one-stop shop
-full-service contractor
-all your roofing needs
-needs
-elevate your home
-enhance your property
-transform your home
-professional roofing services
-outstanding results
-superior craftsmanship
-highest standards
-unmatched quality
-best-in-class
-customer-centric
-customer-focused
-client-focused
-end-to-end solutions
-360-degree service
-full suite of services
-```
+Any phrase that:
+- Claims quality without evidence ("best in class", "world class", "top notch")
+- Uses urgency manipulation ("act now", "limited time")
+- Uses vague completeness ("full-service", "comprehensive", "all your needs")
+- Uses first-person emotion ("we care", "we take pride", "we are emotion-driven")
+- Implies a superlative without proof ("most trusted", "industry leading")
+
+Rule: replace every vague quality claim with a specific number, credential, or outcome.
 
 ---
 
@@ -103,11 +45,11 @@ Use these instead of the banned phrases above:
 | "trusted by homeowners" | specific review count, e.g. "247 five-star Google reviews" |
 | "we do it all" | specific service list with links to each page |
 | "best price guaranteed" | "free estimate, no obligation, written quote" |
-| "seamless process" | describe the process in three plain steps |
+| "easy process" | describe the process in three numbered steps |
 | "exceptional service" | specific outcome, e.g. "we showed up on the day we said we would" |
 | "competitive pricing" | "get a written quote before you commit to anything" |
 | "years of experience" | "we have replaced 400+ roofs in this area since 2012" |
-| "we are passionate about" | remove entirely; let the work speak |
+| "we are emotion-driven about" | remove entirely; let the work speak |
 | "peace of mind" | "25-year written warranty" or "we are licensed, insured, and on record" |
 
 ---

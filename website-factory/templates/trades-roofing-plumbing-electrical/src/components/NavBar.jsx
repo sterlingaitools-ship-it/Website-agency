@@ -10,6 +10,11 @@ const navLinks = [
   { label: 'Free Estimate', to: '/contact' },
 ];
 
+function handleLogoError(e) {
+  e.currentTarget.style.display = 'none';
+  e.currentTarget.nextSibling.style.display = 'inline';
+}
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -41,19 +46,17 @@ export default function NavBar() {
           aria-label={`${brandDNA.company.name} - go to homepage`}
           onClick={closeMenu}
         >
-          {brandDNA.company.logoUrl ? (
-            <img
-              src={brandDNA.company.logoUrl}
-              alt={brandDNA.company.name}
-              className="h-10 max-h-10 w-auto object-contain"
-              width="160"
-              height="40"
-            />
-          ) : (
-            <span className="font-heading font-bold text-xl text-white">
-              {brandDNA.company.name}
-            </span>
-          )}
+          <img
+            src="/logo-white.svg"
+            alt={brandDNA.company.name}
+            className="h-10 max-h-10 w-auto object-contain"
+            width="160"
+            height="40"
+            onError={handleLogoError}
+          />
+          <span className="font-heading font-bold text-xl text-white" style={{ display: 'none' }}>
+            {brandDNA.company.name}
+          </span>
         </Link>
 
         {/* Desktop centre nav */}

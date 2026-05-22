@@ -11,6 +11,11 @@ const serviceOptions = [
   'Other',
 ];
 
+function handleLogoError(e) {
+  e.currentTarget.style.display = 'none';
+  e.currentTarget.nextSibling.style.display = 'inline';
+}
+
 /**
  * Footer — 4-column layout on desktop, single-column stack on mobile.
  * Col 1: brand / contact info
@@ -44,25 +49,20 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div className="flex flex-col gap-3">
-            {brandDNA.company.logoUrl ? (
-              <Link to="/" aria-label={`${brandDNA.company.name} homepage`}>
-                <img
-                  src={brandDNA.company.logoUrl}
-                  alt={brandDNA.company.name}
-                  className="max-h-10 w-auto object-contain"
-                  loading="lazy"
-                  width="160"
-                  height="40"
-                />
-              </Link>
-            ) : (
-              <Link
-                to="/"
-                className="font-heading font-semibold text-base text-white hover:text-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded"
-              >
+            <Link to="/" aria-label={`${brandDNA.company.name} homepage`}>
+              <img
+                src="/logo-white.svg"
+                alt={brandDNA.company.name}
+                className="max-h-10 w-auto object-contain"
+                loading="lazy"
+                width="160"
+                height="40"
+                onError={handleLogoError}
+              />
+              <span className="font-heading font-semibold text-base text-white" style={{ display: 'none' }}>
                 {brandDNA.company.name}
-              </Link>
-            )}
+              </span>
+            </Link>
 
             {brandDNA.address.full && (
               <address className="not-italic font-body text-sm text-neutral leading-relaxed">
@@ -99,9 +99,9 @@ export default function Footer() {
             <h3 className="font-heading font-semibold text-sm text-accent mb-4">
               Our Services
             </h3>
-            {brandDNA.services.length > 0 ? (
+            {(() => { const services = brandDNA.services; return services.length > 0 ? (
               <ul className="flex flex-col gap-2" role="list">
-                {brandDNA.services.map((service) => (
+                {services.map((service) => (
                   <li key={service.slug}>
                     <Link
                       to={`/services/${service.slug}`}
@@ -116,7 +116,7 @@ export default function Footer() {
               <p className="font-body text-sm text-neutral">
                 Services listed here
               </p>
-            )}
+            ); })()}
           </div>
 
           {/* Col 3 — Service Areas */}
@@ -124,9 +124,9 @@ export default function Footer() {
             <h3 className="font-heading font-semibold text-sm text-accent mb-4">
               Service Areas
             </h3>
-            {brandDNA.serviceAreas.length > 0 ? (
+            {(() => { const serviceAreas = brandDNA.serviceAreas; const displayAreas = serviceAreas.slice(0, 8); return serviceAreas.length > 0 ? (
               <ul className="flex flex-col gap-2" role="list">
-                {brandDNA.serviceAreas.slice(0, 8).map((cityName) => (
+                {displayAreas.map((cityName) => (
                   <li key={cityName}>
                     <Link
                       to={`/areas/${areaSlug(cityName)}`}
@@ -141,7 +141,7 @@ export default function Footer() {
               <p className="font-body text-sm text-neutral">
                 Service areas listed here
               </p>
-            )}
+            ); })()}
           </div>
 
           {/* Col 4 — Mini quote form */}
@@ -201,9 +201,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-body text-xs text-neutral text-center sm:text-left">
-            {brandDNA.copy.copyright
-              ? brandDNA.copy.copyright.replace('{{year}}', currentYear)
-              : `Copyright ${currentYear} ${brandDNA.company.name}. All rights reserved.`}
+            {(() => { const copyrightTpl = brandDNA.copy.copyright; return copyrightTpl ? copyrightTpl.replace('{{year}}', currentYear) : `Copyright ${currentYear} ${brandDNA.company.name}. All rights reserved.`; })()}
           </p>
           <nav aria-label="Legal links" className="flex gap-4">
             <Link

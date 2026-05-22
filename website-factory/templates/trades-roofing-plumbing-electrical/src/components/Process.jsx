@@ -23,9 +23,10 @@ const DEFAULT_STEPS = [
 ];
 
 export default function Process() {
+  const processSteps = brandDNA.process_steps;
   const steps =
-    brandDNA.process_steps && brandDNA.process_steps.length > 0
-      ? brandDNA.process_steps.slice(0, 3)
+    processSteps && processSteps.length > 0
+      ? processSteps.slice(0, 3)
       : DEFAULT_STEPS;
 
   return (

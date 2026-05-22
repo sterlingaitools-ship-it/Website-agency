@@ -10,7 +10,7 @@ import brandDNA from '../config/brand-dna';
  * Full-width, team photo background with dark overlay.
  */
 function AboutHero() {
-  const heading = `${brandDNA.company.name}: ${brandDNA.address.city}'s Trusted Roofing Contractor`;
+  const heading = `${brandDNA.company.name}: Trusted Roofing Contractor in ${brandDNA.address.city}`;
 
   return (
     <section
@@ -52,9 +52,9 @@ function StoryBlock() {
           {/* Founder photo */}
           <div className="w-full lg:w-1/2">
             <div className="aspect-square max-w-sm mx-auto lg:mx-0 bg-silver rounded overflow-hidden">
-              {brandDNA.team.founders.length > 0 && brandDNA.team.founders[0].photoUrl ? (
+              {(() => { const founders = brandDNA.team.founders; return founders.length > 0 && founders[0].photoUrl ? (
                 <img
-                  src={brandDNA.team.founders[0].photoUrl}
+                  src={founders[0].photoUrl}
                   alt={brandDNA.team.founder.displayName}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -67,7 +67,7 @@ function StoryBlock() {
                     Founder photo
                   </span>
                 </div>
-              )}
+              ); })()}
             </div>
           </div>
 
@@ -110,7 +110,8 @@ function StoryBlock() {
  * Certification row — horizontal badge display.
  */
 function CertificationRow() {
-  if (brandDNA.trust_badges.length === 0) return null;
+  const trustBadges = brandDNA.trust_badges;
+  if (trustBadges.length === 0) return null;
 
   return (
     <section className="bg-silver py-12" aria-label="Certifications and accreditations">
@@ -122,7 +123,7 @@ function CertificationRow() {
           className="flex flex-wrap justify-center gap-8 items-center"
           role="list"
         >
-          {brandDNA.trust_badges.map((badge) => (
+          {trustBadges.map((badge) => (
             <li key={badge.filename}>
               <img
                 src={`/badges/${badge.filename}`}
@@ -144,7 +145,8 @@ function CertificationRow() {
  * Team grid — photo + name + role cards.
  */
 function TeamGrid() {
-  if (brandDNA.team_members.length === 0) return null;
+  const teamMembers = brandDNA.team_members;
+  if (teamMembers.length === 0) return null;
 
   return (
     <section className="bg-white py-section-gap" aria-labelledby="team-heading">
@@ -159,7 +161,7 @@ function TeamGrid() {
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           role="list"
         >
-          {brandDNA.team_members.map((member) => (
+          {teamMembers.map((member) => (
             <li key={member.filename || member.name}>
               <article className="flex flex-col items-center text-center gap-3">
                 {member.filename ? (
