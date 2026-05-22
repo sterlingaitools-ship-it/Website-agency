@@ -10,7 +10,7 @@
   "stage_7": "complete",
   "stage_7_confidence": 0.77,
   "stage_7_5": "skipped",
-  "stage_9": "pending",
+  "stage_9": "needs_regeneration",
   "stage_10_1": "pending",
   "stage_10_2": "pending",
   "stage_10_3": "pending",
@@ -20,5 +20,6 @@
   "stage_10_4d": "pending",
   "stage_11": "pending",
   "stage_12": "pending",
-  "stage_13": "pending"
+  "stage_13": "pending",
+  "stage_9_note": "Gemini Image API free-tier quota 0. Re-run after enabling billing."
 }

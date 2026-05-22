@@ -83,7 +83,7 @@ MOBILE_HEIGHT = 1200
 MAX_RETRIES = 3
 BASE_BACKOFF_SEC = 2
 
-DEFAULT_MODEL = "gemini-2.5-flash-image-preview"
+DEFAULT_MODEL = "gemini-2.5-flash-image"
 
 # Universal mood fallback. Mood names are niche-neutral; lighting briefs
 # describe LIGHT, not subject matter. Per-niche templates override these
@@ -321,11 +321,33 @@ def build_prompt(brand_dna: dict, research: dict, intake: dict, has_owner: bool,
     primary = palette.get("primary", "#1a1a1a")
     accent = palette.get("accent", "#FFD700")
     accent_name = palette.get("accent_name", "gold")
+    # Derive a human-readable color description from the primary hex for {brand_color_description}.
+    def _hex_to_color_desc(h: str) -> str:
+        h = h.lstrip("#")
+        if len(h) != 6:
+            return "dark"
+        r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        if b > r and b > g and r < 80:
+            return "deep navy blue"
+        if b > r and b > g:
+            return "blue"
+        if r > g and r > b and r > 150:
+            return "red"
+        if g > r and g > b:
+            return "green"
+        return "dark"
+    brand_color_description = _hex_to_color_desc(primary)
 
     # Mood lookup: brand-dna.hero.mood -> niche mood mapping -> lighting brief.
     hero_block = brand_dna.get("hero", {}) if isinstance(brand_dna.get("hero"), dict) else {}
     mood = mood_override or hero_block.get("mood", "golden_hour_warm")
-    lighting = mood_mapping.get(mood) or mood_mapping.get("golden_hour_warm", "")
+    _raw_lighting = mood_mapping.get(mood) or mood_mapping.get("golden_hour_warm", "")
+    # Mood map values may be a dict with a lightingBrief key (per niche-playbook schema)
+    # or a plain string (legacy). Always resolve to a plain string.
+    if isinstance(_raw_lighting, dict):
+        lighting = _raw_lighting.get("lightingBrief", str(_raw_lighting))
+    else:
+        lighting = _raw_lighting or ""
 
     # Region lookup: brand-dna.region -> niche regions -> universal fallback.
     region = region_override or brand_dna.get("region", "default")
@@ -372,6 +394,7 @@ def build_prompt(brand_dna: dict, research: dict, intake: dict, has_owner: bool,
         "accent_color": accent,
         "accent": accent,
         "accent_name": accent_name,
+        "brand_color_description": brand_color_description,
         "mood": mood,
         "mood_lighting": lighting,
         "lighting": lighting,
@@ -486,7 +509,13 @@ def call_gemini(prompt: str, logo_path: Path, owner_path, model_name: str) -> by
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            response = client.models.generate_content(model=model_name, contents=contents)
+            response = client.models.generate_content(
+                model=model_name,
+                contents=contents,
+                config=types.GenerateContentConfig(
+                    response_modalities=["IMAGE", "TEXT"],
+                ),
+            )
             for cand in response.candidates or []:
                 for part in cand.content.parts or []:
                     inline = getattr(part, "inline_data", None)
