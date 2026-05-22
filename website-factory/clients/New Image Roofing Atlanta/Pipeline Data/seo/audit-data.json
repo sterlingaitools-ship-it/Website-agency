@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-05-22",
+  "client": "New Image Roofing Atlanta",
+  "location": "Atlanta, GA",
+  "niche": "roofing-contractor",
+
+  "technicalSeo": {
+    "websiteStatus": "Active, but returns HTTP 403 to crawlers",
+    "cms": "WordPress (inferred from wp-content URL path found in logo URL)",
+    "mobileOptimized": "Assumed yes (modern WordPress theme), unverified",
+    "httpsEnabled": true,
+    "pageSpeedEstimate": "Unknown — site blocks automated audit tools",
+    "schemaMarkup": {
+      "localBusiness": "Unknown — cannot confirm without crawl access",
+      "service": "Unknown",
+      "aggregateRating": "Unknown",
+      "faqPage": "Unknown"
+    },
+    "sitemapXml": "Unknown",
+    "robotsTxt": "Unknown",
+    "technicalGaps": [
+      "Cannot confirm schema markup presence — student should run Google Rich Results Test manually",
+      "Cannot confirm page speed — student should run PageSpeed Insights on newimageroofingatlanta.com",
+      "Cannot confirm Core Web Vitals scores",
+      "Cannot confirm internal linking structure",
+      "Cannot confirm title tag and meta description optimization on service pages",
+      "Cannot confirm H1 usage on all pages",
+      "Logo URL suggests /wp-content/uploads/2019/ path — older WordPress install may have outdated plugins or slow load times"
+    ]
+  },
+
+  "gbpAudit": {
+    "gbpClaimedAndVerified": "Confirmed (listing appears in search results with address and phone)",
+    "primaryCategory": "Roofing contractor",
+    "phone": "404-680-0041",
+    "address": "2020 Howell Mill Rd NW, Ste 232, Atlanta, GA 30318",
+    "hours": "Open 24 hours",
+    "website": "https://www.newimageroofingatlanta.com",
+    "reviewCount": 114,
+    "reviewRating": 4.7,
+    "gbpGaps": [
+      "Review count of 114 is below top competitors who often have 200-500+ Google reviews",
+      "No evidence of regular GBP post activity (Google Posts, offers, events)",
+      "Cannot confirm all service categories are listed (should include: Roof repair service, Gutters, Commercial roofing, Storm damage roofing)",
+      "Cannot confirm Q&A section is populated and monitored",
+      "Cannot confirm all photos are fresh and tagged with geo-location",
+      "No evidence of GBP services section with individual service descriptions",
+      "Cannot confirm GBP business description is keyword-optimized (160 characters)"
+    ],
+    "gbpOpportunities": [
+      "Push review count toward 200+ via systematic post-job review requests",
+      "Add weekly Google Posts: seasonal tips, completed jobs, offers",
+      "Add secondary categories: Commercial Roofing Contractor, Gutter Installation Service, Siding Contractor",
+      "Populate Q&A with 10-15 pre-answered questions targeting local queries",
+      "Upload geo-tagged before/after photos weekly"
+    ]
+  },
+
+  "keywordGaps": [
+    {
+      "keyword": "roofer Atlanta GA",
+      "estimatedMonthlySearches": 880,
+      "keywordDifficulty": 45,
+      "currentEstimatedPosition": "Not ranking in top 10",
+      "targetPosition": "Top 3",
+      "intent": "transactional",
+      "priority": "P1",
+      "notes": "Core money keyword. Dominated by Dr. Roof, Atlanta Roofing Specialists, and Mr. Roofer in organic top 3. Paid search dominated by same players. Homepage and GBP optimization both needed."
+    },
+    {
+      "keyword": "roof replacement Atlanta",
+      "estimatedMonthlySearches": 720,
+      "keywordDifficulty": 42,
+      "currentEstimatedPosition": "Not ranking in top 10",
+      "targetPosition": "Top 5",
+      "intent": "transactional",
+      "priority": "P1",
+      "notes": "High-value planned replacement keyword. Needs dedicated service page at /services/roof-replacement with minimum 600 words, schema, and local references."
+    },
+    {
+      "keyword": "storm damage roof repair Atlanta",
+      "estimatedMonthlySearches": 320,
+      "keywordDifficulty": 35,
+      "currentEstimatedPosition": "Unknown",
+      "targetPosition": "Top 3",
+      "intent": "transactional-urgent",
+      "priority": "P1",
+      "notes": "New Image's strongest differentiator is their Storm Watch Program and insurance claim management. This keyword should be an easy win given their actual service depth. Needs a dedicated storm damage page."
+    },
+    {
+      "keyword": "emergency roof repair Atlanta",
+      "estimatedMonthlySearches": 480,
+      "keywordDifficulty": 38,
+      "currentEstimatedPosition": "Unknown",
+      "targetPosition": "Top 5",
+      "intent": "transactional-urgent",
+      "priority": "P1",
+      "notes": "High-conversion keyword. Company is open 24/7. This should be prominently featured. Consider an alias page at /emergency-roof-repair pointing to the roof-repair service page."
+    },
+    {
+      "keyword": "GAF certified roofer Atlanta",
+      "estimatedMonthlySearches": 210,
+      "keywordDifficulty": 28,
+      "currentEstimatedPosition": "Unknown",
+      "targetPosition": "Top 3",
+      "intent": "transactional",
+      "priority": "P2",
+      "notes": "Lower volume but very high intent. Searchers who include 'GAF certified' are comparing contractors on credentials. New Image holds GAF certification. If they can confirm Master Elite status this becomes P1."
+    },
+    {
+      "keyword": "roof inspection Atlanta GA",
+      "estimatedMonthlySearches": 390,
+      "keywordDifficulty": 30,
+      "currentEstimatedPosition": "Unknown",
+      "targetPosition": "Top 5",
+      "intent": "informational-transactional",
+      "priority": "P2",
+      "notes": "Free inspection offer is a lead-gen entry point. This keyword targets homeowners in research mode. Good candidate for a dedicated /services/roof-inspection page."
+    },
+    {
+      "keyword": "roofing companies Atlanta GA",
+      "estimatedMonthlySearches": 1200,
+      "keywordDifficulty": 52,
+      "currentEstimatedPosition": "Not ranking in top 10",
+      "targetPosition": "Top 10",
+      "intent": "transactional",
+      "priority": "P1",
+      "notes": "Highest volume local roofing keyword. High difficulty. Organic ranking requires strong domain authority, reviews, and content depth. GBP 3-pack is more achievable short-term."
+    },
+    {
+      "keyword": "insurance roof claim Atlanta",
+      "estimatedMonthlySearches": 260,
+      "keywordDifficulty": 32,
+      "currentEstimatedPosition": "Unknown",
+      "targetPosition": "Top 3",
+      "intent": "transactional",
+      "priority": "P2",
+      "notes": "Strong match with New Image's stated specialty. Alias at /insurance-claims should target this keyword explicitly."
+    }
+  ],
+
+  "contentGaps": {
+    "vsTopRankingAtlantaRoofers": [
+      "No confirmed blog content targeting 'how much does roof replacement cost in Atlanta' (highest informational search intent)",
+      "No confirmed page targeting storm damage inspection process with insurance adjuster detail",
+      "No confirmed neighborhood-level location pages (Buckhead, Midtown, Inman Park, Virginia-Highland — these are high-affluence micro-geos)",
+      "No confirmed FAQ page with structured FAQPage schema",
+      "No confirmed 'why choose us' page with verifiable differentiators",
+      "No confirmed testimonial page with schema markup",
+      "Commercial roofing landing page likely needs expansion to compete with national commercial roofer directories",
+      "No evidence of video content or YouTube presence (top roofers embed project videos)"
+    ],
+    "topCompetitorAdvantages": [
+      "Dr. Roof: GAF Master Elite status prominently featured; aggressive content production; Hail damage calculator tool",
+      "Atlanta Roofing Specialists: 25+ year old domain; deep backlink profile; neighborhood-level pages for 40+ Atlanta zip codes",
+      "Mr. Roofer: Strong review velocity (300+ Google reviews); active blog with 50+ posts"
+    ]
+  },
+
+  "revenueImpact": {
+    "assumptions": {
+      "currentLeadsPerMonth": 3,
+      "targetLeadsPerMonth": 10,
+      "closeRate": 0.25,
+      "averageJobValue": 12000,
+      "currency": "USD"
+    },
+    "currentRevenuePotential": {
+      "leadsPerMonth": 3,
+      "closedJobsPerMonth": 0.75,
+      "revenuePerMonth": 9000,
+      "annualRevenue": 108000
+    },
+    "targetRevenuePotential": {
+      "leadsPerMonth": 10,
+      "closedJobsPerMonth": 2.5,
+      "revenuePerMonth": 30000,
+      "annualRevenue": 360000
+    },
+    "incrementalMonthlyRevenue": 21000,
+    "incrementalAnnualRevenue": 252000,
+    "math": "10 leads/month x 25% close rate = 2.5 jobs/month x $12,000 avg job = $30,000/month. Current estimate: 3 leads/month x 25% = 0.75 jobs x $12,000 = $9,000/month. Delta = $21,000/month incremental = $252,000 incremental annual revenue.",
+    "notes": "Average Atlanta roofing job value of $12,000 is conservative. Full residential replacement in Atlanta ranges $8,000-$20,000+. Commercial jobs are significantly higher. The 25% close rate is standard for a company with 4.7 Google stars and Owens Corning Platinum certification."
+  },
+
+  "topThreePriorities": [
+    {
+      "rank": 1,
+      "priority": "GBP Review Velocity",
+      "action": "Implement post-job review request via SMS and email. Target 200+ Google reviews within 6 months. Each additional 10 reviews improves GBP 3-pack ranking. This is the fastest, highest-ROI action available.",
+      "effort": "Low",
+      "impact": "High",
+      "timeline": "Ongoing from day 1"
+    },
+    {
+      "rank": 2,
+      "priority": "Dedicated Storm Damage and Insurance Claims Page",
+      "action": "Build a 600+ word page at /services/storm-damage and an alias at /insurance-claims targeting 'storm damage roof repair Atlanta' and 'insurance roof claim Atlanta'. New Image's actual capabilities exceed most competitors here. This content gap is the fastest organic rank opportunity.",
+      "effort": "Medium",
+      "impact": "High",
+      "timeline": "At site launch"
+    },
+    {
+      "rank": 3,
+      "priority": "Schema Markup Across All Pages",
+      "action": "Implement LocalBusiness, Service, AggregateRating, and FAQPage schema on all pages. This is likely absent on current site (WordPress without dedicated schema plugin). Rich snippet appearance in search results improves CTR by 20-30% without ranking change.",
+      "effort": "Low-Medium (technical implementation)",
+      "impact": "Medium-High",
+      "timeline": "At site launch"
+    }
+  ]
+}

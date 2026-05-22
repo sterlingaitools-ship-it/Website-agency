@@ -1,0 +1,15 @@
+{
+  "folder": "logo",
+  "scrapedAt": "2026-05-22",
+  "status": "manual-drop-needed",
+  "assets": [
+    {
+      "filename": "logo-primary.png",
+      "sourceUrl": "https://www.newimageroofingatlanta.com/wp-content/uploads/2019/12/NIR_Website_Logo_New.png",
+      "status": "not-downloaded",
+      "reason": "Network environment blocks external requests. Placeholder file exists but contains error text, not a real image.",
+      "manualAction": "Download from source URL and overwrite the placeholder file. See MANUAL-DROP-NEEDED.md"
+    }
+  ],
+  "notes": "Logo URL confirmed from research.json. File must be replaced manually before Stage 7 brand DNA extraction."
+}

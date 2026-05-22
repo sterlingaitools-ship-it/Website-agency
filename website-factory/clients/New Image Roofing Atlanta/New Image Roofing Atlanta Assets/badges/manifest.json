@@ -1,0 +1,55 @@
+{
+  "folder": "badges",
+  "scrapedAt": "2026-05-22",
+  "status": "populated-from-niche-playbook",
+  "notes": "Trust badge SVGs are provided by the niche playbook at templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/. Client-specific badge assets were not downloadable (site returns 403). The following badges apply to this client based on confirmed certifications.",
+  "applicableBadges": [
+    {
+      "id": "owens-corning-platinum",
+      "name": "Owens Corning Platinum Preferred Contractor",
+      "confirmed": true,
+      "source": "Multiple search results confirming OC Platinum Preferred status",
+      "playbookFile": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/owens-corning-platinum.svg",
+      "placement": ["trust-bar", "about-page", "service-pages"]
+    },
+    {
+      "id": "bbb-a-plus",
+      "name": "BBB A+ Accreditation",
+      "confirmed": true,
+      "source": "BBB business profile (accredited since April 10, 2015)",
+      "playbookFile": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/bbb-a-plus.svg",
+      "placement": ["trust-bar", "footer", "about-page"]
+    },
+    {
+      "id": "gaf-certified",
+      "name": "GAF Certified Contractor",
+      "confirmed": true,
+      "source": "GAF contractor database listing for commercial division",
+      "playbookFile": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/gaf-certified.svg",
+      "placement": ["trust-bar", "about-page"],
+      "note": "Use gaf-certified (not gaf-master-elite) until client confirms Master Elite status"
+    },
+    {
+      "id": "google-reviews",
+      "name": "Google Reviews 4.7 Stars",
+      "confirmed": true,
+      "source": "Google search snippet showing 114 reviews at 4.7 stars",
+      "playbookFile": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/google-reviews.svg",
+      "placement": ["trust-bar", "hero", "reviews-section"]
+    }
+  ],
+  "notApplicable": [
+    {
+      "id": "gaf-master-elite",
+      "reason": "Not confirmed. GAF listing shows standard certified contractor, not Master Elite. Do not display until client confirms."
+    },
+    {
+      "id": "certainteed-select",
+      "reason": "No evidence of CertainTeed certification found."
+    },
+    {
+      "id": "nrca-member",
+      "reason": "No evidence of NRCA membership found."
+    }
+  ]
+}

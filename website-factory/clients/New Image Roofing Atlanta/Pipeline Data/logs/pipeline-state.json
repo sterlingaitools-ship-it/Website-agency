@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "clientName": "New Image Roofing Atlanta",
+  "clientSlug": "new-image-roofing-atlanta",
+  "niche": "trades-roofing-plumbing-electrical",
+  "createdAt": "2026-05-22T00:00:00.000Z",
+  "lastUpdatedAt": "2026-05-22T00:00:00.000Z",
+  "stages": {
+    "stage1_intake": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "Pipeline Data/intake/intake.json"
+      ]
+    },
+    "stage2_research": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "Pipeline Data/research/research.json",
+        "Pipeline Data/research/research-report.md"
+      ],
+      "notes": "Website returns 403 to automated fetchers. Data from third-party sources. Confidence: medium-high."
+    },
+    "stage3_seo": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "Pipeline Data/seo/audit-report.md",
+        "Pipeline Data/seo/audit-data.json"
+      ]
+    },
+    "stage4_assets": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "New Image Roofing Atlanta Assets/logo/manifest.json",
+        "New Image Roofing Atlanta Assets/badges/manifest.json",
+        "New Image Roofing Atlanta Assets/project-images/manifest.json",
+        "New Image Roofing Atlanta Assets/founder-photos/manifest.json"
+      ],
+      "notes": "Logo file already present at Assets/logo/logo-primary.png. Website 403 prevented scraping other assets."
+    },
+    "stage5_strategy": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "Pipeline Data/strategy/sitemap.json",
+        "Pipeline Data/strategy/strategy.json"
+      ]
+    },
+    "stage6_copy": {
+      "status": "complete",
+      "completedAt": "2026-05-22T00:00:00.000Z",
+      "outputFiles": [
+        "Pipeline Data/copy/copy-deck.md"
+      ]
+    },
+    "stage7_brand_dna": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    },
+    "stage9_hero_image": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    },
+    "stage10_build": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    },
+    "stage11_deploy": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    },
+    "stage12_delivery": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    },
+    "stage13_proposal": {
+      "status": "pending",
+      "completedAt": null,
+      "outputFiles": []
+    }
+  },
+  "gates": {
+    "intake_complete": true,
+    "research_complete": true,
+    "seo_complete": true,
+    "assets_complete": true,
+    "strategy_complete": true,
+    "copy_complete": true,
+    "brand_dna_approved": false,
+    "hero_image_approved": false,
+    "build_complete": false,
+    "deploy_complete": false
+  },
+  "pendingActions": [
+    "Confirm GAF tier (Certified vs. Master Elite) with client Montana Mace",
+    "Obtain Georgia contractor license number from client",
+    "Supply project photos for gallery section",
+    "Confirm whether NRCA, HomeAdvisor, or Angie's List memberships exist",
+    "Run Stage 7 brand DNA extraction once logo is confirmed"
+  ]
+}

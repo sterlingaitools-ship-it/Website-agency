@@ -1,0 +1,34 @@
+{
+  "folder": "project-images",
+  "scrapedAt": "2026-05-22",
+  "status": "manual-drop-needed",
+  "notes": "The client website returns HTTP 403 to automated requests. Project photos could not be scraped. Yelp listing shows 48 photos are publicly available. The student should supply project photos directly from the client.",
+  "assets": [],
+  "externalSources": [
+    {
+      "platform": "Yelp",
+      "url": "https://www.yelp.com/biz/new-image-roofing-atlanta-atlanta-2",
+      "photoCount": 48,
+      "note": "48 photos visible on Yelp listing. Student can download these as a starting point, but client should supply high-resolution originals."
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/NewImageRoofAtlanta/",
+      "note": "Facebook page is active. Student can download project photos from Facebook photo albums."
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/newimageroofingatlanta/",
+      "followerCount": 225,
+      "note": "Instagram account exists. 225 followers. May have project photos available."
+    }
+  ],
+  "photoRequirementsForSite": [
+    "Minimum 6 before/after pairs for homepage gallery",
+    "Each photo should be labeled with: service type (e.g. Roof Replacement), city/suburb (e.g. Sandy Springs, GA)",
+    "Photos should be high resolution (minimum 1200px wide)",
+    "No stock photos. All images must be real jobs completed by New Image Roofing Atlanta",
+    "At least 1 photo per service page (6 service pages = 6 minimum additional photos)"
+  ],
+  "manualAction": "Contact Montana Mace and request high-resolution before/after photos of at least 6 completed projects. See photo requirements above."
+}
