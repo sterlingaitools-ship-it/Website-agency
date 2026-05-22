@@ -320,8 +320,8 @@ These fields require per-client data and cannot be populated from niche research
 | `copy.hero.subheadline` | Per-client (year founded from research) | Stage 6 |
 | `pages.about.*` | Per-client | Stage 6 |
 | `pages.contact.*` | Per-client | Stage 6 |
-| `credit.agency` | Aiden Maila — set once at `/tailor-factory` | `/tailor-factory` |
-| `credit.url` | Student's agency URL — set once at `/tailor-factory` | `/tailor-factory` |
+| `credit.agency` | Roofline Digital | Filled — set at lock |
+| `credit.url` | [MISSING — add when site is live] | `/tailor-factory` |
 
 **No field is silently blank. Every field above is either filled from niche defaults (palette, motion, fonts, voice register) or explicitly marked `[MISSING]` pending per-client data.**
 
