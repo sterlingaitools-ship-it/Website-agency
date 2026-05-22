@@ -5,7 +5,7 @@
   "studentName": "Aiden Maila",
   "gates": {
     "setup.complete": true,
-    "agency.brandLocked": false,
+    "agency.brandLocked": true,
     "m1.profileLocked": true,
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
@@ -85,6 +85,11 @@
       "timestamp": "2026-05-22T00:00:00.000Z",
       "command": "/tailor-factory",
       "outcome": "complete — trust-signals.json updated (4 new badges), CLAUDE.md orientation updated, copy-deck lessons seeded, factory.tailored=true"
+    },
+    {
+      "timestamp": "2026-05-22T00:00:00.000Z",
+      "command": "/setup-agency",
+      "outcome": "complete — agency-brand.json written (gitignored), agency.brandLocked=true. Roofline Digital, Aiden Maila, $5k/$297mo pricing. Placeholder sections for reviews/builds/case-studies pending first client."
     }
   ]
 }
