@@ -1,0 +1,278 @@
+{
+  "$schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "crew-on-roof",
+      "altKeywords": [
+        "crew on roof",
+        "roofer working",
+        "roofing crew",
+        "workers on roof",
+        "installing shingles",
+        "roof installation",
+        "roofers"
+      ],
+      "filenameKeywords": [
+        "crew",
+        "roofer",
+        "working",
+        "install",
+        "worker",
+        "job-site",
+        "jobsite"
+      ],
+      "selectorHints": [
+        ".hero img",
+        "#hero img",
+        "[data-section='hero'] img"
+      ],
+      "exclude": [
+        "stock",
+        "icon",
+        "logo",
+        "badge",
+        "avatar",
+        "thumbnail"
+      ],
+      "priority": 2
+    },
+    {
+      "slug": "completed-project",
+      "altKeywords": [
+        "completed roof",
+        "finished roof",
+        "new roof",
+        "roof replacement",
+        "roofing project",
+        "residential roof",
+        "after photo",
+        "project photo"
+      ],
+      "filenameKeywords": [
+        "completed",
+        "finished",
+        "after",
+        "project",
+        "result",
+        "new-roof",
+        "replacement"
+      ],
+      "selectorHints": [
+        ".gallery img",
+        ".projects img",
+        "[data-section='gallery'] img",
+        ".portfolio img"
+      ],
+      "exclude": [
+        "before",
+        "damage",
+        "stock",
+        "icon",
+        "logo",
+        "badge"
+      ],
+      "priority": 3
+    },
+    {
+      "slug": "before-after-pair",
+      "altKeywords": [
+        "before after",
+        "before and after",
+        "roof before",
+        "roof after",
+        "damaged roof",
+        "old roof"
+      ],
+      "filenameKeywords": [
+        "before",
+        "after",
+        "before-after",
+        "comparison",
+        "before_after"
+      ],
+      "selectorHints": [
+        ".before-after img",
+        ".comparison img",
+        "[data-type='before'] img",
+        "[data-type='after'] img"
+      ],
+      "exclude": [
+        "stock",
+        "icon",
+        "logo",
+        "badge",
+        "avatar"
+      ],
+      "priority": 2
+    },
+    {
+      "slug": "homeowner-testimonial",
+      "altKeywords": [
+        "homeowner",
+        "customer photo",
+        "testimonial photo",
+        "client photo",
+        "happy customer",
+        "satisfied homeowner",
+        "reviewer photo"
+      ],
+      "filenameKeywords": [
+        "homeowner",
+        "customer",
+        "testimonial",
+        "client",
+        "reviewer",
+        "happy"
+      ],
+      "selectorHints": [
+        ".testimonial img",
+        ".review img",
+        ".reviews img",
+        "[data-section='reviews'] img"
+      ],
+      "exclude": [
+        "stock",
+        "icon",
+        "logo",
+        "badge",
+        "crew",
+        "roof",
+        "project"
+      ],
+      "priority": 4
+    },
+    {
+      "slug": "team-portrait",
+      "altKeywords": [
+        "team photo",
+        "owner photo",
+        "founder photo",
+        "staff photo",
+        "meet the team",
+        "roofing team",
+        "company team"
+      ],
+      "filenameKeywords": [
+        "team",
+        "owner",
+        "founder",
+        "staff",
+        "crew-photo",
+        "company",
+        "portrait"
+      ],
+      "selectorHints": [
+        ".team img",
+        ".about img",
+        "[data-section='about'] img",
+        ".founder img"
+      ],
+      "exclude": [
+        "stock",
+        "icon",
+        "logo",
+        "badge",
+        "project",
+        "roof"
+      ],
+      "priority": 4
+    },
+    {
+      "slug": "storm-damage",
+      "altKeywords": [
+        "storm damage",
+        "hail damage",
+        "wind damage",
+        "damaged roof",
+        "damaged shingles",
+        "missing shingles",
+        "roof leak"
+      ],
+      "filenameKeywords": [
+        "storm",
+        "damage",
+        "hail",
+        "wind-damage",
+        "storm-damage",
+        "damaged",
+        "missing-shingles"
+      ],
+      "selectorHints": [
+        ".storm-damage img",
+        "[data-service='storm-damage'] img"
+      ],
+      "exclude": [
+        "stock",
+        "icon",
+        "logo",
+        "badge",
+        "after",
+        "completed"
+      ],
+      "priority": 3
+    },
+    {
+      "slug": "logo",
+      "altKeywords": [
+        "logo",
+        "company logo",
+        "brand logo",
+        "roofing company logo",
+        "contractor logo"
+      ],
+      "filenameKeywords": [
+        "logo",
+        "brand",
+        "mark",
+        "wordmark"
+      ],
+      "selectorHints": [
+        ".logo img",
+        "header .logo img",
+        "nav img",
+        "#logo img",
+        "a[aria-label*='logo'] img"
+      ],
+      "exclude": [
+        "badge",
+        "cert",
+        "gaf",
+        "bbb",
+        "owens"
+      ],
+      "priority": 1
+    },
+    {
+      "slug": "hero",
+      "altKeywords": [
+        "hero image",
+        "main image",
+        "banner image",
+        "header image",
+        "roofer",
+        "roofing contractor"
+      ],
+      "filenameKeywords": [
+        "hero",
+        "hero-final",
+        "banner",
+        "header-image",
+        "main-image"
+      ],
+      "selectorHints": [
+        ".hero img",
+        "#hero img",
+        "[data-section='hero'] img",
+        ".hero-image img"
+      ],
+      "exclude": [
+        "logo",
+        "badge",
+        "icon",
+        "avatar",
+        "thumbnail"
+      ],
+      "priority": 1
+    }
+  ]
+}

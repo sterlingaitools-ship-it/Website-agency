@@ -1,0 +1,27 @@
+{
+  "$schemaVersion": 1,
+  "stepCount": 3,
+  "sectionHeading": "How It Works",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Free Inspection",
+      "description": "We visit your property at no cost and with no obligation. Our certified inspector assesses your roof, documents every issue with photos, and answers your questions on the spot.",
+      "iconHint": "magnifying-glass"
+    },
+    {
+      "n": 2,
+      "title": "Custom Quote",
+      "description": "We provide a detailed written quote within 24 hours. Every line item is explained in plain language so you know exactly what you are paying for and why.",
+      "iconHint": "document-text"
+    },
+    {
+      "n": 3,
+      "title": "Expert Installation",
+      "description": "Our GAF-certified crew completes the installation on the agreed date, on budget, and on time. We clean up completely and do a final walkthrough with you before we leave.",
+      "iconHint": "wrench-screwdriver"
+    }
+  ],
+  "processBadge": "No Obligation",
+  "processBadgeSubtext": "Free inspection, no cost, no commitment."
+}

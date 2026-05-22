@@ -1,0 +1,41 @@
+{
+  "$schemaVersion": 1,
+  "ctaPrimary": "Get Your Free Estimate",
+  "ctaSecondary": "Book a Free Roof Inspection",
+  "formHeader": "Get Your Free Estimate",
+  "formPrivacy": "No spam. No obligation. Your info stays private.",
+  "mobileCallLabel": "Call Now",
+  "thankYouMessage": "Thanks, {firstName}. We received your request and will call you back within 24 hours. We look forward to earning your trust.",
+  "footerTagline": "Licensed. Insured. Certified. On time.",
+  "blogIntro": "Answers to the roofing questions homeowners in our area ask most, written plainly so you can make a confident decision.",
+  "trustStripClaims": [
+    "200+ Five-Star Reviews",
+    "GAF Master Elite Certified",
+    "BBB A+ Accredited",
+    "Licensed and Insured",
+    "Serving the Area Since 2008"
+  ],
+  "heroTrustClaims": [
+    "Licensed, insured, and GAF certified. Top 3% of US roofers.",
+    "200+ five-star Google reviews from real homeowners",
+    "Free inspection, honest quote, no pressure to sign",
+    "We handle the insurance claim from start to finish"
+  ],
+  "riskReversalLine": "We show up when we say we will, give you a written quote, and never start work without your written approval.",
+  "heroH1Format": "{reviewCount} Five-Star Reviews. {city}'s Most Trusted Roofing Contractor.",
+  "reviewsHeaderFormat": "What {city} Homeowners Say. {N} Verified Five-Star Reviews.",
+  "founderSupportingCards": [
+    {
+      "title": "GAF Master Elite",
+      "body_template": "Less than 3% of US roofing contractors qualify for GAF Master Elite status. {brand_short} earned this certification by meeting strict standards for training, insurance, and workmanship. It means your roof qualifies for the Golden Pledge warranty, up to 50 years of coverage backed by GAF."
+    },
+    {
+      "title": "Insurance Claim Help",
+      "body_template": "{brand_short} has handled hundreds of insurance claims across {primaryCity}. We document the damage, meet the adjuster, and make sure your insurer covers what they should. You do not have to figure out the paperwork."
+    },
+    {
+      "title": "25-Year Warranty",
+      "body_template": "Every roof {brand_short} installs comes with a written 25-year workmanship warranty. If anything goes wrong with our work, we come back and fix it at no cost to you."
+    }
+  ]
+}

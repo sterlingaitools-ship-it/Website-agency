@@ -1,0 +1,72 @@
+{
+  "$schemaVersion": 1,
+  "defaultMood": "trust",
+  "moods": {
+    "trust": {
+      "lightingBrief": "Mid-morning natural light, clear blue sky, warm and clean tones. Crew actively working on a pitched roof of a suburban US home. Light comes from the upper left. Shadows are short and soft. Colors are saturated but realistic. The overall feel is competent, professional, and safe.",
+      "skyDescriptor": "Clear blue sky with light high clouds. No drama, no weather threat. Clean and open.",
+      "shadowDescriptor": "Short, soft shadows indicating mid-morning sun. Nothing harsh or theatrical.",
+      "colorWarmth": "warm"
+    },
+    "emergency": {
+      "lightingBrief": "Dusk or overcast dramatic sky, slightly cooler tones with urgency in the light. A crew working quickly on a damaged roof, visible tarping or damaged shingles in foreground. The scene communicates speed and response, not chaos. Enough light to read faces and tools.",
+      "skyDescriptor": "Overcast or early dusk sky. Clouds with movement and texture. Not nighttime but definitely late in the day or post-storm.",
+      "shadowDescriptor": "Diffuse shadows from overcast light. No direct sun. Slightly moody but not dark.",
+      "colorWarmth": "cool"
+    },
+    "completion": {
+      "lightingBrief": "Golden hour light from the late afternoon, warm golden tones. A finished roof in excellent condition is the primary subject. A homeowner or homeowners stand in front of their home, visibly pleased. The crew may be visible in the background packing up. The scene communicates a job done right.",
+      "skyDescriptor": "Golden hour sky, warm orange and yellow tones on the horizon, deep blue above. A few high clouds catching the warmth.",
+      "shadowDescriptor": "Long warm shadows from low-angle golden hour sun. Everything glows slightly.",
+      "colorWarmth": "warm"
+    },
+    "golden_hour_warm": {
+      "lightingBrief": "Warm directional light from a low angle, long soft shadows, saturated golden tones. Crew on a pitched roof or finished high-quality roof in the foreground. Suburban US home in the background with trees and clear sky.",
+      "skyDescriptor": "Golden hour sky transitioning from blue to warm orange near the horizon.",
+      "shadowDescriptor": "Long warm shadows from low-angle sun. Soft and directional.",
+      "colorWarmth": "warm"
+    },
+    "overcast_calm": {
+      "lightingBrief": "Soft, even overcast light. No harsh shadows. Colors are natural and slightly muted. A roofing crew working methodically on a residential roof. The scene reads as professional and calm, not urgent.",
+      "skyDescriptor": "Light overcast, white to light grey sky. Bright enough to be workable.",
+      "shadowDescriptor": "Minimal shadow definition. Soft and even.",
+      "colorWarmth": "neutral"
+    },
+    "dramatic_dusk": {
+      "lightingBrief": "Early dusk with warm-to-cool transition in the sky. A crew finishing a job or a completed roof silhouetted against a dramatic sky. The mood communicates reliability, the work is done even as day ends.",
+      "skyDescriptor": "Dramatic dusk sky, warm orange near horizon transitioning to deep blue-purple above. High clouds catching the last light.",
+      "shadowDescriptor": "Long dark shadows. Subject in partial silhouette. Strong contrast.",
+      "colorWarmth": "mixed"
+    },
+    "bright_midday_clean": {
+      "lightingBrief": "Bright midday sun, high and direct. Clean clear colors, no warm tones. A crew on a roof working confidently. The scene looks clinical and precise, good for conveying accuracy and technical work.",
+      "skyDescriptor": "Deep blue clear sky at midday. No clouds.",
+      "shadowDescriptor": "Short direct shadows directly below objects. High contrast.",
+      "colorWarmth": "neutral"
+    },
+    "dawn_soft_optimistic": {
+      "lightingBrief": "Early morning soft pink and golden light. A crew arriving and setting up. The mood communicates punctuality, fresh start, the job starting on time as promised.",
+      "skyDescriptor": "Early dawn sky, soft pinks and light blues. Sun just above or below the horizon.",
+      "shadowDescriptor": "Very soft long shadows from low dawn light. Gentle and warm.",
+      "colorWarmth": "warm"
+    }
+  },
+  "regionalOverrides": [
+    {
+      "region": "southeast-us",
+      "mood": "trust"
+    },
+    {
+      "region": "tornado-alley",
+      "mood": "emergency"
+    },
+    {
+      "region": "northeast-us",
+      "mood": "overcast_calm"
+    },
+    {
+      "region": "southwest-us",
+      "mood": "bright_midday_clean"
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+  "$schemaVersion": 1,
+  "pages": [
+    {
+      "id": "home",
+      "title": "Homepage",
+      "url": "/",
+      "tier": "root",
+      "sections": [
+        {
+          "name": "Hero",
+          "description": "Split-screen above the fold: proof-first headline with review count and certification status on the left, real crew-on-roof photo on the right. Free estimate form in the hero. Click-to-call in the nav.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Trust Bar",
+          "description": "Five-item trust strip immediately below the hero: Google reviews count, GAF badge, BBB badge, license number, and years in business. Establishes credibility before the homeowner reads anything else.",
+          "tag": "Trust"
+        },
+        {
+          "name": "Services Grid",
+          "description": "Six service cards: Roof Replacement, Roof Repair, Storm Damage and Insurance Claims, Roof Inspection, Gutters, and Commercial Roofing. Each links to its own service detail page.",
+          "tag": "Pitch"
+        },
+        {
+          "name": "Why Choose Us",
+          "description": "Four differentiators on a navy background: 24/7 emergency response, GAF Master Elite certification, 25-year workmanship warranty, and insurance claim assistance.",
+          "tag": "Trust"
+        },
+        {
+          "name": "How It Works",
+          "description": "Three-step process: Free Inspection, Custom Quote, Expert Installation. No-obligation badge beneath the steps removes the commitment fear.",
+          "tag": "Process"
+        },
+        {
+          "name": "Homeowner Reviews",
+          "description": "Six named-photo testimonials from real {brand_short} customers. Each card includes a specific outcome, a photo, and a location. Drives verification from homeowners who are on the fence.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Before and After Gallery",
+          "description": "Three before-and-after project pairs with location tags and a lightbox. Links to the full gallery page. Shows real work quality to homeowners comparing contractors.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Service Areas",
+          "description": "Pill-tag list of every city and suburb {brand_short} serves, alongside an embedded Google map. Each city links to its own service-area page for local SEO.",
+          "tag": "Local"
+        },
+        {
+          "name": "Final CTA Band",
+          "description": "Full-width dark section repeating the free estimate offer with a prominent button and phone number. Catches homeowners who scrolled past the hero form.",
+          "tag": "Convert"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "url": "/about",
+      "tier": "core",
+      "sections": [
+        {
+          "name": "About Hero",
+          "description": "Full-width team photo hero with dark overlay and H1 establishing {brand_short}'s local tenure and certification.",
+          "tag": "Story"
+        },
+        {
+          "name": "Founder Story",
+          "description": "Split layout: {owner_first}'s photo on the left, the company origin story on the right. Explains why they started, what they stand for, and who they serve.",
+          "tag": "Story"
+        },
+        {
+          "name": "Certifications",
+          "description": "Horizontal display of all certification badges with one-sentence plain-language explanations. Explains what GAF Master Elite means for homeowners who have never heard of it.",
+          "tag": "Trust"
+        },
+        {
+          "name": "Team Grid",
+          "description": "Photo cards for {owner_first} and each crew member with name and role. Puts real faces to the company.",
+          "tag": "Team"
+        },
+        {
+          "name": "Stats Strip",
+          "description": "Four metrics in large accent numbers: total roofs installed, years in business, Google review count, and warranty years. Quantified proof at a glance.",
+          "tag": "Stat"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "url": "/contact",
+      "tier": "core",
+      "sections": [
+        {
+          "name": "Contact Hero",
+          "description": "Dark background hero with H1 Get Your Free Roof Estimate and a reassuring subhead.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Contact Block",
+          "description": "60/40 split: full lead form on the left (name, phone, email, service, message) firing into the GHL automation, address and phone and map on the right.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Trust Bar",
+          "description": "Condensed five-badge trust bar reinforcing credibility at the bottom of the contact page.",
+          "tag": "Trust"
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "title": "Reviews",
+      "url": "/reviews",
+      "tier": "core",
+      "sections": [
+        {
+          "name": "Reviews Hero",
+          "description": "Simple hero with the total five-star review count and a line confirming every review is from a real homeowner.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Reviews Grid",
+          "description": "Full paginated display of all reviews. Each card has name, location, photo, outcome tag, and verbatim quote. Filters by service type and city.",
+          "tag": "Proof"
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "title": "Gallery",
+      "url": "/gallery",
+      "tier": "core",
+      "sections": [
+        {
+          "name": "Gallery Hero",
+          "description": "Hero with total project count and a one-line promise that every photo is a real job completed by {brand_short}.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Gallery Grid",
+          "description": "Full before-and-after grid with lightbox, location tags, and service-type filters. Shows the breadth and quality of completed work.",
+          "tag": "Proof"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "title": "FAQ",
+      "url": "/faq",
+      "tier": "core",
+      "sections": [
+        {
+          "name": "FAQ Hero",
+          "description": "Light-background hero with H1 Frequently Asked Questions and a subhead addressing the homeowner's core uncertainty.",
+          "tag": "Info"
+        },
+        {
+          "name": "FAQ Categories",
+          "description": "Tab or anchor navigation: General, Roof Replacement, Storm Damage and Insurance, Cost and Financing, Warranties.",
+          "tag": "UX"
+        },
+        {
+          "name": "FAQ Accordion",
+          "description": "All questions grouped by category with FAQPage schema markup for Google rich results. Covers cost, timeline, materials, insurance, and warranty questions homeowners search for.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "url": "/services/roof-replacement",
+      "tier": "pillar",
+      "hasSilos": "service",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "60/40 split hero with service-specific H1, subhead, free estimate CTA, and click-to-call. Service photo on the right.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Service Trust Bar",
+          "description": "Five-badge trust strip adapted for the service page, 80px height, same token set as the homepage.",
+          "tag": "Trust"
+        },
+        {
+          "name": "Service Description",
+          "description": "Full-width content block explaining what the service covers, what to expect, timeline, materials, and warranty. Written for homeowners, not contractors.",
+          "tag": "Info"
+        },
+        {
+          "name": "How It Works",
+          "description": "Same three-step process section reused from the homepage for consistency.",
+          "tag": "Process"
+        },
+        {
+          "name": "Service Area Pill List",
+          "description": "Linked pill list of every city where this service is available. Strengthens local SEO for service plus city combinations.",
+          "tag": "Local"
+        },
+        {
+          "name": "Service Reviews",
+          "description": "Testimonials filtered to this service type. Same named-photo card format. Showing specific outcomes from this exact service builds targeted confidence.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "Five to eight questions specific to this service with FAQPage schema. Answers the homeowner's pre-call anxieties and captures long-tail search traffic.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "service-areas",
+      "title": "Service Areas",
+      "url": "/areas/",
+      "tier": "pillar",
+      "hasSilos": "city",
+      "sections": [
+        {
+          "name": "City Hero",
+          "description": "Split hero with H1 Roofing Contractor in {city}. Local context in subhead. Free estimate CTA and click-to-call.",
+          "tag": "Local"
+        },
+        {
+          "name": "Trust Bar",
+          "description": "Same five-badge trust strip as homepage.",
+          "tag": "Trust"
+        },
+        {
+          "name": "Local Services",
+          "description": "Services grid with heading updated to Roofing Services in {city}.",
+          "tag": "Pitch"
+        },
+        {
+          "name": "Local Projects",
+          "description": "Gallery filtered to projects completed in {city}. Heading: Recent Work in {city}. Location-tagged proof of local presence.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Local Reviews",
+          "description": "Testimonials from homeowners in {city}. Heading: What {city} Homeowners Say. Nothing is more convincing to a local homeowner than a neighbour's experience.",
+          "tag": "Proof"
+        },
+        {
+          "name": "Other Service Areas",
+          "description": "Grid of other cities served, with internal links. Strengthens the site's local SEO network across the service region.",
+          "tag": "SEO"
+        }
+      ]
+    },
+    {
+      "id": "roof-replacement",
+      "title": "Roof Replacement",
+      "url": "/services/roof-replacement",
+      "tier": "pillar",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "H1: Roof Replacement in {city}. Subhead covers GAF certification and free estimate. CTA and click-to-call above the fold.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Service Content",
+          "description": "What is covered, shingle options, timeline, materials used, and the 25-year workmanship warranty. Written for the homeowner comparing quotes.",
+          "tag": "Info"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "How long does a roof replacement take, how much does it cost, do I need to be home, what materials do you use. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "roof-repair",
+      "title": "Roof Repair",
+      "url": "/services/roof-repair",
+      "tier": "pillar",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "H1: Roof Repair in {city} with Emergency Response Available. Urgency-driven subhead. CTA and click-to-call.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Service Content",
+          "description": "Types of repairs, emergency response availability, same-day service for active leaks, and repair versus replacement guidance.",
+          "tag": "Info"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "Can you repair a leaking roof in one day, how much does roof repair cost, when does repair become replacement. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "storm-damage-page",
+      "title": "Storm Damage and Insurance Claims",
+      "url": "/services/storm-damage",
+      "tier": "pillar",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "H1: Storm Damage Roof Repair in {city} with We Handle the Insurance Claim. Pain-point-specific headline targeting the homeowner who fears the insurance process.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Insurance Claim Process",
+          "description": "Step-by-step explanation of how {brand_short} handles the claim: documentation, adjuster meeting, repair, sign-off. Removes the homeowner's biggest fear in storm situations.",
+          "tag": "Process"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "Does insurance cover roof replacement, how do I file a roof insurance claim, what happens if the adjuster and contractor disagree. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "gutters-page",
+      "title": "Gutters",
+      "url": "/services/gutters",
+      "tier": "pillar",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "H1: Gutter Installation and Repair in {city}. Subhead ties gutters to roof protection and water damage prevention.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Service Content",
+          "description": "Types of gutters, one-piece vs sectional, leaf guard options, and how gutters protect the home from water damage.",
+          "tag": "Info"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "How often should gutters be cleaned, when should gutters be replaced, what are the signs of gutter damage. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    },
+    {
+      "id": "roof-inspection-page",
+      "title": "Roof Inspection",
+      "url": "/services/roof-inspection",
+      "tier": "pillar",
+      "sections": [
+        {
+          "name": "Service Hero",
+          "description": "H1: Free Roof Inspection in {city} with No Obligation. The free and no-obligation framing lowers the entry barrier for cautious homeowners.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Service Content",
+          "description": "What the inspection covers, how long it takes, what the homeowner receives (written report with photos), and when a follow-up is needed.",
+          "tag": "Info"
+        },
+        {
+          "name": "Service FAQ",
+          "description": "What does a roof inspection include, how often should I have my roof inspected, will an inspection damage my roof. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    }
+  ],
+  "perServicePageTemplate": {
+    "sections": [
+      {
+        "name": "{service_name} Hero",
+        "description": "Above-the-fold hero for {service_name}. H1 includes the city name and the service. Free estimate CTA and click-to-call always above the fold.",
+        "tag": "Convert"
+      },
+      {
+        "name": "Trust Bar",
+        "description": "Five-badge trust strip specific to {service_name}. Same badge set as homepage, confirms credentials for this service type.",
+        "tag": "Trust"
+      },
+      {
+        "name": "{service_name} Details",
+        "description": "What the service covers, what to expect during the job, timeline, materials, and warranty terms. Written at the homeowner's level.",
+        "tag": "Info"
+      },
+      {
+        "name": "How It Works",
+        "description": "Three-step process section: Free Inspection, Custom Quote, Expert Installation.",
+        "tag": "Process"
+      },
+      {
+        "name": "Service Area Links",
+        "description": "Pill list of cities where {service_name} is available. Local SEO anchor for {service_name} plus city keyword combinations.",
+        "tag": "Local"
+      },
+      {
+        "name": "{service_name} Reviews",
+        "description": "Homeowner testimonials tagged with {service_name} outcomes. Named photos with specific results.",
+        "tag": "Proof"
+      },
+      {
+        "name": "{service_name} FAQ",
+        "description": "Five to eight questions specific to {service_name} with FAQPage schema for Google rich results.",
+        "tag": "AEO"
+      }
+    ]
+  },
+  "perAreaPageTemplate": {
+    "sections": [
+      {
+        "name": "City Hero",
+        "description": "H1: Roofing Contractor in {city}. Local context subhead references the city and its climate or neighbourhood character. Free estimate CTA and click-to-call.",
+        "tag": "Local"
+      },
+      {
+        "name": "Trust Bar",
+        "description": "Same five-badge trust strip as homepage. Confirms credentials are the same for customers in {city}.",
+        "tag": "Trust"
+      },
+      {
+        "name": "Roofing Services in {city}",
+        "description": "Services grid with heading updated to Roofing Services in {city}. All services link to their detail pages.",
+        "tag": "Pitch"
+      },
+      {
+        "name": "Recent Work in {city}",
+        "description": "Gallery filtered to completed projects in or near {city}. Location-tagged proof that the contractor has worked in this specific area.",
+        "tag": "Proof"
+      },
+      {
+        "name": "What {city} Homeowners Say",
+        "description": "Testimonials from homeowners in {city}. Filtered review cards with city attribution. Local social proof is the most powerful trust signal for a local search.",
+        "tag": "Proof"
+      },
+      {
+        "name": "Other Areas We Serve",
+        "description": "Grid of neighbouring cities with internal links. Strengthens the SEO network across the full service region.",
+        "tag": "SEO"
+      }
+    ]
+  },
+  "aliasPages": [
+    {
+      "id": "stormdamage",
+      "title": "Storm Damage",
+      "tier": "pillar",
+      "urlFromService": ["storm", "hail", "wind", "storm-damage"],
+      "fallbackUrl": "/services/storm-damage",
+      "fallbackTitleFromService": true,
+      "sections": [
+        {
+          "name": "Storm Damage Hero",
+          "description": "Did a storm hit your roof? We tarp, document, file the insurance claim, and complete the repairs. H1 targets the storm damage search intent directly.",
+          "tag": "Convert"
+        },
+        {
+          "name": "Insurance Claim Walkthrough",
+          "description": "Step-by-step explanation of the full insurance claim process. The homeowner sees that {brand_short} handles everything, not just the roofing.",
+          "tag": "Process"
+        },
+        {
+          "name": "Storm Damage Reviews",
+          "description": "Testimonials specifically from homeowners who went through the storm damage and insurance claim process with {brand_short}.",
+          "tag": "Proof"
+        }
+      ]
+    },
+    {
+      "id": "insuranceclaims",
+      "title": "Insurance Claims",
+      "tier": "pillar",
+      "urlFromService": ["insurance", "claim", "storm", "insurance-claim"],
+      "fallbackUrl": "/services/storm-damage",
+      "fallbackTitleFromService": false,
+      "sections": [
+        {
+          "name": "Insurance Claims Hero",
+          "description": "H1 targets the homeowner searching for roof insurance claim help. {brand_short} handles the entire process: damage documentation, adjuster coordination, and repair.",
+          "tag": "Convert"
+        },
+        {
+          "name": "How the Claim Works",
+          "description": "Plain-language walkthrough of the insurance claim from damage discovery to final payment. Removes every fear the homeowner has about the process.",
+          "tag": "Process"
+        },
+        {
+          "name": "Insurance Claim FAQ",
+          "description": "Does my insurance cover roof replacement, what documents do I need, how long does the claim take, what if the insurer underpays. FAQPage schema.",
+          "tag": "AEO"
+        }
+      ]
+    }
+  ]
+}

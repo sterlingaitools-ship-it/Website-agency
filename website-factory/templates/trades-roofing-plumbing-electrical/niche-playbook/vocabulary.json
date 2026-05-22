@@ -1,0 +1,58 @@
+{
+  "$schemaVersion": 1,
+  "sectionNames": {
+    "NavBar": "Navigation",
+    "Hero": "Hero",
+    "TrustBar": "Trust Bar",
+    "Services": "Our Roofing Services",
+    "WhyUs": "Why Homeowners Choose Us",
+    "Process": "How It Works",
+    "Reviews": "What Homeowners Say",
+    "Gallery": "Our Recent Work",
+    "ServiceAreas": "Areas We Serve",
+    "FinalCTA": "Get Your Free Estimate",
+    "Footer": "Footer",
+    "About": "About Us",
+    "Contact": "Contact",
+    "FAQ": "Frequently Asked Questions"
+  },
+  "navLabels": {
+    "roof-replacement": "Roof Replacement",
+    "roof-repair": "Roof Repair",
+    "storm-damage": "Storm Damage",
+    "gutters": "Gutters",
+    "roof-inspection": "Free Inspection",
+    "about": "About Us",
+    "contact": "Free Estimate",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "faq": "FAQ"
+  },
+  "ctaVerbs": [
+    "Get",
+    "Book",
+    "Request",
+    "Claim",
+    "Schedule",
+    "Call"
+  ],
+  "audienceNouns": {
+    "endCustomer": "homeowner",
+    "endCustomerPlural": "homeowners",
+    "endCustomerPossessive": "your home"
+  },
+  "categoryNouns": {
+    "service": "service",
+    "servicePlural": "services",
+    "project": "project",
+    "projectPlural": "projects",
+    "area": "service area",
+    "areaPlural": "service areas",
+    "contractor": "contractor",
+    "crew": "crew",
+    "estimate": "estimate",
+    "inspection": "inspection",
+    "quote": "quote",
+    "warranty": "warranty"
+  }
+}

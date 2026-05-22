@@ -1,0 +1,115 @@
+{
+  "$schemaVersion": 1,
+  "stockBan": true,
+  "photoShootBriefRequired": true,
+  "categories": [
+    {
+      "slug": "crew-on-roof",
+      "label": "Crew on Roof (Active Work)",
+      "minCount": 3,
+      "preferredCount": 5,
+      "targetFolder": "project-images/crew-on-roof/",
+      "dimensions": {
+        "minWidth": 1200,
+        "minHeight": 800,
+        "preferredWidth": 1500,
+        "preferredHeight": 1000,
+        "aspectRatio": "3:2"
+      },
+      "lighting": "bright_midday_clean",
+      "composition": "Crew of 2-3 workers actively installing or repairing shingles on a pitched residential roof. Workers must be in company-branded safety gear. At least one worker visible facing the camera. Suburban home background visible. Shot from ground level looking up, or from scaffolding at roof height. No posed standing-still shots.",
+      "notes": "These are the hero-section candidate images. Must show real crew, real job site, real materials. No stock. Workers must wear branded shirts or safety vests if available. Hard hats and safety harnesses visible is a trust signal. Avoid shots where workers look idle or unsafe.",
+      "required": true
+    },
+    {
+      "slug": "completed-project",
+      "label": "Completed Roof Projects",
+      "minCount": 6,
+      "preferredCount": 12,
+      "targetFolder": "project-images/completed/",
+      "dimensions": {
+        "minWidth": 1000,
+        "minHeight": 750,
+        "preferredWidth": 1400,
+        "preferredHeight": 1000,
+        "aspectRatio": "4:3"
+      },
+      "lighting": "golden_hour_warm",
+      "composition": "Full exterior shot of a completed residential roof with the home clearly visible. Shoot from the street or from across the yard. Include the full roofline, gutters, and the home front. Location tag required per image. Mix of house styles and neighbourhood types preferred.",
+      "notes": "These populate the Gallery section and are used as location-tagged social proof. At least 2 images per neighbourhood or service area. Include the neighbourhood or city name in the filename. Avoid shooting in rain or at night.",
+      "required": true
+    },
+    {
+      "slug": "before-after-pair",
+      "label": "Before and After Project Pairs",
+      "minCount": 4,
+      "preferredCount": 8,
+      "targetFolder": "project-images/before-after/",
+      "dimensions": {
+        "minWidth": 900,
+        "minHeight": 600,
+        "preferredWidth": 1200,
+        "preferredHeight": 800,
+        "aspectRatio": "3:2"
+      },
+      "lighting": "any",
+      "composition": "Two photos from the same angle: one showing the damaged or worn roof before work begins, one showing the completed new roof from the exact same position. Frame must match closely enough for the comparison to be convincing. The home should be recognisable as the same property in both shots.",
+      "notes": "These are the highest-converting gallery images in this niche. Homeowners respond strongly to visible before-and-after evidence. Each pair is filed as before-N.jpg and after-N.jpg. The before shot should be taken on arrival before any work begins. Location tag required.",
+      "required": true
+    },
+    {
+      "slug": "homeowner-testimonial",
+      "label": "Homeowner Testimonial Photo",
+      "minCount": 2,
+      "preferredCount": 4,
+      "targetFolder": "testimonials/",
+      "dimensions": {
+        "minWidth": 400,
+        "minHeight": 400,
+        "preferredWidth": 600,
+        "preferredHeight": 600,
+        "aspectRatio": "1:1"
+      },
+      "lighting": "natural_indoor",
+      "composition": "Homeowner standing in front of their home with the completed roof visible in the background. Chest-up framing. Direct eye contact with camera. Natural outdoor light preferred. Subject should look relaxed and comfortable, not posed stiffly.",
+      "notes": "Paired with written testimonials in the Reviews section. Must have homeowner's written consent. Name and suburb required for caption. Video testimonials are the gold standard and should be requested first.",
+      "required": false
+    },
+    {
+      "slug": "team-portrait",
+      "label": "Team and Founder Portrait",
+      "minCount": 1,
+      "preferredCount": 2,
+      "targetFolder": "team/",
+      "dimensions": {
+        "minWidth": 800,
+        "minHeight": 600,
+        "preferredWidth": 1200,
+        "preferredHeight": 900,
+        "aspectRatio": "4:3"
+      },
+      "lighting": "bright_midday_clean",
+      "composition": "Founder and full crew together in front of a company vehicle or at a completed job site. Everyone facing the camera. Company branding visible (shirts, vehicle, signage). Founder positioned slightly forward or to one side. Professional and confident appearance.",
+      "notes": "Used on the About page. The single most trust-building image for homeowners who do a verification pass before calling. A real team photo beats any other trust signal. Avoid generic office backgrounds.",
+      "required": true
+    },
+    {
+      "slug": "storm-damage",
+      "label": "Storm Damage Documentation",
+      "minCount": 2,
+      "preferredCount": 3,
+      "targetFolder": "project-images/storm-damage/",
+      "dimensions": {
+        "minWidth": 900,
+        "minHeight": 600,
+        "preferredWidth": 1200,
+        "preferredHeight": 800,
+        "aspectRatio": "3:2"
+      },
+      "lighting": "overcast_calm",
+      "composition": "Close-up or medium shot showing visible storm damage to a residential roof: missing or broken shingles, hail impacts, lifted flashing, or water intrusion damage. Shoot in adequate daylight. Damage should be clearly visible and identifiable. No people required in these shots.",
+      "notes": "Used on the Storm Damage service page and for insurance claim assistance content. These photos help homeowners self-diagnose damage and build confidence that the contractor understands their specific situation.",
+      "required": false
+    }
+  ]
+}

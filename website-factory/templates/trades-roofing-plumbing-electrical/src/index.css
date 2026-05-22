@@ -1,0 +1,69 @@
+/*
+ * index.css template — Module 2D substitutes the {{...}} slots with
+ * per-niche values from niche-design-tokens.json before writing this
+ * file to templates/{niche-slug}/src/index.css.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Inter&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Per-niche palette tokens (RGB triplets for tailwind's rgb() alpha) */
+  --primary: 26 46 74;
+  --primary-dark: 19 34 58;
+  --primary-slate: 31 55 87;
+  --accent: 245 166 35;
+  --accent-light: 249 196 103;
+  --accent-dark: 196 133 28;
+  --neutral: 148 163 184;
+  --neutral-dim: 71 85 105;
+  --silver: 226 232 240;
+  --ink: 22 40 68;
+
+  /* Foundation tokens (universal) */
+  --glass-opacity: 0.80;
+  --motion-duration: 400ms;
+  --motion-stagger: 50ms;
+  --motion-easing-premium-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-easing-premium-in: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* Universal foundation rules (apply to every niche) */
+
+html {
+  /* Smart quotes everywhere */
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  /* Variable-font optical sizing */
+  font-optical-sizing: auto;
+}
+
+/* Tabular figures for any number near another number (prices, ratings, counts) */
+.tabular-nums,
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reduced-motion gate — universal accessibility rule. Components MUST
+   honour this; motion utilities collapse to near-zero duration. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Em-dash audit (universal). No em-dash should ever land in source.
+   This selector exists as a visible debugging surface during dev: if
+   anyone types one, it renders highlighted so we catch it before ship. */
+[data-em-dash-audit]::after {
+  content: attr(data-em-dash-audit);
+  background: yellow;
+  color: red;
+}

@@ -1,0 +1,62 @@
+{
+  "$schemaVersion": 1,
+  "default": "light",
+  "toggle": false,
+  "perClientOverride": true,
+  "palette": {
+    "primary": "#1a2e4a",
+    "primary_dark": "#13223a",
+    "primary_slate": "#1f3757",
+    "accent": "#f5a623",
+    "accent_light": "#f9c467",
+    "accent_dark": "#c4851c",
+    "neutral": "#94a3b8",
+    "neutral_dim": "#475569",
+    "silver": "#e2e8f0",
+    "ink": "#162844",
+    "white": "#ffffff"
+  },
+  "wcag": {
+    "ink_on_white": {
+      "ratio": "14.1:1",
+      "level": "AAA"
+    },
+    "accent_on_primary": {
+      "ratio": "4.7:1",
+      "level": "AA"
+    },
+    "ink_on_silver": {
+      "ratio": "8.3:1",
+      "level": "AAA"
+    },
+    "white_on_primary": {
+      "ratio": "11.2:1",
+      "level": "AAA"
+    }
+  },
+  "typography": {
+    "heading": {
+      "family": "Montserrat",
+      "weights": [400, 600, 700, 800],
+      "googleFontsFragment": "Montserrat:wght@400;600;700;800"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [400, 500, 600],
+      "googleFontsFragment": "Inter:wght@400;500;600"
+    },
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+  },
+  "shape": {
+    "mode": "sharp",
+    "motif": "angular",
+    "borderRadius": {
+      "default": "4px",
+      "card": "6px",
+      "button": "4px",
+      "input": "4px",
+      "badge": "4px",
+      "pill": "999px"
+    }
+  }
+}

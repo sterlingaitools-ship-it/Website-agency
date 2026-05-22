@@ -1,0 +1,60 @@
+{
+  "$schemaVersion": 1,
+  "preset": "energetic",
+  "tier2Enabled": [
+    "section-stagger-fade",
+    "number-glow"
+  ],
+  "easings": {
+    "default": "ease-out",
+    "ctaEntry": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "ctaExit": "ease-in",
+    "cardHover": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "scrollReveal": "ease-out"
+  },
+  "durations": {
+    "hover": "220ms",
+    "hoverOut": "180ms",
+    "reveal": "400ms",
+    "entranceStagger": "50ms",
+    "pageTransition": "300ms"
+  },
+  "honorsReducedMotion": true,
+  "enterTransform": {
+    "from": "translateY(16px)",
+    "to": "translateY(0)",
+    "opacityFrom": 0,
+    "opacityTo": 1
+  },
+  "exitTransform": {
+    "from": "translateY(0)",
+    "to": "translateY(-8px)",
+    "opacityFrom": 1,
+    "opacityTo": 0
+  },
+  "stagger_ms": 50,
+  "duration_ms": 400,
+  "reducedMotionOverride": {
+    "preset": "none",
+    "durations": {
+      "hover": "0ms",
+      "hoverOut": "0ms",
+      "reveal": "0ms",
+      "entranceStagger": "0ms",
+      "pageTransition": "0ms"
+    }
+  },
+  "animatedElements": [
+    "section-headings",
+    "service-cards",
+    "testimonial-cards",
+    "process-steps",
+    "gallery-thumbnails",
+    "trust-badge-strip"
+  ],
+  "staticElements": [
+    "NavBar",
+    "MobileCTABar",
+    "hero-content"
+  ]
+}

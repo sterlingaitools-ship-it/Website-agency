@@ -1,0 +1,76 @@
+{
+  "$schemaVersion": 1,
+  "trustStripCount": 5,
+  "placements": [
+    "hero",
+    "floating-strip",
+    "service-page",
+    "about-page",
+    "footer"
+  ],
+  "badges": [
+    {
+      "id": "google-reviews",
+      "name": "Google Reviews",
+      "matchKeywords": ["google review", "google rating", "google star", "4.5", "4.8", "4.9", "five star", "5 star"],
+      "filename": "google-reviews.svg",
+      "issuer": "Google LLC",
+      "issuerUrl": "https://www.google.com/business/",
+      "tier": "entry",
+      "isMultiColor": true
+    },
+    {
+      "id": "gaf-master-elite",
+      "name": "GAF Master Elite",
+      "matchKeywords": ["gaf master elite", "master elite", "gaf certified", "gaf contractor"],
+      "filename": "gaf-master-elite.svg",
+      "issuer": "GAF Materials Corporation",
+      "issuerUrl": "https://www.gaf.com/en-us/for-contractors/contractor-certification",
+      "validationRegex": "^[A-Z0-9]{4,20}$",
+      "tier": "elite",
+      "isMultiColor": true
+    },
+    {
+      "id": "owens-corning-platinum",
+      "name": "Owens Corning Platinum Preferred",
+      "matchKeywords": ["owens corning platinum", "owens corning preferred", "owens corning certified", "oc platinum"],
+      "filename": "owens-corning-platinum.svg",
+      "issuer": "Owens Corning",
+      "issuerUrl": "https://www.owenscorning.com/en-us/roofing/contractors",
+      "tier": "elite",
+      "isMultiColor": true
+    },
+    {
+      "id": "bbb-a-plus",
+      "name": "BBB A+ Accreditation",
+      "matchKeywords": ["bbb", "better business bureau", "bbb accredited", "bbb a+", "bbb rating"],
+      "filename": "bbb-a-plus.svg",
+      "issuer": "Better Business Bureau",
+      "issuerUrl": "https://www.bbb.org/accreditation-seals",
+      "validationRegex": "^[0-9]{10,15}$",
+      "tier": "mid",
+      "isMultiColor": true
+    },
+    {
+      "id": "license-display",
+      "name": "State Contractor License",
+      "matchKeywords": ["contractor license", "state license", "license number", "lic #", "licensed contractor", "roofing license"],
+      "filename": "license-display.svg",
+      "issuer": "State Contractor Licensing Board",
+      "issuerUrl": "https://www.contractors-license.org/",
+      "validationRegex": "^[A-Z0-9#\\-]{4,20}$",
+      "tier": "mid",
+      "isMultiColor": false
+    },
+    {
+      "id": "nrca-member",
+      "name": "NRCA Member",
+      "matchKeywords": ["nrca", "national roofing contractors association", "nrca member", "nrca certified"],
+      "filename": "nrca-member.svg",
+      "issuer": "National Roofing Contractors Association",
+      "issuerUrl": "https://www.nrca.net/",
+      "tier": "mid",
+      "isMultiColor": true
+    }
+  ]
+}
