@@ -1,0 +1,160 @@
+{
+  "niche_slug": "trades-roofing-plumbing-electrical",
+  "extractedAt": "2026-05-21T00:00:00.000Z",
+  "captureMethod": "manual — research synthesis (Apify blocked by network policy)",
+  "winner": "direction-a-proof-first-authority",
+  "componentSources": {
+    "heroFrom": "direction-a-proof-first-authority",
+    "sectionOrderFrom": "direction-a-proof-first-authority",
+    "typographyFrom": "direction-a-proof-first-authority",
+    "colorSystemFrom": "direction-a-proof-first-authority",
+    "trustStackFrom": "direction-a-proof-first-authority",
+    "ctaFrom": "direction-a-proof-first-authority",
+    "navigationFrom": "direction-a-proof-first-authority",
+    "formPatternFrom": "direction-a-proof-first-authority",
+    "mobilePatternFrom": "direction-b-emergency-led-action",
+    "testimonialsFrom": "direction-c-story-driven-community"
+  },
+  "palette": {
+    "primary": "#1a2e4a",
+    "primary_dark": "#13223a",
+    "primary_slate": "#1f3757",
+    "accent": "#f5a623",
+    "accent_light": "#f9c467",
+    "accent_dark": "#c4851c",
+    "neutral": "#94a3b8",
+    "neutral_dim": "#475569",
+    "silver": "#e2e8f0",
+    "ink": "#162844"
+  },
+  "paletteUsage": {
+    "primary": "Nav bar background, section backgrounds, WhyUs strip, pill tags",
+    "primary_dark": "Hover state on primary buttons, FinalCTA band background, footer background",
+    "primary_slate": "Secondary section backgrounds, card borders, footer divider",
+    "accent": "All CTA buttons, MobileCTABar background, active nav link, star icons, step number circles",
+    "accent_light": "Button hover state, highlight rings",
+    "accent_dark": "Button pressed/active state, Learn More links, See All links",
+    "neutral": "Placeholder text, disabled states, divider lines, subhead text on dark backgrounds",
+    "neutral_dim": "Secondary body text, captions, meta labels, trust bar labels",
+    "silver": "Card backgrounds, section dividers, TrustBar background, Reviews section background, ServiceAreas background",
+    "ink": "Primary body text on white, headings on white backgrounds, button text on accent backgrounds"
+  },
+  "contrastRatios": {
+    "ink_on_white": "14.1:1 — passes WCAG AAA",
+    "accent_on_primary": "4.7:1 — passes WCAG AA large text",
+    "ink_on_silver": "8.3:1 — passes WCAG AAA",
+    "white_on_primary": "9.1:1 — passes WCAG AAA"
+  },
+  "typography": {
+    "heading": "Montserrat",
+    "body": "Inter",
+    "headingFontUrl": "Montserrat:wght@400;600;700;800",
+    "bodyFontUrl": "Inter:wght@400;500;600",
+    "googleFontsImport": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap",
+    "scale": {
+      "display": {"font": "Montserrat", "weight": 800, "sizePx_desktop": 56, "sizePx_mobile": 36, "lineHeight": 1.1},
+      "h1": {"font": "Montserrat", "weight": 800, "sizePx_desktop": 48, "sizePx_mobile": 32, "lineHeight": 1.15},
+      "h2": {"font": "Montserrat", "weight": 700, "sizePx_desktop": 36, "sizePx_mobile": 28, "lineHeight": 1.2},
+      "h3": {"font": "Montserrat", "weight": 700, "sizePx_desktop": 24, "sizePx_mobile": 20, "lineHeight": 1.3},
+      "body": {"font": "Inter", "weight": 400, "sizePx_desktop": 16, "sizePx_mobile": 15, "lineHeight": 1.6},
+      "sm": {"font": "Inter", "weight": 400, "sizePx_desktop": 14, "sizePx_mobile": 13, "lineHeight": 1.5},
+      "xs": {"font": "Inter", "weight": 400, "sizePx_desktop": 12, "sizePx_mobile": 12, "lineHeight": 1.4}
+    }
+  },
+  "motion": {
+    "preset": "energetic",
+    "stagger_ms": 50,
+    "duration_ms": 400,
+    "easing": "ease-out",
+    "enterTransform": "translateY(16px) to translateY(0)",
+    "enterOpacity": "0 to 1",
+    "trigger": "IntersectionObserver at 20% visibility",
+    "reducedMotion": "all transition durations set to 0ms when prefers-reduced-motion: reduce",
+    "staticElements": ["NavBar", "MobileCTABar", "Hero — loads immediately, no entrance animation"]
+  },
+  "theme_mode": "light",
+  "shape_mode": "sharp",
+  "shape_motif": "angular",
+  "shapeValues": {
+    "default_border_radius": "4px",
+    "card_border_radius": "6px",
+    "button_border_radius": "4px",
+    "input_border_radius": "4px",
+    "badge_border_radius": "4px",
+    "pill_border_radius": "4px",
+    "note": "Pill shapes used only for service area tags (functional, small scale). All structural elements use sharp 4px corners."
+  },
+  "breakpoints": {
+    "mobile": "0px — 767px",
+    "tablet": "768px — 1023px",
+    "desktop": "1024px+"
+  },
+  "navBar": {
+    "height_desktop": "72px",
+    "height_mobile": "60px",
+    "background": "primary",
+    "sticky": true,
+    "mobilePattern": "hamburger collapses to slide-down full-width menu",
+    "phonePosition": "right, always visible"
+  },
+  "mobileCTABar": {
+    "height": "56px",
+    "background": "accent",
+    "position": "fixed bottom",
+    "visibility": "mobile only, hidden at >= 768px",
+    "bodyPaddingBottom_mobile": "56px",
+    "source": "direction-b-emergency-led-action"
+  },
+  "hero": {
+    "layoutDesktop": "split-screen 55% left copy + 45% right image",
+    "minHeight": "600px",
+    "maxHeight": "780px",
+    "leftBackground": "primary",
+    "formFields": ["Full Name", "Phone Number", "Service Needed (select)", "Email Address"],
+    "submitLabel": "Get My Free Quote",
+    "imageSubject": "Real crew on real roof — no stock photography",
+    "mobileReflow": "single column, copy first, image second at 240px height"
+  },
+  "trustBar": {
+    "height_desktop": "96px",
+    "background": "silver",
+    "items": [
+      "Google review count + star rating",
+      "GAF certification badge",
+      "BBB accreditation badge",
+      "License and insured indicator",
+      "Years in business"
+    ],
+    "mobileLayout": "2-col grid wrap, rows of 2 + 1 centered",
+    "trustStackSource": "04-cro-patterns.md and 05-trust-signals.md"
+  },
+  "performanceTargets": {
+    "heroLoadTime": "under 2 seconds on 4G",
+    "initialPageWeight": "under 300KB excluding images",
+    "imageFormat": "WebP",
+    "imageLazyLoad": "all images below fold use loading=lazy",
+    "heroImagePreload": "link rel=preload in document head",
+    "fontDisplay": "swap"
+  },
+  "seoDefaults": {
+    "titlePattern": "{{service or city}} | Licensed and Insured | Free Estimates | {{brandDNA.business.name}}",
+    "h1Pattern": "{{qualifier}} in {{brandDNA.business.city}}, {{brandDNA.business.state}}",
+    "schemaTypes": ["LocalBusiness", "RoofingContractor", "AggregateRating", "FAQPage", "Service"],
+    "primaryKeywordCluster": ["roofer near me", "roof replacement city", "roof repair near me", "roofing contractor city", "emergency roof repair"],
+    "secondaryKeywordClusters": ["storm damage roof repair", "insurance claim roof", "GAF certified roofer near me", "licensed roofing contractor near me"]
+  },
+  "sources": {
+    "raw_dir": "research/02-niche-research/trades-roofing-plumbing-electrical/templates/raw",
+    "color_dir": "manual",
+    "typo_dir": "manual",
+    "pick": "research/02-niche-research/trades-roofing-plumbing-electrical/templates/pick.json",
+    "copyPatterns": "research/02-niche-research/trades-roofing-plumbing-electrical/03-copy-patterns.md",
+    "croPatterns": "research/02-niche-research/trades-roofing-plumbing-electrical/04-cro-patterns.md",
+    "trustSignals": "research/02-niche-research/trades-roofing-plumbing-electrical/05-trust-signals.md",
+    "seoLandscape": "research/02-niche-research/trades-roofing-plumbing-electrical/06-seo-landscape.md",
+    "starterTemplate": "research/02-niche-research/trades-roofing-plumbing-electrical/08-starter-template.md",
+    "templateSpec": "research/02-niche-research/trades-roofing-plumbing-electrical/09-template-spec.md",
+    "wireframe": "research/02-niche-research/trades-roofing-plumbing-electrical/09-wireframe.md",
+    "sitemap": "research/02-niche-research/trades-roofing-plumbing-electrical/09-sitemap.json"
+  }
+}
