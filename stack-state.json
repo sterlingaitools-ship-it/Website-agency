@@ -14,7 +14,7 @@
     "m3.offerLocked": true,
     "m4.factoryStructureLoaded": true,
     "m5.factoryBriefLocked": true,
-    "factory.tailored": false,
+    "factory.tailored": true,
     "factory.deployed": false,
     "m6.engineStructureLoaded": false,
     "m7.engineBriefLocked": false,
@@ -80,6 +80,11 @@
       "timestamp": "2026-05-22T00:00:00.000Z",
       "command": "/generate-wf-brief",
       "outcome": "complete — brief locked at research/output/website-factory-brief.md, agency name Roofline Digital, m5.factoryBriefLocked=true"
+    },
+    {
+      "timestamp": "2026-05-22T00:00:00.000Z",
+      "command": "/tailor-factory",
+      "outcome": "complete — trust-signals.json updated (4 new badges), CLAUDE.md orientation updated, copy-deck lessons seeded, factory.tailored=true"
     }
   ]
 }

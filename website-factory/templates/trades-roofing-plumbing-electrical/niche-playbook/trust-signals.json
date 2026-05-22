@@ -71,6 +71,62 @@
       "issuerUrl": "https://www.nrca.net/",
       "tier": "mid",
       "isMultiColor": true
+    },
+    {
+      "id": "gaf-certified",
+      "name": "GAF Certified Contractor",
+      "matchKeywords": ["gaf certified", "gaf contractor", "gaf certification"],
+      "filename": "gaf-certified.svg",
+      "logoPath": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/gaf-certified.svg",
+      "issuer": "GAF Materials Corporation",
+      "issuerUrl": "https://www.gaf.com/en-us/for-contractors/contractor-certification",
+      "appliesIf": "brand-dna.trust_badges contains alt matching 'gaf certified' but not 'master elite'",
+      "niche": "trades-roofing-plumbing-electrical",
+      "tier": "entry",
+      "note": "Entry-level GAF certification. Less powerful than Master Elite but still a valid trust signal. Display only when the client does not qualify for Master Elite.",
+      "isMultiColor": true
+    },
+    {
+      "id": "certainteed-select",
+      "name": "CertainTeed SELECT ShingleMaster",
+      "matchKeywords": ["certainteed", "certainteed select", "shinglemaster", "certainteed certified"],
+      "filename": "certainteed-select.svg",
+      "logoPath": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/certainteed-select.svg",
+      "issuer": "CertainTeed Corporation",
+      "issuerUrl": "https://www.certainteed.com/roofing/find-a-contractor/",
+      "appliesIf": "brand-dna.trust_badges contains alt matching 'certainteed'",
+      "niche": "trades-roofing-plumbing-electrical",
+      "tier": "elite",
+      "note": "CertainTeed's premium contractor tier, equivalent in trust signal strength to GAF Master Elite and Owens Corning Platinum. Display when client uses CertainTeed materials.",
+      "isMultiColor": true
+    },
+    {
+      "id": "osha-safety",
+      "name": "OSHA Safety Certified Crew",
+      "matchKeywords": ["osha", "osha certified", "osha safety", "osha 10", "osha 30"],
+      "filename": "osha-safety.svg",
+      "logoPath": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/osha-safety.svg",
+      "issuer": "US Occupational Safety and Health Administration",
+      "issuerUrl": "https://www.osha.gov/training",
+      "appliesIf": "brand-dna.trust_badges contains alt matching 'osha'",
+      "niche": "trades-roofing-plumbing-electrical",
+      "tier": "mid",
+      "note": "Increasingly common in roofing. Appeals to risk-conscious homeowners and insurance adjusters. Secondary signal — display in About page certifications row rather than trust bar.",
+      "isMultiColor": false
+    },
+    {
+      "id": "nextdoor-recommended",
+      "name": "Recommended on Nextdoor",
+      "matchKeywords": ["nextdoor", "nextdoor recommended", "nextdoor neighbor", "nextdoor neighbour"],
+      "filename": "nextdoor-recommended.svg",
+      "logoPath": "templates/trades-roofing-plumbing-electrical/niche-playbook/trust-badges/nextdoor-recommended.svg",
+      "issuer": "Nextdoor",
+      "issuerUrl": "https://business.nextdoor.com/",
+      "appliesIf": "brand-dna.trust_badges contains alt matching 'nextdoor'",
+      "niche": "trades-roofing-plumbing-electrical",
+      "tier": "mid",
+      "note": "Local social proof — more persuasive in this niche than most press mentions. A screenshot of Nextdoor recommendations or a Nextdoor Business badge functions as hyperlocal trust. Display near the Reviews section.",
+      "isMultiColor": true
     }
   ]
 }
