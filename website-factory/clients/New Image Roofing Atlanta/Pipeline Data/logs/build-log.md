@@ -43,3 +43,11 @@ Theme mode: light
 Voice register: commercial
 Region: Greater Atlanta, GA
 Output: Pipeline Data/brand/brand-dna.json, extraction-report.md
+
+## Stage 10.1, build-from-template (2026-05-22T21:09:43.609124+00:00)
+Status: complete
+Output: /home/user/Website-agency/website-factory/clients/New Image Roofing Atlanta/New Image Roofing Atlanta Website
+
+## Stage 10.1, build-from-template (2026-05-22T21:09:55.698345+00:00)
+Status: complete
+Output: /home/user/Website-agency/website-factory/clients/New Image Roofing Atlanta/New Image Roofing Atlanta Website

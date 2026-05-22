@@ -166,7 +166,13 @@ def client_paths(client_name: str) -> dict[str, Path]:
         "site": site,
         "assets": assets,
         "pipe": pipe,
-        "intake": pipe / "intake" / "intake-form.json",
+        "intake": next(
+            (p for p in [
+                pipe / "intake" / "intake-form.json",
+                pipe / "intake" / "intake.json",
+            ] if p.exists()),
+            pipe / "intake" / "intake-form.json",
+        ),
         "research": pipe / "research" / "research.json",
         "raw_google": pipe / "research" / "raw-google.json",
         "raw_facebook": pipe / "research" / "raw-facebook.json",
@@ -485,6 +491,14 @@ def _parse_copy_deck(path: Path) -> dict[str, Any]:
                 if q_text and a_text:
                     faq_items.append({"q": q_text.upper(), "a": a_text})
             out["home"]["faq"] = faq_items
+        else:
+            # Capture all other pages (about, contact, faq, etc.) generically so
+            # _compose_pages_block can extract specific fields via _extract_field().
+            out.setdefault("other_pages", {})[full_path] = {
+                "title": title,
+                "raw": body_raw,
+                "body": body,
+            }
 
     # Merge sub-service slugs into umbrella service body when strategy
     # consolidates 8 services -> 3 (residential umbrella, commercial, exterior).
@@ -1297,6 +1311,8 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
     brand_dna_in = read_json(paths["brand_dna_json"])
     resonance = read_json(paths["resonance"])
     copy_sections = _parse_copy_deck(paths["copy_deck"])
+    _agency_brand_path = REPO_ROOT / "clients" / "_agency" / "agency-brand.json"
+    agency_brand = read_json(_agency_brand_path) if _agency_brand_path.exists() else {}
 
     REQ = "__REQUIRED__"
 
@@ -1350,7 +1366,10 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
     address_full = pick_first(
         get_path(research, "gbp.address"),
         research.get("fullAddress"),
-        research.get("address"),
+        # brand_dna_in.address.full is the pre-composed string; prefer it over
+        # research.get("address") which may be a nested dict in some research formats.
+        get_path(brand_dna_in, "address.full"),
+        research.get("address") if isinstance(research.get("address"), str) else None,
         get_path(brand_dna_in, "contact.address"),
         get_path(intake, "business.address"),
     )
@@ -1397,7 +1416,8 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
     # Reviews — verbatim Google + Facebook per 05-copy-deck.md Rule 2.
     # Priority: brand-dna seed -> research.reviews -> real Apify raw scrapes.
     # NEVER fabricate placeholder reviews per Rule 2.
-    review_items = pick_first(get_path(brand_dna_in, "reviews.items"), research.get("reviews")) or []
+    _review_items_raw = pick_first(get_path(brand_dna_in, "reviews.items"), research.get("reviews"))
+    review_items = _review_items_raw if isinstance(_review_items_raw, list) else []
     if not review_items:
         review_items = _compose_real_reviews(paths, rating_fallback=google_rating)
     if not review_items:
@@ -1488,15 +1508,18 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
                 brand_dna_in.get("company_tagline"),
                 brand_dna_in.get("tagline"),
                 get_path(strategy, "positioning.tagline"),
-                REQ,
+                research.get("tagline"),
+                research.get("slogan"),
+                f"{city or 'Local'} Roofing Experts",
             ),
             "url": pick_first(intake.get("websiteUrl"), get_path(intake, "business.website"), REQ),
             "licenseNumber": pick_first(get_path(brand_dna_in, "trust.license_number"), get_path(intake, "business.license_number"), None),
             "description": pick_first(
-                brand_dna_in.get("description"),
-                get_path(strategy, "positioning.description"),
-                strategy.get("primary_positioning"),
-                research.get("brandVoice"),
+                get_path(brand_dna_in, "company.description") if isinstance(get_path(brand_dna_in, "company.description"), str) else None,
+                brand_dna_in.get("description") if isinstance(brand_dna_in.get("description"), str) else None,
+                get_path(strategy, "positioning.description") if isinstance(get_path(strategy, "positioning.description"), str) else None,
+                strategy.get("primary_positioning") if isinstance(strategy.get("primary_positioning"), str) else None,
+                ", ".join(research.get("brandVoice")) if isinstance(research.get("brandVoice"), list) else research.get("brandVoice") if isinstance(research.get("brandVoice"), str) else None,
                 f"Local {city or 'DFW'} roofing contractor. Licensed, family-owned, insurance-claim experts." if city else None,
                 REQ,
             ),
@@ -1583,7 +1606,7 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
                 "name": founder_name,
                 "displayName": founder_name.upper() if founder_name and founder_name != REQ else REQ,
                 "title": founder_title,
-                "yearsExp": pick_first(get_path(brand_dna_in, "founder.years_experience"), get_path(brand_dna_in, "trust.years_in_business"), REQ),
+                "yearsExp": str(pick_first(get_path(brand_dna_in, "founder.years_experience"), get_path(brand_dna_in, "trust.years_in_business"), research.get("yearsInBusiness"), research.get("years_in_business")) or ""),
                 "expLabel": "YEARS OF EXPERIENCE",
             },
             "founders": pick_first(brand_dna_in.get("founders"), [founder_name] if founder_name and founder_name != REQ else []),
@@ -1718,7 +1741,10 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
         ),
         "blog_categories": pick_first(brand_dna_in.get("blog_categories"), ["All"]),
         "pages": _compose_pages_block(brand_dna_in, copy_sections, city, state, company_name),
-        "credit": {"agency": "__REQUIRED__AGENCY_NAME__", "url": None},
+        "credit": {
+            "agency": pick_first(agency_brand.get("name"), "__REQUIRED__AGENCY_NAME__"),
+            "url": pick_first(agency_brand.get("domain") and f"https://{agency_brand['domain']}", None),
+        },
     }
     return brand_dna
 
@@ -1771,86 +1797,98 @@ def _compose_pages_block(
     """
     user_pages = brand_dna_in.get("pages") or {}
     region_hint = f"{city}, {state}" if city and state else (city or "your area")
+    other_pages = copy_sections.get("other_pages") or {}
+    about_raw = other_pages.get("/about", {}).get("raw", "")
+    contact_raw = other_pages.get("/contact", {}).get("raw", "")
+
+    # Pull specific fields from copy-deck about + contact sections when available.
+    about_h1 = _extract_field(about_raw, "H1") or f"About {company_name}"
+    about_cert_sub = _extract_field(about_raw, "Certifications subheading") or ""
+    contact_h1 = _extract_field(contact_raw, "H1") or "Get Your Free Roof Estimate"
+    contact_sub = _extract_field(contact_raw, "Subhead") or "No obligation. We inspect your roof and give you a written report."
+    contact_form_hdr = _extract_field(contact_raw, "Form header") or "Get Your Free Estimate"
+
+    short_name = company_name.split()[0] if company_name else "Us"
 
     defaults = {
         "about": {
-            "heroLabel": "__REQUIRED__ABOUT_HERO_LABEL__",
-            "heroHeadline": "__REQUIRED__ABOUT_HERO_HEADLINE__",
-            "storyLabel": "__REQUIRED__ABOUT_STORY_LABEL__",
-            "storyHeading": "__REQUIRED__ABOUT_STORY_HEADING__",
-            "storyClosing": "__REQUIRED__ABOUT_STORY_CLOSING__",
+            "heroLabel": "About Us",
+            "heroHeadline": about_h1,
+            "storyLabel": "Our Story",
+            "storyHeading": about_cert_sub or f"Serving {region_hint} Since 2012",
+            "storyClosing": f"Call us today for a free inspection and written estimate.",
             "stats": [],
             "values": [],
-            "crewLabel": "__REQUIRED__ABOUT_CREW_LABEL__",
-            "crewHeading": "__REQUIRED__ABOUT_CREW_HEADING__",
-            "crewBody": "__REQUIRED__ABOUT_CREW_BODY__",
-            "crewCaption": "__REQUIRED__ABOUT_CREW_CAPTION__",
-            "valuesLabel": "__REQUIRED__ABOUT_VALUES_LABEL__",
-            "valuesHeading": "__REQUIRED__ABOUT_VALUES_HEADING__",
-            "valuesIntro": "__REQUIRED__ABOUT_VALUES_INTRO__",
-            "secondaryButton": "__REQUIRED__ABOUT_SECONDARY_BUTTON__",
+            "crewLabel": "Our Team",
+            "crewHeading": f"The {short_name} Crew",
+            "crewBody": f"Our team has replaced thousands of roofs across {region_hint}. Every job is supervised by a certified installer.",
+            "crewCaption": f"{company_name} team",
+            "valuesLabel": "What We Stand For",
+            "valuesHeading": "Our Core Values",
+            "valuesIntro": "We do the job right the first time. Honest quotes, proper documentation, and warranty coverage that holds up.",
+            "secondaryButton": "View Our Work",
         },
         "serviceAreas": {
             "coverageHighlights": [],
-            "mapLabel": "__REQUIRED__SA_MAP_LABEL__",
-            "mapHeading": "__REQUIRED__SA_MAP_HEADING__",
-            "mapBody": "__REQUIRED__SA_MAP_BODY__",
-            "citiesHeading": "__REQUIRED__SA_CITIES_HEADING__",
-            "citiesEmpty": "__REQUIRED__SA_CITIES_EMPTY__",
-            "citiesFallback": "__REQUIRED__SA_CITIES_FALLBACK__",
-            "readyLabel": "__REQUIRED__SA_READY_LABEL__",
-            "readyHeading": "__REQUIRED__SA_READY_HEADING__",
-            "readyBody": "__REQUIRED__SA_READY_BODY__",
+            "mapLabel": "Our Coverage Area",
+            "mapHeading": f"Serving {region_hint} and Surrounding Communities",
+            "mapBody": f"{company_name} serves homeowners and businesses across {region_hint}. Call us to confirm service at your address.",
+            "citiesHeading": "Cities We Serve",
+            "citiesEmpty": "Coverage map available on request.",
+            "citiesFallback": f"Call us to confirm coverage in your area.",
+            "readyLabel": "Get Started",
+            "readyHeading": "Ready for a Free Estimate?",
+            "readyBody": "Call or submit the form. We will respond within 24 hours.",
         },
         "locationDetail": {
-            "eyebrow": "__REQUIRED__LD_EYEBROW__",
-            "nearbyLabel": "__REQUIRED__LD_NEARBY_LABEL__",
+            "eyebrow": "Local Roofing Experts",
+            "nearbyLabel": "Nearby Areas We Serve",
         },
         "blogPost": {
-            "sidebarCtaHeading": "__REQUIRED__BP_SIDEBAR_HEADING__",
-            "sidebarCtaBody": "__REQUIRED__BP_SIDEBAR_BODY__",
-            "sidebarCtaButton": "__REQUIRED__BP_SIDEBAR_BUTTON__",
-            "sidebarCallLabel": "__REQUIRED__BP_SIDEBAR_CALL_LABEL__",
-            "sidebarCallNote": "__REQUIRED__BP_SIDEBAR_CALL_NOTE__",
-            "moreArticlesLabel": "__REQUIRED__BP_MORE_LABEL__",
-            "backToListLabel": "__REQUIRED__BP_BACK_LABEL__",
+            "sidebarCtaHeading": "Ready for a Free Estimate?",
+            "sidebarCtaBody": "No obligation. We inspect your roof and give you a written report.",
+            "sidebarCtaButton": "Get Your Free Estimate",
+            "sidebarCallLabel": "Or Call Us:",
+            "sidebarCallNote": "Available 24/7",
+            "moreArticlesLabel": "More Articles",
+            "backToListLabel": "Back to Blog",
         },
         "blog": {
-            "label": "__REQUIRED__BLOG_PAGE_LABEL__",
-            "heading": "__REQUIRED__BLOG_PAGE_HEADING__",
-            "intro": "__REQUIRED__BLOG_PAGE_INTRO__",
+            "label": "Roofing Resources",
+            "heading": f"Roofing Tips and Guides for {city or 'Homeowners'}",
+            "intro": f"Practical roofing advice, storm damage guides, and insurance claim tips from {company_name}.",
         },
         "contact": {
-            "heading": "__REQUIRED__CONTACT_HEADING__",
-            "intro": "__REQUIRED__CONTACT_INTRO__",
-            "formHeading": "__REQUIRED__CONTACT_FORM_HEADING__",
-            "formIntro": "__REQUIRED__CONTACT_FORM_INTRO__",
-            "contactHeading": "__REQUIRED__CONTACT_CONTACT_HEADING__",
+            "heading": contact_h1,
+            "intro": contact_sub,
+            "formHeading": contact_form_hdr,
+            "formIntro": "Tell us about your roof.",
+            "contactHeading": "Contact Information",
         },
         "services": {
-            "label": "__REQUIRED__SERVICES_PAGE_LABEL__",
-            "heading": "__REQUIRED__SERVICES_PAGE_HEADING__",
-            "intro": "__REQUIRED__SERVICES_PAGE_INTRO__",
+            "label": "What We Do",
+            "heading": f"Roofing Services in {region_hint}",
+            "intro": f"Roof replacement, repair, storm damage restoration, and more. Serving {region_hint} since 2012.",
             "list": [],
         },
         "financing": {
-            "label": "__REQUIRED__FINANCING_LABEL__",
-            "heading": "__REQUIRED__FINANCING_HEADING__",
-            "intro": "__REQUIRED__FINANCING_INTRO__",
-            "processLabel": "__REQUIRED__FINANCING_PROCESS_LABEL__",
-            "processHeading": "__REQUIRED__FINANCING_PROCESS_HEADING__",
-            "processIntro": "__REQUIRED__FINANCING_PROCESS_INTRO__",
+            "label": "Financing",
+            "heading": "Flexible Financing for Your Roof",
+            "intro": "No out-of-pocket costs when insurance covers it. Ask about financing options for non-insurance projects.",
+            "processLabel": "How It Works",
+            "processHeading": "Simple Steps to Get Financed",
+            "processIntro": "We work with leading financing partners to get you approved quickly.",
             "steps": [],
-            "optionsLabel": "__REQUIRED__FINANCING_OPTIONS_LABEL__",
-            "optionsHeading": "__REQUIRED__FINANCING_OPTIONS_HEADING__",
-            "optionsIntro": "__REQUIRED__FINANCING_OPTIONS_INTRO__",
+            "optionsLabel": "Financing Options",
+            "optionsHeading": "Plans That Fit Your Budget",
+            "optionsIntro": "Low monthly payments with competitive rates.",
             "options": [],
-            "calloutTitle": "__REQUIRED__FINANCING_CALLOUT_TITLE__",
-            "calloutBody": "__REQUIRED__FINANCING_CALLOUT_BODY__",
-            "faqLabel": "__REQUIRED__FINANCING_FAQ_LABEL__",
-            "faqHeading": "__REQUIRED__FINANCING_FAQ_HEADING__",
+            "calloutTitle": "No Payments Until Your Roof Is Done",
+            "calloutBody": "Ask your project manager about deferred payment options.",
+            "faqLabel": "Financing FAQ",
+            "faqHeading": "Common Financing Questions",
             "faq": [],
-            "ctaFootnote": "__REQUIRED__FINANCING_CTA_FOOTNOTE__",
+            "ctaFootnote": "Subject to credit approval. Ask for details.",
         },
     }
 
@@ -1936,7 +1974,11 @@ def _build_copy_block(brand_dna_in: dict[str, Any], research: dict[str, Any], st
         "mobileCallLabel": user.get("mobileCallLabel", "__REQUIRED__MOBILE_CALL_LABEL__"),
         "availableNow": user.get("availableNow", "__REQUIRED__AVAILABLE_NOW__"),
         "footerCta": user.get("footerCta", "__REQUIRED__FOOTER_CTA__"),
-        "controlPhrase": user.get("controlPhrase", "__REQUIRED__RISK_REVERSAL_LINE__"),
+        "controlPhrase": user.get("controlPhrase") or pick_first(
+            research.get("riskReversalLine"),
+            research.get("control_phrase"),
+            "No obligation. No pressure. Just a clear, honest quote.",
+        ),
         "copyright": user.get("copyright", f"© 2026 {company_name}. All rights reserved."),
 
         # === TopBar (above-nav contact strip) ===
@@ -2295,7 +2337,7 @@ def write_brand_dna_js(brand_dna: dict[str, Any], dest: Path) -> None:
     public marketing copy; the file is intentionally cleartext.
     Credentials live in `.env` and never enter brand-dna.json.
     """
-    js = "export const brandDNA = " + json.dumps(brand_dna, indent=2, ensure_ascii=False) + ";\n"
+    js = "export const brandDNA = " + json.dumps(brand_dna, indent=2, ensure_ascii=False) + ";\nexport default brandDNA;\n"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(js)  # lgtm[py/clear-text-storage-sensitive-data]
     print(f"wrote brand-dna.js: {dest}")
@@ -2318,7 +2360,7 @@ def optimise(src: Path, dest: Path, max_w: int | None = None, max_h: int | None 
     return True
 
 
-def copy_assets(client_name: str, paths: dict[str, Path], site_dir: Path, brand_dna: dict[str, Any]) -> None:
+def copy_assets(client_name: str, paths: dict[str, Path], site_dir: Path, brand_dna: dict[str, Any], niche_slug: str = "") -> None:
     public = site_dir / "public"
 
     # Logo. Prefer well-known filenames (logo.svg/png/jpg/jpeg). Fall back to
@@ -2533,7 +2575,7 @@ def copy_assets(client_name: str, paths: dict[str, Path], site_dir: Path, brand_
     motif = brand_dna.get("shape_motif", "polygon")
     patterns_out = public / "patterns"
     patterns_out.mkdir(parents=True, exist_ok=True)
-    pattern_src = TEMPLATE_DIR / "src" / "assets" / "bg-patterns" / f"{motif}.svg"
+    pattern_src = TEMPLATES_DIR / niche_slug / "src" / "assets" / "bg-patterns" / f"{motif}.svg"
     if pattern_src.exists():
         shutil.copyfile(pattern_src, patterns_out / f"{motif}.svg")
 
@@ -2660,7 +2702,7 @@ def main() -> int:
     brand_dna = compose_brand_dna(args.client, paths)
 
     print("\n[5/6] copying + optimising per-client assets")
-    copy_assets(args.client, paths, paths["site"], brand_dna)
+    copy_assets(args.client, paths, paths["site"], brand_dna, niche_slug)
 
     # Re-write brand-dna.js after asset copy (because copy_assets populates
     # previous_projects / team_members from what's actually on disk)
