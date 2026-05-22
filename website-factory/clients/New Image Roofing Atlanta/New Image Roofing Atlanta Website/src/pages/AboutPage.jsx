@@ -1,9 +1,11 @@
+import { Helmet } from 'react-helmet-async';
 import NavBar from '../components/NavBar';
 import MobileCTABar from '../components/MobileCTABar';
 import TrustBar from '../components/TrustBar';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import brandDNA from '../config/brand-dna';
+import { pageTitle, canonical } from '../utils/seo';
 
 /**
  * AboutHero — simple centered header section, inline (not a separate component).
@@ -198,8 +200,18 @@ function TeamGrid() {
 }
 
 export default function AboutPage() {
+  const title = pageTitle('About Us');
+  const desc = `Learn about ${brandDNA.company.name}, Atlanta's trusted roofing contractor since 2012. ${brandDNA.reviews.googleCount} five-star reviews. Owens Corning Platinum Preferred.`;
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={canonical('/about')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <NavBar />
       <main className="pb-14 md:pb-0">
         <AboutHero />

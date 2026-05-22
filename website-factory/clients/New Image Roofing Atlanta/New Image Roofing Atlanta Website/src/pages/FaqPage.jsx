@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import NavBar from '../components/NavBar';
 import MobileCTABar from '../components/MobileCTABar';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import brandDNA from '../config/brand-dna';
+import { pageTitle, canonical, faqPageSchema } from '../utils/seo';
 
 const FAQ_CATEGORIES = [
   { id: 'general', label: 'General' },
@@ -56,9 +58,21 @@ export default function FaqPage() {
     (item) => !item.category || item.category === activeCategory
   );
   const displayItems = filtered.length > 0 ? filtered : allFaqs;
+  const title = pageTitle('Frequently Asked Questions');
+  const desc = `Answers to common questions about roofing replacement, storm damage, insurance claims, and costs from ${brandDNA.company.name} in ${brandDNA.address.city}, ${brandDNA.address.state}.`;
+  const schema = faqPageSchema(allFaqs);
 
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={canonical('/faq')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta name="robots" content="index, follow" />
+        {schema && <script type="application/ld+json">{schema}</script>}
+      </Helmet>
       <NavBar />
       <main className="pb-14 md:pb-0">
         {/* FAQ Hero */}

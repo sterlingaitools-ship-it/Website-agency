@@ -48,6 +48,7 @@ export default function App() {
         <Route path="/services/roof-inspection" element={<ServicePage />} />
         <Route path="/services/:service" element={<ServicePage />} />
         <Route path="/areas/:city" element={<CityPage />} />
+        <Route path="/locations/:city" element={<CityPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />

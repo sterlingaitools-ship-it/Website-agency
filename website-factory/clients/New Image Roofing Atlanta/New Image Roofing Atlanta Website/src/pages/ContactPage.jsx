@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import NavBar from '../components/NavBar';
 import MobileCTABar from '../components/MobileCTABar';
 import TrustBar from '../components/TrustBar';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import brandDNA from '../config/brand-dna';
+import { pageTitle, canonical, COMPANY, CITY, STATE } from '../utils/seo';
 
 const serviceOptions = [
   'Roof Replacement',
@@ -34,8 +36,18 @@ export default function ContactPage() {
     setSubmitted(true);
   };
 
+  const title = pageTitle('Contact Us');
+  const desc = `Contact ${COMPANY} for a free roofing estimate in ${CITY}, ${STATE}. Call ${brandDNA.contact.phone} or submit our online form. No obligation, fast response.`;
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={canonical('/contact')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <NavBar />
       <main className="pb-14 md:pb-0">
         {/* Contact Hero */}

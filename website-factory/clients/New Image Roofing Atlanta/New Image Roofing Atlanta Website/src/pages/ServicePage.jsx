@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import NavBar from '../components/NavBar';
 import MobileCTABar from '../components/MobileCTABar';
 import TrustBar from '../components/TrustBar';
@@ -10,6 +11,7 @@ import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import ServiceAreas from '../components/ServiceAreas';
 import brandDNA from '../config/brand-dna';
+import { serviceTitle, serviceDesc, canonical, serviceSchema } from '../utils/seo';
 
 const serviceOptions = [
   'Roof Replacement',
@@ -165,8 +167,22 @@ export default function ServicePage() {
     ),
   };
 
+  const path = serviceSlug ? `/services/${serviceSlug}` : '/services';
+  const title = service ? serviceTitle(service.name) : serviceTitle('Roofing Services');
+  const desc = serviceDesc(service);
+  const schema = serviceSchema(service, path);
+
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={canonical(path)} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta name="robots" content="index, follow" />
+        {schema && <script type="application/ld+json">{schema}</script>}
+      </Helmet>
       <NavBar />
       <main className="pb-14 md:pb-0">
         <ServicePageHero service={service} />

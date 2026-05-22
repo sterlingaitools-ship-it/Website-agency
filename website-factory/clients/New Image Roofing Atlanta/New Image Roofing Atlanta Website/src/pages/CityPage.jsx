@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import NavBar from '../components/NavBar';
 import MobileCTABar from '../components/MobileCTABar';
 import TrustBar from '../components/TrustBar';
@@ -8,6 +9,7 @@ import Gallery from '../components/Gallery';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import brandDNA from '../config/brand-dna';
+import { cityTitle, cityDesc, canonical, citySchema } from '../utils/seo';
 
 /**
  * City-specific hero — reuses the hero split layout with city-aware copy.
@@ -114,8 +116,22 @@ export default function CityPage() {
     ? city.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
     : brandDNA.address.city;
 
+  const citySlug = city || '';
+  const title = cityTitle(displayCity);
+  const desc = cityDesc(displayCity);
+  const schema = citySchema(displayCity, citySlug);
+
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={canonical(`/locations/${citySlug}`)} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">{schema}</script>
+      </Helmet>
       <NavBar />
       <main className="pb-14 md:pb-0">
         <CityHero city={city || ''} />
