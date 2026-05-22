@@ -1,0 +1,20 @@
+{
+  "folder": "founder-photos",
+  "scrapedAt": "2026-05-22",
+  "status": "manual-drop-needed",
+  "notes": "No owner or team photos were found on accessible public pages. The client website returns 403. LinkedIn profile exists for Montana Mace (CEO) but profile photos are not downloadable without authentication.",
+  "assets": [],
+  "founderInfo": {
+    "name": "Montana Mace",
+    "title": "CEO",
+    "linkedIn": "https://www.linkedin.com/in/montana-mace-89295562/",
+    "note": "Montana Mace LinkedIn profile photo may be available if student logs in. Request a professional headshot directly from the client."
+  },
+  "photoRequirementsForSite": [
+    "Professional headshot of Montana Mace for About page and founder section",
+    "Minimum 800x800px, ideally on a neutral or outdoor background",
+    "Optional: owner cutout (transparent background PNG) for hero composite use in Stage 9",
+    "Optional: team photo for About page"
+  ],
+  "manualAction": "Request a professional headshot from Montana Mace. If no professional photo is available, the About page should use a job-site photo instead. Owner cutout for hero is optional but improves conversion (see niche playbook hero-composition.md)."
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "client": "New Image Roofing Atlanta",
+  "generatedAt": "2026-05-22",
+  "niche": "trades-roofing-plumbing-electrical",
+
+  "positioning": {
+    "primaryDifferentiators": [
+      "Owens Corning Platinum Preferred Contractor (fewer than 1% of US roofers qualify)",
+      "GAF Certified Contractor",
+      "BBB A+ Accredited since 2015",
+      "14 years in Atlanta metro market (since 2012)",
+      "15,000+ roofing systems replaced",
+      "Storm Watch Program (post-storm inspection at no cost)",
+      "Full insurance claim management (inspection, paperwork, adjuster meeting)",
+      "Open 24 hours, 7 days a week",
+      "Lifetime labor warranty on residential installations",
+      "Duro-Last certified commercial contractor"
+    ],
+    "heroMessageAngle": "certification-and-volume",
+    "heroH1": "114 Five-Star Reviews. Atlanta's GAF-Certified, Owens Corning Platinum Roofing Contractor.",
+    "heroSubhead": "Licensed, insured, and certified since 2012. Serving Atlanta and Metro-Atlanta. 15,000+ roofs replaced.",
+    "primaryCta": "Get Your Free Estimate",
+    "formHeader": "Get Your Free Estimate",
+    "submitButton": "Get My Free Quote"
+  },
+
+  "targetAudience": {
+    "primary": "Residential homeowners in Atlanta metro area (30-65 age range, homeowners not renters)",
+    "secondary": "Commercial property managers and building owners in Greater Georgia",
+    "painPoints": [
+      "Roof is leaking or recently damaged by storm",
+      "Roof is aging (15+ years) and showing signs of wear",
+      "Received an inflated or confusing insurance quote",
+      "Worried about contractor taking a deposit and disappearing",
+      "Unsure whether storm damage warrants an insurance claim",
+      "Need a trusted contractor to handle the insurance adjuster process"
+    ],
+    "purchaseIntent": {
+      "urgent": "active leak, storm damage, fallen tree",
+      "planned": "roof over 15 years old, visible deterioration, preparing to sell home",
+      "seasonal": "post-winter inspection, spring/fall maintenance"
+    }
+  },
+
+  "contentStrategy": {
+    "topicalAuthority": "storm-damage-and-insurance-claims",
+    "contentPillars": [
+      "Storm damage and insurance claim expertise",
+      "Certification and credential transparency",
+      "Local Atlanta market knowledge",
+      "Honest, plain-language homeowner education"
+    ],
+    "blogFocus": [
+      "Cost transparency (roof replacement cost in Atlanta)",
+      "Insurance claim process walkthrough",
+      "Contractor selection criteria (how to verify, what to ask)",
+      "Seasonal preparation (spring/fall inspection checklists)",
+      "Certification explainers (GAF, Owens Corning, BBB)"
+    ]
+  },
+
+  "navigationStructure": {
+    "primary": [
+      { "label": "Services", "type": "dropdown", "children": ["Roof Replacement", "Roof Repair", "Storm Damage", "Free Inspection", "Gutters", "Commercial"] },
+      { "label": "Service Areas", "type": "dropdown", "children": ["Atlanta", "Marietta", "Roswell", "Alpharetta", "Sandy Springs", "Decatur", "Smyrna", "Dunwoody"] },
+      { "label": "About Us", "slug": "/about" },
+      { "label": "Reviews", "slug": "/reviews" },
+      { "label": "Gallery", "slug": "/gallery" },
+      { "label": "FAQ", "slug": "/faq" }
+    ],
+    "cta": { "label": "Get Free Estimate", "slug": "/contact", "style": "button-primary" }
+  },
+
+  "trustSignalPriority": [
+    "114 Google reviews at 4.7 stars (display prominently in hero and trust bar)",
+    "Owens Corning Platinum Preferred (primary certification badge)",
+    "BBB A+ Accredited since 2015 (secondary badge)",
+    "GAF Certified (tertiary badge)",
+    "14 years in business",
+    "15,000+ roofing systems replaced",
+    "Open 24/7",
+    "Lifetime labor warranty"
+  ],
+
+  "conversionStrategy": {
+    "primaryConversion": "Free inspection form submission",
+    "secondaryConversion": "Phone call (click-to-call)",
+    "formPlacement": ["Hero", "Contact page", "Each service page", "Final CTA band"],
+    "mobileSticky": "Call Now button visible at all times on mobile",
+    "urgencyTriggers": [
+      "Storm Watch Program CTA when storm season approaches",
+      "24/7 availability message on repair and storm damage pages",
+      "Same-day emergency tarping call-out"
+    ],
+    "trustBeforeAsk": "Every page establishes credentials before showing a form"
+  },
+
+  "localSeoStrategy": {
+    "primaryCityPage": "/locations/atlanta-ga",
+    "locationPages": [
+      "/locations/atlanta-ga",
+      "/locations/marietta-ga",
+      "/locations/roswell-ga",
+      "/locations/alpharetta-ga",
+      "/locations/sandy-springs-ga",
+      "/locations/decatur-ga",
+      "/locations/smyrna-ga",
+      "/locations/dunwoody-ga"
+    ],
+    "gbpOptimization": [
+      "Push review count to 200+ (systematic post-job SMS request)",
+      "Weekly Google Posts",
+      "Populate all service categories",
+      "Pre-answer 10+ Q&A questions",
+      "Upload geo-tagged project photos weekly"
+    ],
+    "schemaRequired": [
+      "LocalBusiness on homepage and all location pages",
+      "Service on all service pages",
+      "AggregateRating (4.7, 114 reviews) on homepage and service pages",
+      "FAQPage on all service pages and FAQ page"
+    ]
+  },
+
+  "reviewStrategy": {
+    "currentCount": 114,
+    "currentRating": 4.7,
+    "targetCount": 200,
+    "timeline": "6 months",
+    "method": "Post-job SMS with direct Google review link",
+    "displayOnSite": "Use 114 Google reviews / 4.7 stars as the live figure. Update as count grows.",
+    "reviewSourceForHero": "Google"
+  },
+
+  "competitiveLandscape": {
+    "mainThreats": [
+      {
+        "competitor": "Dr. Roof Atlanta",
+        "advantage": "GAF Master Elite, dominant paid search, hail damage calculator tool",
+        "counter": "New Image differentiates with Owens Corning Platinum and Duro-Last commercial specialty"
+      },
+      {
+        "competitor": "Atlanta Roofing Specialists",
+        "advantage": "25+ year domain, deep content, 40+ neighborhood pages",
+        "counter": "New Image leads with 15,000+ completed roofs and insurance claim specialization"
+      },
+      {
+        "competitor": "Mr. Roofer Atlanta",
+        "advantage": "300+ Google reviews, strong GBP ranking",
+        "counter": "New Image closes gap with review velocity campaign; differentiates with commercial capabilities"
+      }
+    ],
+    "gapToClose": "GAF Master Elite certification would be the single largest competitive upgrade available to New Image. Student should ask Montana Mace whether this is on the roadmap."
+  },
+
+  "pagesNotToBuild": [
+    "Solar Systems (service listed but not prominently featured; insufficient research data)"
+  ],
+
+  "launchChecklist": [
+    "Confirm GAF tier with client",
+    "Obtain Georgia contractor license number",
+    "Supply at least 6 before/after project photo pairs",
+    "Supply Montana Mace headshot for About page",
+    "Review and approve copy deck",
+    "Review and approve sitemap",
+    "Connect domain to new site",
+    "Submit sitemap.xml to Google Search Console",
+    "Set up post-job review request SMS workflow",
+    "Verify GBP listing accuracy after launch"
+  ]
+}

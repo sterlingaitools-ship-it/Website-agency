@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "client": "New Image Roofing Atlanta",
+  "generatedAt": "2026-05-22",
+  "primaryCity": "Atlanta",
+  "primaryState": "GA",
+  "totalPages": 27,
+  "pages": [
+    {
+      "id": "homepage",
+      "slug": "/",
+      "page_title": "Atlanta Roofing Contractor | Free Inspection | New Image Roofing Atlanta",
+      "h1": "114 Five-Star Reviews. Atlanta's GAF-Certified, Owens Corning Platinum Roofing Contractor.",
+      "meta_description": "Atlanta roofing contractor since 2012. Free inspection, no obligation. GAF certified, Owens Corning Platinum, BBB A+ rated. Call (404) 680-0041 today.",
+      "target_keyword": "roofer Atlanta GA",
+      "page_type": "homepage",
+      "priority": "1.0"
+    },
+    {
+      "id": "service-roof-replacement",
+      "slug": "/services/roof-replacement",
+      "page_title": "Roof Replacement in Atlanta, GA | New Image Roofing Atlanta",
+      "h1": "Roof Replacement in Atlanta, GA",
+      "meta_description": "Full residential roof replacement in Atlanta, GA. Owens Corning Platinum contractor. Free inspection, written quote, lifetime labor warranty. (404) 680-0041.",
+      "target_keyword": "roof replacement Atlanta GA",
+      "page_type": "service",
+      "priority": "0.9"
+    },
+    {
+      "id": "service-roof-repair",
+      "slug": "/services/roof-repair",
+      "page_title": "Roof Repair in Atlanta, GA | Emergency and Scheduled | New Image Roofing",
+      "h1": "Roof Repair in Atlanta, GA",
+      "meta_description": "Roof leak repair and emergency roof repair in Atlanta, GA. Available 24/7. Same-day emergency tarping. Free inspection. Licensed and insured. (404) 680-0041.",
+      "target_keyword": "roof repair Atlanta GA",
+      "page_type": "service",
+      "priority": "0.9"
+    },
+    {
+      "id": "service-storm-damage",
+      "slug": "/services/storm-damage",
+      "page_title": "Storm Damage Roof Repair Atlanta GA | Insurance Claims | New Image Roofing",
+      "h1": "Storm Damage Roof Repair in Atlanta, GA",
+      "meta_description": "Storm damage roof repair in Atlanta, GA. We document damage, meet the adjuster, handle the claim. Free inspection, no obligation. Call (404) 680-0041.",
+      "target_keyword": "storm damage roof repair Atlanta",
+      "page_type": "service",
+      "priority": "0.9"
+    },
+    {
+      "id": "service-gutters",
+      "slug": "/services/gutters",
+      "page_title": "Gutter Installation and Cleaning Atlanta GA | New Image Roofing Atlanta",
+      "h1": "Gutter Installation and Cleaning in Atlanta, GA",
+      "meta_description": "Gutter installation, replacement, and cleaning services in Atlanta, GA. Free inspection included with any roofing estimate. Licensed, insured. (404) 680-0041.",
+      "target_keyword": "gutter installation Atlanta GA",
+      "page_type": "service",
+      "priority": "0.8"
+    },
+    {
+      "id": "service-roof-inspection",
+      "slug": "/services/roof-inspection",
+      "page_title": "Free Roof Inspection Atlanta GA | New Image Roofing Atlanta",
+      "h1": "Free Roof Inspection in Atlanta, GA",
+      "meta_description": "Free, no-obligation roof inspection in Atlanta, GA. Written report with photos. Certified inspectors. Residential and commercial. Call (404) 680-0041.",
+      "target_keyword": "free roof inspection Atlanta GA",
+      "page_type": "service",
+      "priority": "0.8"
+    },
+    {
+      "id": "service-commercial",
+      "slug": "/services/commercial-roofing",
+      "page_title": "Commercial Roofing Atlanta GA | Repair, Replacement, Restoration | New Image",
+      "h1": "Commercial Roofing in Atlanta, GA",
+      "meta_description": "Commercial roof repair, replacement, and restoration in Atlanta, GA. TPO, Duro-Last, spray coatings. 24-hour inspection and estimate. Call (404) 680-0041.",
+      "target_keyword": "commercial roofing Atlanta GA",
+      "page_type": "service",
+      "priority": "0.8"
+    },
+    {
+      "id": "alias-storm-damage",
+      "slug": "/storm-damage",
+      "page_title": "Storm Damage Roof Repair Atlanta | New Image Roofing",
+      "h1": "Storm Damage Roof Repair in Atlanta, GA",
+      "meta_description": "Storm hit your Atlanta area home? We inspect, document damage, and handle your insurance claim end to end. Free inspection, no obligation. (404) 680-0041.",
+      "target_keyword": "storm damage roof Atlanta",
+      "page_type": "alias",
+      "canonicalRef": "/services/storm-damage",
+      "priority": "0.7"
+    },
+    {
+      "id": "alias-insurance-claims",
+      "slug": "/insurance-claims",
+      "page_title": "Roof Insurance Claim Atlanta GA | New Image Roofing Atlanta",
+      "h1": "Roof Insurance Claims in Atlanta, GA",
+      "meta_description": "We handle your roof insurance claim from inspection to adjuster meeting to approval. Atlanta's insurance claim roofing specialists since 2012. (404) 680-0041.",
+      "target_keyword": "insurance roof claim Atlanta",
+      "page_type": "alias",
+      "canonicalRef": "/services/storm-damage",
+      "priority": "0.8"
+    },
+    {
+      "id": "location-atlanta",
+      "slug": "/locations/atlanta-ga",
+      "page_title": "Roofing Contractor in Atlanta, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Atlanta, GA",
+      "meta_description": "Licensed Atlanta roofing contractor since 2012. Roof replacement, repair, storm damage, free inspection. BBB A+, Owens Corning Platinum. (404) 680-0041.",
+      "target_keyword": "roofing contractor Atlanta GA",
+      "page_type": "location",
+      "priority": "0.9"
+    },
+    {
+      "id": "location-marietta",
+      "slug": "/locations/marietta-ga",
+      "page_title": "Roofing Contractor in Marietta, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Marietta, GA",
+      "meta_description": "Roof replacement, repair, and storm damage in Marietta, GA. Free inspection, no obligation. GAF certified, BBB A+, Owens Corning Platinum. (404) 680-0041.",
+      "target_keyword": "roofing contractor Marietta GA",
+      "page_type": "location",
+      "priority": "0.8"
+    },
+    {
+      "id": "location-roswell",
+      "slug": "/locations/roswell-ga",
+      "page_title": "Roofing Contractor in Roswell, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Roswell, GA",
+      "meta_description": "Roof replacement, repair, and storm damage services in Roswell, GA. Free no-obligation inspection. BBB A+, Owens Corning Platinum. Call (404) 680-0041 today.",
+      "target_keyword": "roofing contractor Roswell GA",
+      "page_type": "location",
+      "priority": "0.8"
+    },
+    {
+      "id": "location-alpharetta",
+      "slug": "/locations/alpharetta-ga",
+      "page_title": "Roofing Contractor in Alpharetta, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Alpharetta, GA",
+      "meta_description": "Roofing contractor in Alpharetta, GA. Roof replacement, repair, storm damage, gutters. Free inspection. Owens Corning Platinum preferred. (404) 680-0041.",
+      "target_keyword": "roofing contractor Alpharetta GA",
+      "page_type": "location",
+      "priority": "0.8"
+    },
+    {
+      "id": "location-sandy-springs",
+      "slug": "/locations/sandy-springs-ga",
+      "page_title": "Roofing Contractor in Sandy Springs, GA | New Image Roofing",
+      "h1": "Roofing Contractor in Sandy Springs, GA",
+      "meta_description": "Roof replacement, repair, and storm damage services in Sandy Springs, GA. Free no-obligation roof inspection. BBB A+, 114 five-star reviews. (404) 680-0041.",
+      "target_keyword": "roofing contractor Sandy Springs GA",
+      "page_type": "location",
+      "priority": "0.8"
+    },
+    {
+      "id": "location-decatur",
+      "slug": "/locations/decatur-ga",
+      "page_title": "Roofing Contractor in Decatur, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Decatur, GA",
+      "meta_description": "Roof replacement, repair, storm damage, and insurance claims in Decatur, GA. Free inspection. BBB A+, GAF certified, licensed and insured. (404) 680-0041.",
+      "target_keyword": "roofing contractor Decatur GA",
+      "page_type": "location",
+      "priority": "0.7"
+    },
+    {
+      "id": "location-smyrna",
+      "slug": "/locations/smyrna-ga",
+      "page_title": "Roofing Contractor in Smyrna, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Smyrna, GA",
+      "meta_description": "Roof replacement, repair, and gutter services in Smyrna, GA. Free no-obligation inspection. Owens Corning Platinum preferred contractor. (404) 680-0041.",
+      "target_keyword": "roofing contractor Smyrna GA",
+      "page_type": "location",
+      "priority": "0.7"
+    },
+    {
+      "id": "location-dunwoody",
+      "slug": "/locations/dunwoody-ga",
+      "page_title": "Roofing Contractor in Dunwoody, GA | New Image Roofing Atlanta",
+      "h1": "Roofing Contractor in Dunwoody, GA",
+      "meta_description": "Roofing contractor in Dunwoody, GA. Roof replacement, repair, storm damage. Free inspection, no obligation. BBB A+, 14 years serving Atlanta. (404) 680-0041.",
+      "target_keyword": "roofing contractor Dunwoody GA",
+      "page_type": "location",
+      "priority": "0.7"
+    },
+    {
+      "id": "about",
+      "slug": "/about",
+      "page_title": "About New Image Roofing Atlanta | Montana Mace, CEO",
+      "h1": "About New Image Roofing Atlanta",
+      "meta_description": "New Image Roofing Atlanta has served the metro area since 2012. Founded by Montana Mace. Owens Corning Platinum, GAF certified, BBB A+. 15,000+ roofs completed.",
+      "target_keyword": "New Image Roofing Atlanta about",
+      "page_type": "utility",
+      "priority": "0.7"
+    },
+    {
+      "id": "contact",
+      "slug": "/contact",
+      "page_title": "Contact New Image Roofing Atlanta | Get Your Free Estimate",
+      "h1": "Get Your Free Roof Estimate",
+      "meta_description": "Contact New Image Roofing Atlanta for a free, no-obligation roof inspection and estimate. Call (404) 680-0041 or submit your request online. Open 24 hours.",
+      "target_keyword": "contact New Image Roofing Atlanta",
+      "page_type": "utility",
+      "priority": "0.8"
+    },
+    {
+      "id": "gallery",
+      "slug": "/gallery",
+      "page_title": "Roofing Project Gallery | New Image Roofing Atlanta",
+      "h1": "Our Recent Work",
+      "meta_description": "Before and after photos of real roofing projects completed by New Image Roofing Atlanta across the metro area. Roof replacement, repair, storm damage work.",
+      "target_keyword": "Atlanta roofing projects gallery",
+      "page_type": "utility",
+      "priority": "0.6"
+    },
+    {
+      "id": "reviews",
+      "slug": "/reviews",
+      "page_title": "Customer Reviews | New Image Roofing Atlanta | 4.7 Stars",
+      "h1": "What Atlanta Homeowners Say About Us",
+      "meta_description": "Read verified customer reviews for New Image Roofing Atlanta. 114 Google reviews, 4.7-star rating. Real homeowners, real outcomes. BBB A+ accredited since 2015.",
+      "target_keyword": "New Image Roofing Atlanta reviews",
+      "page_type": "utility",
+      "priority": "0.7"
+    },
+    {
+      "id": "faq",
+      "slug": "/faq",
+      "page_title": "Roofing FAQ | New Image Roofing Atlanta",
+      "h1": "Frequently Asked Questions",
+      "meta_description": "Answers to Atlanta homeowners' most common roofing questions: cost, timeline, insurance, warranties, storm damage, and more. New Image Roofing Atlanta.",
+      "target_keyword": "roofing questions Atlanta FAQ",
+      "page_type": "utility",
+      "priority": "0.7"
+    },
+    {
+      "id": "blog-cost",
+      "slug": "/blog/roof-replacement-cost-atlanta",
+      "page_title": "How Much Does Roof Replacement Cost in Atlanta? (Real Numbers)",
+      "h1": "How Much Does Roof Replacement Cost in Atlanta? Real Numbers.",
+      "meta_description": "Real roof replacement costs in Atlanta, GA. Material types, roof size, labor rates, and what a legitimate written quote from a licensed contractor includes.",
+      "target_keyword": "roof replacement cost Atlanta GA",
+      "page_type": "blog",
+      "priority": "0.7"
+    },
+    {
+      "id": "blog-insurance-claim",
+      "slug": "/blog/roof-insurance-claim-atlanta",
+      "page_title": "What Happens During a Roof Insurance Claim in Atlanta, GA",
+      "h1": "What Happens During a Roof Insurance Claim in Atlanta, GA",
+      "meta_description": "Step-by-step guide to a roof insurance claim in Atlanta: damage documentation, adjuster meeting, approval, and repair. From New Image Roofing Atlanta.",
+      "target_keyword": "roof insurance claim process Atlanta",
+      "page_type": "blog",
+      "priority": "0.7"
+    },
+    {
+      "id": "blog-gaf-contractor",
+      "slug": "/blog/gaf-certified-contractor-atlanta",
+      "page_title": "GAF Certified Contractor vs. Standard: What It Means for Your Roof",
+      "h1": "GAF Certified Contractor vs. Standard Contractor: What the Difference Means for Your Roof",
+      "meta_description": "GAF certification explained: what each tier means, what warranty it unlocks, and how to verify a contractor's status before you sign. New Image Roofing Atlanta.",
+      "target_keyword": "GAF certified contractor Atlanta",
+      "page_type": "blog",
+      "priority": "0.6"
+    },
+    {
+      "id": "blog-avoid-scam",
+      "slug": "/blog/how-to-avoid-roofing-scams-atlanta",
+      "page_title": "Atlanta Homeowners: How to Avoid Getting Scammed by a Roofer",
+      "h1": "How to Avoid Getting Scammed by a Roofer in Atlanta",
+      "meta_description": "5 warning signs of a dishonest roofing contractor in Atlanta. What to check before you hire: license, insurance, BBB, and warranty red flags explained.",
+      "target_keyword": "avoid roofing scams Atlanta GA",
+      "page_type": "blog",
+      "priority": "0.6"
+    },
+    {
+      "id": "blog-storm-season",
+      "slug": "/blog/storm-season-roof-checklist-atlanta",
+      "page_title": "Atlanta Storm Season: Is Your Roof Ready? A 5-Point Checklist",
+      "h1": "Atlanta Storm Season Is Coming: Is Your Roof Ready? A 5-Point Checklist.",
+      "meta_description": "5 things every Atlanta homeowner should check before storm season. How to spot damage early and what to do when a storm hits. From New Image Roofing Atlanta.",
+      "target_keyword": "storm damage roof checklist Atlanta",
+      "page_type": "blog",
+      "priority": "0.6"
+    },
+    {
+      "id": "blog-owens-corning",
+      "slug": "/blog/owens-corning-platinum-preferred-contractor",
+      "page_title": "What Is an Owens Corning Platinum Preferred Contractor?",
+      "h1": "What Is an Owens Corning Platinum Preferred Contractor? What It Means for Your Roof.",
+      "meta_description": "Owens Corning Platinum Preferred status explained. What it requires, what warranty it unlocks, and why it matters when choosing a roofer in Atlanta, GA.",
+      "target_keyword": "Owens Corning Platinum Preferred contractor Atlanta",
+      "page_type": "blog",
+      "priority": "0.6"
+    }
+  ]
+}
