@@ -1,0 +1,11 @@
+{
+  "client": "New Image Roofing Atlanta",
+  "stage": "11",
+  "deployed_at": "2026-05-23T00:00:00.000Z",
+  "vercel_project": "new-image-roofing-atlanta",
+  "vercel_scope": "sterlingaitools-ship-its-projects",
+  "production_url": "https://new-image-roofing-atlanta-psi.vercel.app",
+  "inspect_url": "https://vercel.com/sterlingaitools-ship-its-projects/new-image-roofing-atlanta/83MrGgq6Uy8QuWxX9iuTAntuZXmX",
+  "build_time_seconds": 29,
+  "status": "complete"
+}
