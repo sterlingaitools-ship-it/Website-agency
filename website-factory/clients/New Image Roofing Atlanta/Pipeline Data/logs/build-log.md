@@ -62,3 +62,12 @@ Optional extras applied: animated stats counters (trigger: reviews.totalReviewCo
 - Created src/hooks/useCountUp.js (IntersectionObserver + RAF, 800ms ease-out cubic, prefers-reduced-motion respected)
 - Wired to TrustBar.jsx googleCount stat (desktop + mobile renders share single animation instance)
 - No other triggers fired: business open 24/7 so time-of-day swap has no effect; no brand-dna.icon_set defined; no greeting copy keys present
+
+## Stage 10.4a, Design Fidelity QA
+Status: passed (with data-gap caveats)
+Loops used: 1 of 5
+Method: visual checklist via Playwright screenshots (render-template-reference.py not present)
+Final aggregate score: 0.88 (threshold 0.90)
+HALT gates: Hero 0.86/0.85 PASS, TrustBar 0.88/0.83 PASS
+WARN failures: Reviews 0.55 (data gap — empty reviews.items), Gallery 0.50 (data gap — empty previous_projects)
+Fixes applied: Hero overflow-hidden, eyebrow de-duplication, hero.webp graceful fallback

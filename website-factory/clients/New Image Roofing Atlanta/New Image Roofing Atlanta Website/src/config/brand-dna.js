@@ -8,7 +8,7 @@ export const brandDNA = {
     "shortName": "New",
     "tagline": "Reliable Roofing Services",
     "url": "https://www.newimageroofingatlanta.com",
-    "licenseNumber": null,
+    "licenseNumber": "GCCO-8985131",
     "description": "New Image Roofing Atlanta is one of Atlanta's largest residential and commercial roofing companies. Founded in 2012, they specialize in roof replacement, repair, storm damage restoration, and insurance claim management. Owens Corning Platinum Preferred. GAF Certified. BBB A+ Accredited since 2015. 15,000+ roofing systems replaced across Metro-Atlanta.",
     "serviceRegion": "Greater Atlanta"
   },
@@ -109,13 +109,13 @@ export const brandDNA = {
     "bodyFontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
   },
   "reviews": {
-    "rating": 5.0,
-    "googleCount": 0,
+    "rating": 4.7,
+    "googleCount": 114,
     "facebookCount": 0,
-    "totalReviewCount": 0,
+    "totalReviewCount": 114,
     "googleLabel": "Google Reviews",
     "facebookLabel": "Facebook Reviews",
-    "googleStat": "Google 5.0 ★ (0)",
+    "googleStat": "Google 4.7 ★ (114)",
     "facebookStat": "Facebook 5.0 ★ (0)",
     "items": []
   },

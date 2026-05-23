@@ -10,21 +10,6 @@ const serviceOptions = [
   'Other',
 ];
 
-function StarIcon({ className }) {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
 export default function Hero() {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,6 +18,7 @@ export default function Hero() {
     email: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [imgFailed, setImgFailed] = useState(false);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -40,29 +26,21 @@ export default function Hero() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // GHL webhook fired by Stage 10.2 personalisation — stub here.
     setSubmitted(true);
   };
 
   return (
     <section
       id="hero-form"
-      className="flex flex-col lg:flex-row min-h-[600px] lg:min-h-[680px] lg:max-h-[780px] pt-[72px]"
+      className="flex flex-col lg:flex-row min-h-[700px] pt-[72px] overflow-hidden"
       aria-label="Hero"
     >
       {/* Left column — copy + form */}
-      <div className="bg-primary w-full lg:w-[55%] flex flex-col justify-center px-8 lg:px-16 py-16 lg:pt-20 lg:pb-14">
-        {/* Star eyebrow */}
-        <div className="flex items-center gap-1.5 mb-4">
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} className="text-accent" />
-          ))}
-          <span className="font-body font-medium text-sm text-neutral ml-1 tabular-nums">
-            {brandDNA.reviews.googleCount
-              ? `${brandDNA.reviews.googleCount} ${brandDNA.copy.hero.eyebrow}`
-              : brandDNA.copy.hero.eyebrow}
-          </span>
-        </div>
+      <div className="bg-primary w-full lg:w-[55%] flex flex-col justify-start px-8 lg:px-16 pt-10 lg:pt-12 pb-10 lg:pb-10 overflow-y-auto">
+        {/* Eyebrow — rendered from copy deck directly (already contains stars + count) */}
+        <p className="font-body font-medium text-sm text-neutral mb-4 tabular-nums">
+          {brandDNA.copy.hero.eyebrow}
+        </p>
 
         {/* Headline h1 */}
         <h1 className="font-heading font-extrabold text-4xl lg:text-5xl text-white leading-tight mb-4">
@@ -70,23 +48,23 @@ export default function Hero() {
         </h1>
 
         {/* Subheadline */}
-        <p className="font-body text-lg text-neutral mb-8">
+        <p className="font-body text-lg text-neutral mb-6">
           {brandDNA.copy.hero.subheadline}
         </p>
 
         {/* Quote form */}
-        <div className="bg-white rounded-[6px] p-6 shadow-card-lg">
+        <div className="bg-white rounded-[6px] p-5 shadow-card-lg">
           {submitted ? (
             <p className="font-heading font-bold text-lg text-ink text-center py-4">
               {brandDNA.copy.formSubtext}
             </p>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
-              <p className="font-heading font-bold text-lg text-ink mb-4">
+              <p className="font-heading font-bold text-base text-ink mb-3">
                 {brandDNA.copy.formHeader}
               </p>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2.5">
                 <label className="sr-only" htmlFor="hero-name">Full Name</label>
                 <input
                   id="hero-name"
@@ -97,7 +75,7 @@ export default function Hero() {
                   placeholder="Full Name"
                   required
                   autoComplete="name"
-                  className="w-full rounded border border-silver px-3 py-2.5 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+                  className="w-full rounded border border-silver px-3 py-2 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
                 />
 
                 <label className="sr-only" htmlFor="hero-phone">Phone Number</label>
@@ -110,7 +88,7 @@ export default function Hero() {
                   placeholder="Phone Number"
                   required
                   autoComplete="tel"
-                  className="w-full rounded border border-silver px-3 py-2.5 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+                  className="w-full rounded border border-silver px-3 py-2 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
                 />
 
                 <label className="sr-only" htmlFor="hero-service">Service Needed</label>
@@ -120,7 +98,7 @@ export default function Hero() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full rounded border border-silver px-3 py-2.5 font-body text-sm text-ink bg-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+                  className="w-full rounded border border-silver px-3 py-2 font-body text-sm text-ink bg-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
                 >
                   <option value="" disabled>Service Needed</option>
                   {serviceOptions.map((opt) => (
@@ -137,19 +115,19 @@ export default function Hero() {
                   onChange={handleChange}
                   placeholder="Email Address"
                   autoComplete="email"
-                  className="w-full rounded border border-silver px-3 py-2.5 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+                  className="w-full rounded border border-silver px-3 py-2 font-body text-sm text-ink placeholder-neutral focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
                 />
 
                 <button
                   type="submit"
-                  className="w-full rounded bg-accent hover:bg-accent-dark active:bg-accent-dark text-ink font-heading font-bold text-base py-3 mt-1 transition-colors motion-safe:duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink"
+                  className="w-full rounded bg-accent hover:bg-accent-dark active:bg-accent-dark text-ink font-heading font-bold text-base py-3 transition-colors motion-safe:duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink"
                 >
                   {brandDNA.copy.submitButton}
                 </button>
               </div>
 
               {brandDNA.copy.privacyLine && (
-                <p className="font-body text-xs text-neutral-dim mt-3 text-center">
+                <p className="font-body text-xs text-neutral-dim mt-2 text-center">
                   {brandDNA.copy.privacyLine}
                 </p>
               )}
@@ -158,7 +136,7 @@ export default function Hero() {
         </div>
 
         {/* Secondary call link */}
-        <p className="font-body font-medium text-sm text-neutral mt-4">
+        <p className="font-body font-medium text-sm text-neutral mt-3">
           Or call us:{' '}
           <a
             href={brandDNA.contact.phoneTelLink}
@@ -170,9 +148,9 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Right column — hero image */}
-      <div className="w-full lg:w-[45%] h-60 lg:h-auto relative overflow-hidden">
-        {brandDNA.copy.hero.imageAlt && (
+      {/* Right column — hero image with bg fallback when image is missing */}
+      <div className="w-full lg:w-[45%] h-60 lg:h-auto relative overflow-hidden bg-primary-slate">
+        {!imgFailed && (
           <img
             src="/hero.webp"
             alt={brandDNA.copy.hero.imageAlt}
@@ -181,7 +159,20 @@ export default function Hero() {
             decoding="async"
             width="720"
             height="780"
+            onError={() => setImgFailed(true)}
           />
+        )}
+        {imgFailed && (
+          <div
+            className="w-full h-full flex items-center justify-center bg-primary-slate"
+            aria-hidden="true"
+          >
+            <img
+              src="/logo.svg"
+              alt=""
+              className="w-40 opacity-20"
+            />
+          </div>
         )}
       </div>
     </section>
