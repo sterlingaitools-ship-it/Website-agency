@@ -89,3 +89,28 @@ Node count delta: 0
 Structural mismatches: 0
 Note: Stage 10.2 Helmet schema injection creates a body <script> in client that template reference lacks. Excluded from structural comparison as metadata, not component structure.
 Report: Pipeline Data/qa/build-fidelity.json
+
+## Stage 13, Proposal (2026-05-23T04:48:14.648728+00:00)
+Status: failed
+Output: clients/New Image Roofing Atlanta/New Image Roofing Atlanta Proposal/proposal.html
+Unresolved placeholders: 4
+
+## Stage 13, Proposal (2026-05-23T04:49:39.838420+00:00)
+Status: failed
+Output: clients/New Image Roofing Atlanta/New Image Roofing Atlanta Proposal/proposal.html
+Unresolved placeholders: 1
+
+## Stage 13, Proposal (2026-05-23T04:50:58.541981+00:00)
+Status: complete
+Output: clients/New Image Roofing Atlanta/New Image Roofing Atlanta Proposal/proposal.html
+Unresolved placeholders: 0
+
+## Stage 13, Proposal (2026-05-23T04:51:02.800947+00:00)
+Status: complete
+Output: clients/New Image Roofing Atlanta/New Image Roofing Atlanta Proposal/proposal.html
+Unresolved placeholders: 0
+
+## Stage 13, Proposal (2026-05-23T04:52:56.751404+00:00)
+Status: complete
+Output: clients/New Image Roofing Atlanta/New Image Roofing Atlanta Proposal/proposal.html
+Unresolved placeholders: 0

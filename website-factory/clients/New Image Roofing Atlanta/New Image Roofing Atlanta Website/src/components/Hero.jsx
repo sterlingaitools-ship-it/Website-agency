@@ -31,7 +31,7 @@ export default function Hero() {
 
   return (
     <section
-      id="hero-form"
+      id="hero"
       className="flex flex-col lg:flex-row min-h-[700px] pt-[72px] overflow-hidden"
       aria-label="Hero"
     >

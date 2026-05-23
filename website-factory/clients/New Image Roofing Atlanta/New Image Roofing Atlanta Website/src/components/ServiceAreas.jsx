@@ -17,6 +17,7 @@ export default function ServiceAreas() {
 
   return (
     <section
+      id="service-area"
       className="bg-silver py-section-gap lg:py-section-gap-lg"
       aria-labelledby="service-areas-heading"
     >

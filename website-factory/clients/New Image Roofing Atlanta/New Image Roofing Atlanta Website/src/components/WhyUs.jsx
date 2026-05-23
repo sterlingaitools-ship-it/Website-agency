@@ -79,6 +79,7 @@ export default function WhyUs() {
 
   return (
     <section
+      id="about"
       className="bg-primary py-section-gap lg:py-section-gap-lg"
       aria-labelledby="why-us-heading"
     >

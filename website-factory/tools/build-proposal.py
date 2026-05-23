@@ -625,6 +625,7 @@ def compose_vars(client_name: str, paths: dict[str, Path]) -> dict[str, str]:
     research = read_json(paths["research"])
     strategy = read_json(paths["strategy"])
     brand_dna = read_json(paths["brand_dna"])
+    agency = load_agency_brand()
 
     # Identity
     company_name = pick_first(
@@ -814,6 +815,23 @@ def compose_vars(client_name: str, paths: dict[str, Path]) -> dict[str, str]:
         "BBB_NUMBER": str(bbb_number) if bbb_number else "",
         "SETUP_FEE_DEFAULT": str(setup_fee_default).replace("$", ""),
         "LIVE_PREVIEW_URL": _resolve_live_preview_url(client_name),
+        "COMPANY_ADDRESS_DISPLAY": pick_first(
+            get_path(brand_dna, "address.full"),
+            ", ".join(filter(None, [
+                get_path(brand_dna, "address.street"),
+                get_path(brand_dna, "address.city"),
+                get_path(brand_dna, "address.state"),
+                get_path(brand_dna, "address.zip"),
+            ])),
+        ) or "",
+        "COMPANY_LICENSE_DISPLAY": pick_first(
+            get_path(brand_dna, "company.licenseNumber"),
+            get_path(brand_dna, "license"),
+        ) or "",
+        "AGENCY_TRAFFIC_AUDIT_HEADING": pick_first(
+            get_path(agency, "winning_formula.traffic.audit_heading"),
+            "10 things we do to get you found",
+        ) or "",
     }
 
 
@@ -1431,6 +1449,13 @@ def main() -> int:
     if palette_block:
         out = out.replace("</head>", f"{palette_block}\n</head>", 1)
         print(f"  injected agency palette overrides")
+
+    # Second-pass substitution: inject functions may have introduced new
+    # {{VAR}} tokens (e.g. feature-card-cta hrefs with {{LIVE_PREVIEW_URL}}).
+    # Replace any stragglers without re-running the PAGE_DATA block substitution.
+    for k, v in vars_map.items():
+        out = out.replace("{{" + k + "}}", v or "")
+
     proposal_html = proposal_dir / "proposal.html"
     proposal_html.write_text(out)
     # Vercel serves /index.html at the root URL; the canonical artifact is
