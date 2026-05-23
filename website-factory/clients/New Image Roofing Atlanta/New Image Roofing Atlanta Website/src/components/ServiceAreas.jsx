@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import brandDNA from '../config/brand-dna';
 
 /**
- * ServiceAreas — pill tag list + embedded Google Map placeholder.
+ * ServiceAreas - pill tag list + embedded Google Map placeholder.
  * 60/40 split on desktop; map hidden on mobile.
  * serviceAreas[] is an array of plain strings (city names) per the shape contract.
  * City slugs are derived by lowercasing and replacing spaces with hyphens.
@@ -29,7 +29,7 @@ export default function ServiceAreas() {
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left — pill tags (60%) */}
+          {/* Left - pill tags (60%) */}
           <div className="w-full lg:w-3/5">
             {areas.length > 0 ? (
               <ul
@@ -55,7 +55,7 @@ export default function ServiceAreas() {
             )}
           </div>
 
-          {/* Right — Google Maps embed (40%), hidden on mobile */}
+          {/* Right - Google Maps embed (40%), hidden on mobile */}
           <div className="hidden lg:block w-full lg:w-2/5">
             {mapsEmbedUrl ? (
               <iframe

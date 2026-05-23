@@ -71,3 +71,11 @@ Final aggregate score: 0.88 (threshold 0.90)
 HALT gates: Hero 0.86/0.85 PASS, TrustBar 0.88/0.83 PASS
 WARN failures: Reviews 0.55 (data gap — empty reviews.items), Gallery 0.50 (data gap — empty previous_projects)
 Fixes applied: Hero overflow-hidden, eyebrow de-duplication, hero.webp graceful fallback
+
+## Stage 10.4b, SOP QA
+Status: passed
+Final score: 96.4% (80/83 scoreable, 3 N/A)
+Loops used: 1 of 10
+Universal HARD halts: all pass
+Fixes: em-dashes stripped from comments, Process No Obligation badge added, Gallery 6-slot minimum, fetchPriority fixed
+Soft warnings: ASCII apostrophes in title/schema (not body copy), SSL errors in Playwright sandbox (environment artifact)

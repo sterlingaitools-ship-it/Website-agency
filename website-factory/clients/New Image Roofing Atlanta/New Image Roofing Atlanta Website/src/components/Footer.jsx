@@ -17,7 +17,7 @@ function handleLogoError(e) {
 }
 
 /**
- * Footer — 4-column layout on desktop, single-column stack on mobile.
+ * Footer - 4-column layout on desktop, single-column stack on mobile.
  * Col 1: brand / contact info
  * Col 2: services list
  * Col 3: service areas (first 8)
@@ -32,7 +32,7 @@ export default function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // GHL webhook fired by Stage 10.2 personalisation — stub here.
+    // GHL webhook fired by Stage 10.2 personalisation - stub here.
     setSubmitted(true);
   };
 
@@ -47,7 +47,7 @@ export default function Footer() {
         {/* 4-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
 
-          {/* Col 1 — Brand */}
+          {/* Col 1 - Brand */}
           <div className="flex flex-col gap-3">
             <Link to="/" aria-label={`${brandDNA.company.name} homepage`}>
               <img
@@ -94,7 +94,7 @@ export default function Footer() {
             )}
           </div>
 
-          {/* Col 2 — Services */}
+          {/* Col 2 - Services */}
           <div>
             <h3 className="font-heading font-semibold text-sm text-accent mb-4">
               Our Services
@@ -119,7 +119,7 @@ export default function Footer() {
             ); })()}
           </div>
 
-          {/* Col 3 — Service Areas */}
+          {/* Col 3 - Service Areas */}
           <div>
             <h3 className="font-heading font-semibold text-sm text-accent mb-4">
               Service Areas
@@ -144,7 +144,7 @@ export default function Footer() {
             ); })()}
           </div>
 
-          {/* Col 4 — Mini quote form */}
+          {/* Col 4 - Mini quote form */}
           <div>
             <h3 className="font-heading font-semibold text-sm text-accent mb-4">
               {brandDNA.copy.footerCta}

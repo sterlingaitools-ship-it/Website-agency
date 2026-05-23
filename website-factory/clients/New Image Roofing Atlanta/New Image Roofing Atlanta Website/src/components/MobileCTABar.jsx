@@ -1,7 +1,7 @@
 import brandDNA from '../config/brand-dna';
 
 /**
- * MobileCTABar — fixed bottom bar, accent bg, tap-to-call.
+ * MobileCTABar - fixed bottom bar, accent bg, tap-to-call.
  * Visible on mobile only (hidden at md breakpoint and above).
  * The entire bar is a single <a href="tel:..."> element.
  * 56px tall per spec. Adds 56px bottom padding to body via CSS class applied

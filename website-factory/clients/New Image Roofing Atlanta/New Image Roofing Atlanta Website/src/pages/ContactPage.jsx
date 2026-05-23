@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // GHL webhook fired by Stage 10.2 personalisation — stub here.
+    // GHL webhook fired by Stage 10.2 personalisation - stub here.
     setSubmitted(true);
   };
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
         >
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <div className="flex flex-col lg:flex-row gap-10">
-              {/* Left — full form (60%) */}
+              {/* Left - full form (60%) */}
               <div className="w-full lg:w-3/5">
                 <h2
                   id="contact-form-heading"
@@ -187,7 +187,7 @@ export default function ContactPage() {
                 )}
               </div>
 
-              {/* Right — contact details (40%) */}
+              {/* Right - contact details (40%) */}
               <div className="w-full lg:w-2/5 flex flex-col gap-5">
                 <div>
                   <h3 className="font-heading font-semibold text-base text-ink mb-1">

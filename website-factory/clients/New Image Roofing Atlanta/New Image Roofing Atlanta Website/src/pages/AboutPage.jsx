@@ -8,7 +8,7 @@ import brandDNA from '../config/brand-dna';
 import { pageTitle, canonical } from '../utils/seo';
 
 /**
- * AboutHero — simple centered header section, inline (not a separate component).
+ * AboutHero - simple centered header section, inline (not a separate component).
  * Full-width, team photo background with dark overlay.
  */
 function AboutHero() {
@@ -44,7 +44,7 @@ function AboutHero() {
 }
 
 /**
- * Founder story block — 50/50 split.
+ * Founder story block - 50/50 split.
  */
 function StoryBlock() {
   return (
@@ -109,7 +109,7 @@ function StoryBlock() {
 }
 
 /**
- * Certification row — horizontal badge display.
+ * Certification row - horizontal badge display.
  */
 function CertificationRow() {
   const trustBadges = brandDNA.trust_badges;
@@ -144,7 +144,7 @@ function CertificationRow() {
 }
 
 /**
- * Team grid — photo + name + role cards.
+ * Team grid - photo + name + role cards.
  */
 function TeamGrid() {
   const teamMembers = brandDNA.team_members;

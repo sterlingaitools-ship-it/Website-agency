@@ -35,9 +35,9 @@ export default function Hero() {
       className="flex flex-col lg:flex-row min-h-[700px] pt-[72px] overflow-hidden"
       aria-label="Hero"
     >
-      {/* Left column — copy + form */}
+      {/* Left column - copy + form */}
       <div className="bg-primary w-full lg:w-[55%] flex flex-col justify-start px-8 lg:px-16 pt-10 lg:pt-12 pb-10 lg:pb-10 overflow-y-auto">
-        {/* Eyebrow — rendered from copy deck directly (already contains stars + count) */}
+        {/* Eyebrow - rendered from copy deck directly (already contains stars + count) */}
         <p className="font-body font-medium text-sm text-neutral mb-4 tabular-nums">
           {brandDNA.copy.hero.eyebrow}
         </p>
@@ -148,14 +148,14 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Right column — hero image with bg fallback when image is missing */}
+      {/* Right column - hero image with bg fallback when image is missing */}
       <div className="w-full lg:w-[45%] h-60 lg:h-auto relative overflow-hidden bg-primary-slate">
         {!imgFailed && (
           <img
             src="/hero.webp"
             alt={brandDNA.copy.hero.imageAlt}
             className="w-full h-full object-cover object-center"
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
             width="720"
             height="780"

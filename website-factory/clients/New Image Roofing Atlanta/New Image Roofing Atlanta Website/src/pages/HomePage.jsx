@@ -47,7 +47,7 @@ export default function HomePage() {
         <FinalCTA />
       </main>
       <Footer />
-      {/* Fixed bottom overlay — outside main content flow */}
+      {/* Fixed bottom overlay - outside main content flow */}
       <MobileCTABar />
     </>
   );

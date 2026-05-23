@@ -1,7 +1,7 @@
 import brandDNA from '../config/brand-dna';
 
 /**
- * Default differentiator icons — used when brandDNA.why_choose_us entries
+ * Default differentiator icons - used when brandDNA.why_choose_us entries
  * do not supply an iconPath. Four niche-appropriate defaults.
  */
 function Icon247({ className }) {

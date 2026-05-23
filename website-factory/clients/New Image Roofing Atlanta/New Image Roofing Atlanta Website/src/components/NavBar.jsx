@@ -77,7 +77,7 @@ export default function NavBar() {
           ))}
         </ul>
 
-        {/* Desktop right — phone CTA */}
+        {/* Desktop right - phone CTA */}
         <div className="hidden lg:flex items-center gap-2">
           <span className="font-body text-sm text-neutral">Call:</span>
           <a

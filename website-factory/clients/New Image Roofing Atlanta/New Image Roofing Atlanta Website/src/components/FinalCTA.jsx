@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import brandDNA from '../config/brand-dna';
 
 /**
- * FinalCTA — full-width dark band before the footer.
+ * FinalCTA - full-width dark band before the footer.
  * Background: primary-dark. Heading + subhead + CTA button + phone.
  */
 export default function FinalCTA() {

@@ -12,7 +12,7 @@ import brandDNA from '../config/brand-dna';
 import { cityTitle, cityDesc, canonical, citySchema } from '../utils/seo';
 
 /**
- * City-specific hero — reuses the hero split layout with city-aware copy.
+ * City-specific hero - reuses the hero split layout with city-aware copy.
  */
 function CityHero({ city }) {
   const displayCity = city.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
@@ -50,7 +50,7 @@ function CityHero({ city }) {
         </div>
       </div>
 
-      {/* Right — hero image */}
+      {/* Right - hero image */}
       <div className="w-full lg:w-[45%] h-48 lg:h-auto bg-primary-slate relative overflow-hidden">
         <img
           src="/hero.webp"

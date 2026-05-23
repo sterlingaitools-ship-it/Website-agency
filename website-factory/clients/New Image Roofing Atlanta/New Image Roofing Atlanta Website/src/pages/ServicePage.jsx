@@ -23,7 +23,7 @@ const serviceOptions = [
 ];
 
 /**
- * Inline FAQ accordion — no external library.
+ * Inline FAQ accordion - no external library.
  */
 function FAQAccordion({ items }) {
   const [openIdx, setOpenIdx] = useState(null);
@@ -128,7 +128,7 @@ function ServicePageHero({ service }) {
         </div>
       </div>
 
-      {/* Right — hero image placeholder */}
+      {/* Right - hero image placeholder */}
       <div className="w-full lg:w-2/5 h-48 lg:h-auto bg-primary-slate relative overflow-hidden">
         <img
           src="/hero.webp"

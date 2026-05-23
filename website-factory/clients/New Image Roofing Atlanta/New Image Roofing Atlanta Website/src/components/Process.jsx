@@ -1,7 +1,7 @@
 import brandDNA from '../config/brand-dna';
 
 /**
- * Default process steps — used when brandDNA.process_steps is empty.
+ * Default process steps - used when brandDNA.process_steps is empty.
  * Matches niche playbook defaults from the wireframe spec.
  */
 const DEFAULT_STEPS = [
@@ -74,6 +74,22 @@ export default function Process() {
             </article>
           ))}
         </div>
+
+        {/* No Obligation badge */}
+        {brandDNA.copy.process.badgeText && (
+          <div className="flex justify-center mt-8">
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-5 py-2">
+              <span className="font-heading font-bold text-sm text-accent-dark tabular-nums">
+                {brandDNA.copy.process.badgeText}
+              </span>
+              {brandDNA.copy.process.badgeSubtext && (
+                <span className="font-body text-xs text-neutral-dim">
+                  {brandDNA.copy.process.badgeSubtext}
+                </span>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Mobile: vertical stack with left dotted line */}
         <ol className="flex flex-col gap-8 md:hidden relative pl-8">

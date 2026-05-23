@@ -78,7 +78,7 @@ export default function TrustBar() {
         {/* Desktop: 5-item horizontal strip */}
         <div className="hidden sm:flex items-center justify-between gap-2 flex-wrap">
 
-          {/* 1 — Google reviews */}
+          {/* 1 - Google reviews */}
           <div className="flex flex-col items-center gap-1 px-4 text-center">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
@@ -91,7 +91,7 @@ export default function TrustBar() {
 
           {divider}
 
-          {/* 2 — GAF badge */}
+          {/* 2 - GAF badge */}
           <div className="flex flex-col items-center gap-1 px-4 text-center">
             {gafBadge ? (
               <img
@@ -112,7 +112,7 @@ export default function TrustBar() {
 
           {divider}
 
-          {/* 3 — BBB badge */}
+          {/* 3 - BBB badge */}
           <div className="flex flex-col items-center gap-1 px-4 text-center">
             {bbbBadge ? (
               <a
@@ -140,7 +140,7 @@ export default function TrustBar() {
 
           {divider}
 
-          {/* 4 — Licensed & Insured */}
+          {/* 4 - Licensed & Insured */}
           <div className="flex flex-col items-center gap-1 px-4 text-center">
             <ShieldIcon />
             <span className="font-heading font-semibold text-sm text-ink">Licensed &amp; Insured</span>
@@ -153,7 +153,7 @@ export default function TrustBar() {
 
           {divider}
 
-          {/* 5 — Years serving */}
+          {/* 5 - Years serving */}
           <div className="flex flex-col items-center gap-1 px-4 text-center">
             <CalendarIcon />
             <span className="font-heading font-bold text-xl text-primary tabular-nums">
@@ -207,7 +207,7 @@ export default function TrustBar() {
             )}
           </div>
 
-          {/* Years serving — centered in its own row */}
+          {/* Years serving - centered in its own row */}
           <div className="col-span-2 flex flex-col items-center gap-1 py-3 text-center">
             <span className="font-heading font-bold text-lg text-primary">
               {brandDNA.company.serviceRegion}
