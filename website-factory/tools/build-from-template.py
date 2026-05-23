@@ -1407,8 +1407,8 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
         }
 
     # Reviews + social
-    google_count = pick_first(research.get("googleReviewCount"), get_path(research, "gbp.review_count"), 0)
-    google_rating = pick_first(research.get("googleRating"), get_path(research, "gbp.rating"), 5.0)
+    google_count = pick_first(research.get("googleReviewCount"), get_path(research, "gbp.review_count"), get_path(research, "reviews.google_count"), 0)
+    google_rating = pick_first(research.get("googleRating"), get_path(research, "gbp.rating"), get_path(research, "reviews.google_rating"), 5.0)
     fb_count = pick_first(research.get("facebookReviewCount"), get_path(research, "social.facebook_review_count"), 0)
     fb_rating = pick_first(research.get("facebookRating"), get_path(research, "social.facebook_rating"), 5.0)
     fb_url = pick_first(research.get("facebookUrl"), get_path(research, "social.facebook_url"))
@@ -1513,7 +1513,7 @@ def compose_brand_dna(client_name: str, paths: dict[str, Path]) -> dict[str, Any
                 f"{city or 'Local'} Roofing Experts",
             ),
             "url": pick_first(intake.get("websiteUrl"), get_path(intake, "business.website"), REQ),
-            "licenseNumber": pick_first(get_path(brand_dna_in, "trust.license_number"), get_path(intake, "business.license_number"), None),
+            "licenseNumber": pick_first(get_path(brand_dna_in, "company.licenseNumber"), get_path(brand_dna_in, "trust.license_number"), intake.get("licenseNumber"), get_path(intake, "business.license_number"), None),
             "description": pick_first(
                 get_path(brand_dna_in, "company.description") if isinstance(get_path(brand_dna_in, "company.description"), str) else None,
                 brand_dna_in.get("description") if isinstance(brand_dna_in.get("description"), str) else None,
@@ -1922,8 +1922,8 @@ def _build_copy_block(brand_dna_in: dict[str, Any], research: dict[str, Any], st
     """
     user = brand_dna_in.get("copy", {}) or {}
     region = strategy.get("region_marketing") or research.get("region_marketing") or (f"{city}, {state}" if city and state else "your area")
-    rating = research.get("googleRating") or 5.0
-    review_count = research.get("googleReviewCount") or 0
+    rating = research.get("googleRating") or get_path(research, "reviews.google_rating") or 5.0
+    review_count = research.get("googleReviewCount") or get_path(research, "reviews.google_count") or 0
     tagline = brand_dna_in.get("company_tagline") or "__REQUIRED__COMPANY_TAGLINE__"
     region_upper = region.upper()
     state_full_or = state or "your state"
