@@ -25,7 +25,7 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        {/* Full gallery grid — no limit */}
+        {/* Full gallery grid - no limit */}
         <Gallery limit={100} showSeeAll={false} />
 
         <FinalCTA />

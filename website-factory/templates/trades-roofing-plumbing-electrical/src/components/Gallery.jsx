@@ -21,7 +21,7 @@ function CloseIcon() {
 }
 
 /**
- * Simple state-based lightbox — no external library.
+ * Simple state-based lightbox - no external library.
  * Shows a before/after toggle for the selected project.
  */
 function Lightbox({ project, onClose }) {
@@ -110,11 +110,16 @@ function Lightbox({ project, onClose }) {
   );
 }
 
+const MIN_SLOTS = 6;
+
 export default function Gallery({ limit = 6, showSeeAll = true }) {
   const [lightboxProject, setLightboxProject] = useState(null);
 
   const allProjects = brandDNA.previous_projects;
-  const projects = allProjects.slice(0, limit);
+  const realProjects = allProjects.slice(0, limit);
+  const placeholderCount = Math.max(0, MIN_SLOTS - realProjects.length);
+  const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({ _placeholder: true, idx: i }));
+  const projects = [...realProjects, ...placeholders];
 
   const openLightbox = (project) => setLightboxProject(project);
   const closeLightbox = () => setLightboxProject(null);
@@ -132,14 +137,22 @@ export default function Gallery({ limit = 6, showSeeAll = true }) {
           {brandDNA.copy.gallery.heading}
         </h2>
 
-        {projects.length > 0 ? (
-          <ul
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            role="list"
-          >
-            {projects.map((project, idx) => {
-              const imgSrc = project.filename ? `/work/${project.filename}` : project.before_url;
-              const altText = project.alt || project.caption || `Project ${idx + 1}`;
+        <ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          role="list"
+        >
+          {projects.map((project, idx) => {
+            if (project._placeholder) {
+              return (
+                <li key={`ph-${idx}`}>
+                  <article className="rounded-[6px] overflow-hidden border border-silver shadow-card bg-silver/30 flex items-center justify-center h-48 md:h-56" aria-label="Project photo coming soon">
+                    <span className="font-body text-sm text-neutral-dim">Photo coming soon</span>
+                  </article>
+                </li>
+              );
+            }
+            const imgSrc = project.filename ? `/work/${project.filename}` : project.before_url;
+            const altText = project.alt || project.caption || `Project ${idx + 1}`;
 
               return (
                 <li key={idx}>
@@ -206,12 +219,7 @@ export default function Gallery({ limit = 6, showSeeAll = true }) {
                 </li>
               );
             })}
-          </ul>
-        ) : (
-          <p className="text-center font-body text-neutral-dim">
-            {brandDNA.copy.gallery.body}
-          </p>
-        )}
+        </ul>
 
         {showSeeAll && (
           <div className="mt-8 text-center">

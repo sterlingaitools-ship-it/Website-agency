@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Niche design tokens — substituted by Module 2D from niche-design-tokens.json */
+/* Niche design tokens - substituted by Module 2D from niche-design-tokens.json */
 
 :root {
-  --primary: 0 102 204;
-  --primary-dark: 0 51 102;
-  --primary-slate: 85 119 170;
-  --accent: 255 170 0;
-  --accent-light: 255 204 85;
-  --accent-dark: 204 136 0;
-  --neutral: 170 170 170;
-  --neutral-dim: 136 136 136;
-  --silver: 204 204 204;
-  --ink: 34 34 34;
+  --primary: 26 46 74;
+  --primary-dark: 15 31 51;
+  --primary-slate: 45 74 107;
+  --accent: 245 166 35;
+  --accent-light: 243 200 128;
+  --accent-dark: 66 41 0;
+  --neutral: 245 244 242;
+  --neutral-dim: 232 231 228;
+  --silver: 240 241 243;
+  --ink: 28 28 30;
 }
 /* Universal foundation rules (apply to every niche) */
 
@@ -31,7 +32,7 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
-/* Reduced-motion gate — universal accessibility rule. Components MUST
+/* Reduced-motion gate - universal accessibility rule. Components MUST
    honour this; motion utilities collapse to near-zero duration. */
 @media (prefers-reduced-motion: reduce) {
   *,

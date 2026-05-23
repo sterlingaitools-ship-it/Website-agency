@@ -79,3 +79,13 @@ Loops used: 1 of 10
 Universal HARD halts: all pass
 Fixes: em-dashes stripped from comments, Process No Obligation badge added, Gallery 6-slot minimum, fetchPriority fixed
 Soft warnings: ASCII apostrophes in title/schema (not body copy), SSL errors in Playwright sandbox (environment artifact)
+
+## Stage 10.4c, Build Fidelity DOM Diff
+Status: passed
+Method: Playwright runtime DOM walk (script/noscript/style excluded)
+Client nodes: 462
+Reference nodes: 462
+Node count delta: 0
+Structural mismatches: 0
+Note: Stage 10.2 Helmet schema injection creates a body <script> in client that template reference lacks. Excluded from structural comparison as metadata, not component structure.
+Report: Pipeline Data/qa/build-fidelity.json

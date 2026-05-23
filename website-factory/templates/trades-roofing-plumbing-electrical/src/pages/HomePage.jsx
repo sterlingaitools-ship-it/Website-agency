@@ -12,7 +12,7 @@ import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 
 /**
- * HomePage — root route "/".
+ * HomePage - root route "/".
  * MobileCTABar renders outside <main> as a fixed-position overlay.
  * Body gets pb-14 on mobile to avoid content being hidden under the bar.
  */
@@ -32,7 +32,7 @@ export default function HomePage() {
         <FinalCTA />
       </main>
       <Footer />
-      {/* Fixed bottom overlay — outside main content flow */}
+      {/* Fixed bottom overlay - outside main content flow */}
       <MobileCTABar />
     </>
   );

@@ -28,7 +28,7 @@ export default function ReviewsPage() {
           </div>
         </section>
 
-        {/* Full reviews grid — no limit */}
+        {/* Full reviews grid - no limit */}
         <Reviews limit={100} showSeeAll={false} />
 
         <FinalCTA />

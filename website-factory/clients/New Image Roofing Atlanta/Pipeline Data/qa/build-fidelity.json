@@ -1,0 +1,10 @@
+{
+  "method": "playwright-dom-diff-no-scripts",
+  "client_node_count": 462,
+  "reference_node_count": 462,
+  "node_count_delta": 0,
+  "mismatches_count": 0,
+  "mismatches": [],
+  "passed": true,
+  "note": "script/noscript/style excluded (Stage 10.2 Helmet metadata, not component structure)"
+}
