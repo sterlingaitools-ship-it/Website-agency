@@ -1,0 +1,8 @@
+# Override parent .gitignore — this folder is a self-contained
+# static deploy artifact. build/ must be committed so Vercel
+# gets the full proposal (iframe target + all assets).
+!build/
+!build/**
+!agency-assets/
+!agency-assets/**
+!agency-logo.svg
